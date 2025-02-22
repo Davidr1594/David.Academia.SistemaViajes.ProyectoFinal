@@ -1,0 +1,6 @@
+@David.Academia.SistemaViajes.ProyectoFinal_HostAddress = http://localhost:5165
+
+GET {{David.Academia.SistemaViajes.ProyectoFinal_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,568 @@
+[
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.AuthUsuarioController",
+    "Method": "AuntenticarUsuario",
+    "RelativePath": "api/AuthUsuario/AutenticarUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clave",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "ActualizarColaborador",
+    "RelativePath": "api/Colaborador/ActualizarColaborador/{usuarioActualizaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colaborador",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.ColaboradorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "EstadoColaborador",
+    "RelativePath": "api/Colaborador/CambiarEstadoColaborador/{colaboradorId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colaboradorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "CrearColaborador",
+    "RelativePath": "api/Colaborador/CrearColaborador/{usuarioCreaId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCreaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.ColaboradorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "ObtenerColaboradores",
+    "RelativePath": "api/Colaborador/ObtenerColaboradores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "ObtenerColaboradorPorId",
+    "RelativePath": "api/Colaborador/ObtenerColaboradorPorId/{colaboradorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colaboradorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController",
+    "Method": "ActualizarPais",
+    "RelativePath": "api/Pais/ActualizarPais/{paisId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paisId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pais",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.PaisDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController",
+    "Method": "EstadoPais",
+    "RelativePath": "api/Pais/CambiarEstadoPais/{paisId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paisId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController",
+    "Method": "CreaPais",
+    "RelativePath": "api/Pais/CrearPais",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paisDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.PaisDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController",
+    "Method": "ObtenerPaises",
+    "RelativePath": "api/Pais/ObtenerPaises",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController",
+    "Method": "ObtenerPaisPorId",
+    "RelativePath": "api/Pais/ObtenerPaisPorId/{paisId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paisId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
+    "Method": "ActualizarRol",
+    "RelativePath": "api/Rol/ActualizarRol",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rol",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.RolDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
+    "Method": "EstadoRol",
+    "RelativePath": "api/Rol/CambiarEstadoRol/{rolId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
+    "Method": "CreaRol",
+    "RelativePath": "api/Rol/CrearRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rol",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.RolDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
+    "Method": "ObtenerRoles",
+    "RelativePath": "api/Rol/ObtenerRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
+    "Method": "ObtenerRolPorId",
+    "RelativePath": "api/Rol/ObtenerRolPorId/{rolId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "ActualizarSucursal",
+    "RelativePath": "api/Sucursal/ActualizarSucursal/{usuarioActualizaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sucursalDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.SucursalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "EstadoRol",
+    "RelativePath": "api/Sucursal/AgregarRelacionSucursalColaborador/{sucursalId}/{colaboradorId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colaboradorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "EstadoRol",
+    "RelativePath": "api/Sucursal/CambiarEstadoSucursal/{sucursalId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "CrearSucursal",
+    "RelativePath": "api/Sucursal/CrearSucursal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UsuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sucursalDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.SucursalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "ObtenerSucursal",
+    "RelativePath": "api/Sucursal/ObtenerSucursal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
+    "Method": "ObtenerSucursalPorId",
+    "RelativePath": "api/Sucursal/ObtenerSucursalPorId/{sucursalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController",
+    "Method": "ActualizarTransportista",
+    "RelativePath": "api/Transportista/ActualizarTransportita/{usuarioActualizaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "transportista",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto.TransportistaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController",
+    "Method": "EstadoRol",
+    "RelativePath": "api/Transportista/CambiarEstadoTransportista/{transportista}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transportistaId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "transportista",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController",
+    "Method": "CrearUsuario",
+    "RelativePath": "api/Transportista/CrearTransportista/{usuarioCreaId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCreaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "transportista",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto.TransportistaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController",
+    "Method": "ObtenerTransportistaPorId",
+    "RelativePath": "api/Transportista/ObtenerTransportistaPorId/{transportistaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transportistaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController",
+    "Method": "ObtenerTransportistas",
+    "RelativePath": "api/Transportista/ObtenerTransportistas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
+    "Method": "ActualizarUsuario",
+    "RelativePath": "api/Usuario/ActualizarUsuario/{usuarioActualizaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.UsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
+    "Method": "EstadoRol",
+    "RelativePath": "api/Usuario/CambiarEstadoUsuario/{usuarioId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
+    "Method": "CrearUsuario",
+    "RelativePath": "api/Usuario/CrearUsuario/{usuarioCreaId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCreaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.UsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
+    "Method": "ObtenerUsuarioPorId",
+    "RelativePath": "api/Usuario/ObtenerUsuarioPorId/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "api/Usuario/ObtenerUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

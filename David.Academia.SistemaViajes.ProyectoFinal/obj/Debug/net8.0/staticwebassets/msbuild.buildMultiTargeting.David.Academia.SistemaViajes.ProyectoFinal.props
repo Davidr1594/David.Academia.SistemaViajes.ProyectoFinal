@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\David.Academia.SistemaViajes.ProyectoFinal.props" />
+</Project>

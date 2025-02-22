@@ -1,0 +1,56 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:9315",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "SistemaTransporte": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5165",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CODIGO_PAIS": "HN",
+        "FS_SQL_SISTEMATRANSPORTE_SERVER": "192.168.1.33\\academiagfs,49194",
+        "FS_SQL_SISTEMATRANSPORTE_DBNAME": "SistemaTransporteDReyes",
+        "FS_SQL_SISTEMATRANSPORTE_USER": "AcademiaDEV",
+        "FS_SQL_SISTEMATRANSPORTE_PASSWORD": "Academia.1"
+      }
+    },
+    "DockerST": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CODIGO_PAIS": "HN",
+        "FS_SQL_SISTEMATRANSPORTE_SERVER": "localhost,1450",
+        "FS_SQL_SISTEMATRANSPORTE_DBNAME": "SistemaTransporteDReyes",
+        "FS_SQL_SISTEMATRANSPORTE_USER": "sa",
+        "FS_SQL_SISTEMATRANSPORTE_PASSWORD": "yourStrong(!)Password"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "weatherforecast",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CODIGO_PAIS": "HN",
+        "FS_SQL_SISTEMATRANSPORTE_SERVER": "192.168.1.33\\academiagfs,49194",
+        "FS_SQL_SISTEMATRANSPORTE_DBNAME": "SistemaTransporteDReyes",
+        "FS_SQL_SISTEMATRANSPORTE_USER": "AcademiaDEV",
+        "FS_SQL_SISTEMATRANSPORTE_PASSWORD": "Academia.1"
+      }
+    }
+  }
+}
