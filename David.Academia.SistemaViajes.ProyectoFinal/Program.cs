@@ -1,9 +1,14 @@
 
 
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using Farsiman.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -49,6 +54,8 @@ builder.Services.AddDbContext<SistemaTransporteDrContext>(o => o.UseSqlServer(
 
 
 // Servicios de Aplicación
+builder.Services.AddScoped<UnitOfWorkBuilder>();
+
 builder.Services.AddTransient<RolService>();
 builder.Services.AddTransient<UsuarioService>();
 builder.Services.AddTransient<AuthService>();
@@ -57,6 +64,22 @@ builder.Services.AddTransient<SucursalService>();
 builder.Services.AddTransient<PaisService>();
 builder.Services.AddTransient<SucursalColaboradorService>();
 builder.Services.AddTransient<TransportistaService>();
+builder.Services.AddTransient<CiudadService>();
+builder.Services.AddTransient<EstadoDepartamentoService>();
+builder.Services.AddTransient<MetodoPagoService>();
+builder.Services.AddTransient<EstadoPagoService>();
+builder.Services.AddTransient<MonedaService>();
+builder.Services.AddTransient<EstadoViajeService>();
+builder.Services.AddTransient<PuestoService>();
+builder.Services.AddTransient<ViajeService>();
+
+
+
+
+
+
+
+
 
 
 

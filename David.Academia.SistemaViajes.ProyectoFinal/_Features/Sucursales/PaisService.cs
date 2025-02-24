@@ -188,7 +188,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (paisEncontrado == null)
                 {
                     respuesta.Mensaje = "Pais no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -201,6 +201,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 }
 
                 paisEncontrado.Activo = estado;
+                respuesta.Datos = true;
+
                 await _context.SaveChangesAsync();
 
 

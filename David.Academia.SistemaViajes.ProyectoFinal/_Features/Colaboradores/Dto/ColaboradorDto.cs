@@ -1,4 +1,4 @@
-﻿namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto
+﻿namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto
 {
     public class ColaboradorDto
     {

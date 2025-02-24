@@ -8,7 +8,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
     {
         public void Configure(EntityTypeBuilder<EstadoDepartamento> builder)
         {
-            builder.ToTable("EstadoDepartamento");
+            builder.ToTable("EstadosDepartamentos");
             builder.HasKey(x => x.EstadoId);
             builder.Property(x => x.EstadoId).IsRequired();
             builder.HasIndex(x => x.Nombre).IsUnique();

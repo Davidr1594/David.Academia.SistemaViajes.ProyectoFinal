@@ -2,21 +2,29 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
+using Farsiman.Domain.Core.Standard.Repositories;
+using Farsiman.Infraestructure.Core.Entity.Standard;
 using Microsoft.EntityFrameworkCore;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
 {
     public class RolService
     {
-        private readonly SistemaTransporteDrContext _context;
-        private readonly IMapper _mapper;
 
-        public RolService(SistemaTransporteDrContext context, IMapper mapper)
+        private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<Rol> _rolRepository;
+        
+
+        public RolService(IMapper mapper, UnitOfWorkBuilder unitOfWorkBuilder)
         {
-            _context = context;
             _mapper = mapper;
+            
+            _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
+            _rolRepository = _unitOfWork.Repository<Rol>();
         }
 
         public async Task<Respuesta<RolDto>> CrearRol(RolDto rolDto)
@@ -35,19 +43,21 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 respuesta.Mensaje = "El nombre del rol es requerido.";
                 return respuesta;
             }
-            if (await _context.Roles.AnyAsync(r => r.Nombre.ToLower() == rolDto.Nombre.ToLower()))
+            if (await _rolRepository.AsQueryable().AnyAsync(r => r.Nombre.ToLower() == rolDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = "Ya existe un rol con este nombre.";
                 return respuesta;
             }
-
+            
             try
             {
                 var rol = _mapper.Map<Rol>(rolDto);
 
-                await _context.Roles.AddAsync(rol);
-                await _context.SaveChangesAsync();
+                
+
+                await _rolRepository.AddAsync(rol);
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<RolDto>(rol);
                 respuesta.Mensaje = "Rol creado con éxito.";
@@ -72,7 +82,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<List<RolDto>>();
             try
             {
-                var roles = await _context.Roles.ToListAsync();
+                var roles = await _rolRepository.AsQueryable().ToListAsync();
 
                 if (roles.Count == 0)
                 {
@@ -112,7 +122,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<RolDto>();
             try
             {
-                var rol = await _context.Roles.FirstOrDefaultAsync(r => r.RolId == rolId);
+                var rol = await _rolRepository.AsQueryable().FirstOrDefaultAsync(r => r.RolId == rolId);
 
                 if (rol == null)
                 {
@@ -144,7 +154,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<RolDto>();
             try
             {
-                var rolEncontrado = await _context.Roles.FirstOrDefaultAsync(u => u.RolId == rol.RolId);
+                var rolEncontrado = await _rolRepository.AsQueryable().FirstOrDefaultAsync(r => r.RolId == rol.RolId);
 
                 if (rolEncontrado == null)
                 {
@@ -155,9 +165,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
 
                 _mapper.Map(rol, rolEncontrado);
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
                 respuesta.Mensaje = "Rol actualizado con exito";
-                respuesta.Datos = rol;
+                respuesta.Datos = _mapper.Map<RolDto>(rolEncontrado);
             }
             catch (DbUpdateException ex)
             {
@@ -180,12 +190,12 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<bool>();
             try
             {
-                var rolEncontrado = await _context.Roles.FirstOrDefaultAsync(r => r.RolId == rolId);
+                var rolEncontrado = await _rolRepository.AsQueryable().FirstOrDefaultAsync(r => r.RolId == rolId);
 
                 if (rolEncontrado == null)
                 {
                     respuesta.Mensaje = "Rol no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -198,7 +208,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 }
 
                 rolEncontrado.Activo = estado;
-                await _context.SaveChangesAsync();
+                respuesta.Datos = true;
+
+                await _unitOfWork.SaveChangesAsync();
 
                
             }

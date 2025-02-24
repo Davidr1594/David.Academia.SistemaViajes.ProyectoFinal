@@ -189,7 +189,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas
                 if (transportistaEncontrado == null)
                 {
                     respuesta.Mensaje = "Transportista no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -202,6 +202,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas
                 }
 
                 transportistaEncontrado.Activo = estado;
+                respuesta.Datos = true;
                 await _context.SaveChangesAsync();
 
 

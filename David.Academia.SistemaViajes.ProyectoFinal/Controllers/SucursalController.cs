@@ -71,7 +71,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
         [HttpPatch("CambiarEstadoSucursal/{sucursalId}/estado")]
-        public async Task<IActionResult> EstadoRol(int sucursalId, [FromQuery] bool estado)
+        public async Task<IActionResult> EstadoSucursalColaborador(int sucursalId, [FromQuery] bool estado)
         {
             var respuesta = await _sucursalService.EstadoSucursal(sucursalId, estado);
 
@@ -83,7 +83,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
         [HttpPatch("AgregarRelacionSucursalColaborador/{sucursalId}/{colaboradorId}")]
-        public async Task<IActionResult> EstadoRol(int sucursalId,int colaboradorId) 
+        public async Task<IActionResult> AgregarRelacionSucursalColaborador(int sucursalId,int colaboradorId) 
         {
             var respuesta = await _sucursalColaboradorService.AgregarRelacionEntreSucursalColaborador(sucursalId, colaboradorId);
 

@@ -2,20 +2,24 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
+using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
 {
     public class SucursalService
     {
-        private readonly SistemaTransporteDrContext _context;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<Sucursal> _sucursalRepository;
         private readonly IMapper _mapper;
 
-        public SucursalService(SistemaTransporteDrContext sistemaTransporteDrContext, IMapper mapper)
+        public SucursalService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
         {
-            _context = sistemaTransporteDrContext;
+            _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
+            _sucursalRepository = _unitOfWork.Repository<Sucursal>();
             _mapper = mapper;
 
         }
@@ -37,7 +41,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 respuesta.Mensaje = "El nombre del la sucursal es requerido.";
                 return respuesta;
             }
-            if (await _context.Roles.AnyAsync(c => c.Nombre.ToLower() == sucursalDto.Nombre.ToLower()))
+            if (await _sucursalRepository.AsQueryable().AnyAsync(c => c.Nombre.ToLower() == sucursalDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = "Ya existe una sucursal con este nombre.";
@@ -50,8 +54,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             try
             {
 
-                await _context.Sucursales.AddAsync(sucursal);
-                await _context.SaveChangesAsync();
+                await _sucursalRepository.AddAsync(sucursal);
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<SucursalDto>(sucursal); ;
                 respuesta.Mensaje = "Sucursal cread con éxito.";
@@ -76,7 +80,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             var respuesta = new Respuesta<List<SucursalDto>>();
             try
             {
-                var sucursales = await _context.Sucursales.ToListAsync();
+                var sucursales = await _sucursalRepository.AsQueryable().ToListAsync();
 
                 if (sucursales.Count == 0)
                 {
@@ -116,7 +120,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             var respuesta = new Respuesta<SucursalDto>();
             try
             {
-                var sucursal = await _context.Sucursales.FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
+                var sucursal = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
 
                 if (sucursal == null)
                 {
@@ -148,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             var respuesta = new Respuesta<SucursalDto>();
             try
             {
-                var sucursalEncontrada = await _context.Sucursales.FirstOrDefaultAsync(s => s.SucursalId == sucursalDto.SucursalId);
+                var sucursalEncontrada = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalDto.SucursalId);
 
                 if (sucursalEncontrada == null)
                 {
@@ -161,7 +165,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 sucursalEncontrada.UsuarioActualiza = usuarioActualizaId;
                 sucursalEncontrada.FechaActualizacion = DateTime.Now;
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
                 respuesta.Mensaje = "Rol actualizado con exito";
                 respuesta.Datos = sucursalDto;
             }
@@ -186,12 +190,12 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             var respuesta = new Respuesta<bool>();
             try
             {
-                var SucursalEncontrada = await _context.Sucursales.FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
+                var SucursalEncontrada = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
 
                 if (SucursalEncontrada == null)
                 {
                     respuesta.Mensaje = "Sucursal no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -204,7 +208,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 }
 
                 SucursalEncontrada.Activo = estado;
-                await _context.SaveChangesAsync();
+                respuesta.Datos = true;
+
+                await _unitOfWork.SaveChangesAsync();
 
 
             }

@@ -1,20 +1,24 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
+using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
+namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores
 {
     public class ColaboradorService
     {
-        private readonly SistemaTransporteDrContext _context;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<Colaborador> _colaboradorRepository;
         private readonly IMapper _mapper;
 
-        public ColaboradorService( SistemaTransporteDrContext context, IMapper mapper)
-        { 
-            _context = context;
+        public ColaboradorService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        {
+            _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
+            _colaboradorRepository = _unitOfWork.Repository<Colaborador>();
             _mapper = mapper;
         }
 
@@ -35,7 +39,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 respuesta.Mensaje = "El nombre del colaborador es requerido.";
                 return respuesta;
             }
-            if (await _context.Roles.AnyAsync(c => c.Nombre.ToLower() == colaboradorDto.Nombre.ToLower()))
+            if (await _colaboradorRepository.AsQueryable().AnyAsync(c => c.Nombre.ToLower() == colaboradorDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = "Ya existe un colaborador con este nombre.";
@@ -48,8 +52,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             try
             {
 
-                await _context.Colaboradores.AddAsync(colaborador);
-                await _context.SaveChangesAsync();
+                await _colaboradorRepository.AddAsync(colaborador);
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<ColaboradorDto>(colaborador);
                 respuesta.Mensaje = "Colaborador creado con éxito.";
@@ -74,7 +78,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<List<ColaboradorDto>>();
             try
             {
-                var colaboradores = _context.Colaboradores.AsQueryable().ToList();
+                var colaboradores = _colaboradorRepository.AsQueryable().AsQueryable().ToList();
 
 
                 if (colaboradores.Count == 0)
@@ -117,7 +121,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<ColaboradorDto>();
             try
             {
-                var colaborador = await _context.Colaboradores.FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId);
+                var colaborador = await _colaboradorRepository.AsQueryable().FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId);
 
                 if (colaborador == null)
                 {
@@ -149,7 +153,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<ColaboradorDto>();
             try
             {
-                var colaboradorEncontrado = await _context.Colaboradores.FirstOrDefaultAsync(c => c.ColaboradorId == colaborador.ColaboradorId);
+                var colaboradorEncontrado = await _colaboradorRepository.AsQueryable().FirstOrDefaultAsync(c => c.ColaboradorId == colaborador.ColaboradorId);
 
                 if (colaboradorEncontrado == null)
                 {
@@ -162,7 +166,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 colaboradorEncontrado.UsuarioActualiza = usuarioActualizaId;
                 colaboradorEncontrado.FechaActualizacion = DateTime.Now;
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = colaborador;
             }
@@ -188,12 +192,12 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<bool>();
             try
             {
-                var colaboradorEncontrado = await _context.Colaboradores.FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId);
+                var colaboradorEncontrado = await _colaboradorRepository.AsQueryable().FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId);
 
                 if (colaboradorEncontrado == null)
                 {
                     respuesta.Mensaje = "Colaborador no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -206,7 +210,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 }
 
                 colaboradorEncontrado.Activo = estado;
-                await _context.SaveChangesAsync();
+                respuesta.Datos = true;
+
+                await _unitOfWork.SaveChangesAsync();
 
 
             }

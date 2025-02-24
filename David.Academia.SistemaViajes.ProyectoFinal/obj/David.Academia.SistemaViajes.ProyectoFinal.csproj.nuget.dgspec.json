@@ -62,17 +62,17 @@
               "target": "Package",
               "version": "[2.29723.0, )"
             },
+            "Farsiman.Infraestructure.Core.Entity.Standard": {
+              "target": "Package",
+              "version": "[8.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

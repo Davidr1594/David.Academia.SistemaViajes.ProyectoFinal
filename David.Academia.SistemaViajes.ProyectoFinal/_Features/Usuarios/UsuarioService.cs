@@ -1,23 +1,25 @@
 ﻿using AutoMapper;
-using Azure;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
+using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
 {
     public class UsuarioService
     {
-        private readonly SistemaTransporteDrContext _context;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IRepository<Usuario> _usuarioRepository;
 
-        public  UsuarioService(SistemaTransporteDrContext context, IMapper mapper)
+        public  UsuarioService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
         {
-            _context = context;
-            _mapper = mapper;   
+            _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
+            _mapper = mapper;
+            _usuarioRepository = _unitOfWork.Repository<Usuario>(); 
         }
         public async Task<Respuesta<UsuarioDto>>CrearUsuario(int usuarioCreaId, UsuarioDto usuarioDto)
         {
@@ -36,7 +38,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 respuesta.Mensaje = "El nombre del usuario es requerido.";
                 return respuesta;
             }
-            if (await _context.Roles.AnyAsync(u => u.Nombre.ToLower() == usuarioDto.Nombre.ToLower()))
+            if (await _usuarioRepository.AsQueryable().AnyAsync(u => u.Nombre.ToLower() == usuarioDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = "Ya existe un usuario con este nombre.";
@@ -57,8 +59,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             {
 
 
-                await _context.Usuarios.AddAsync(usuarioACrear);
-                await _context.SaveChangesAsync();
+                await _usuarioRepository.AddAsync(usuarioACrear);
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<UsuarioDto>(usuarioACrear);
                 respuesta.Mensaje = ("Usuario creado con éxito.");
@@ -83,7 +85,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<List<UsuarioDto>>();
             try
             {
-                var usuarios = await _context.Usuarios.ToListAsync();
+                var usuarios = await _usuarioRepository.AsQueryable().ToListAsync();
 
                 if (usuarios.Count == 0)
                 { 
@@ -122,7 +124,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<UsuarioDto>();
             try
             {
-                var usuario  = await _context.Usuarios.FirstOrDefaultAsync(u => u.UsuarioId == usuarioId);
+                var usuario  = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.UsuarioId == usuarioId);
 
                 if (usuario == null)
                 {
@@ -154,7 +156,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<UsuarioDto>();
             try
             {
-                var usuarioEncontrado = await _context.Usuarios.FirstOrDefaultAsync(u => u.UsuarioId == usuario.UsuarioId);
+                var usuarioEncontrado = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.UsuarioId == usuario.UsuarioId);
 
                 if (usuarioEncontrado == null) 
                 {
@@ -167,7 +169,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 usuarioEncontrado.UsuarioActualiza = usuarioActualizaId;
                 usuarioEncontrado.FechaActualizacion = DateTime.Now;
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<UsuarioDto>(usuarioEncontrado); 
             }
@@ -192,12 +194,12 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
             var respuesta = new Respuesta<bool>();
             try
             {
-                var usuarioEncontrado = await _context.Usuarios.FirstOrDefaultAsync(u => u.UsuarioId == usuarioId);
+                var usuarioEncontrado = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.UsuarioId == usuarioId);
 
                 if (usuarioEncontrado == null)
                 {
                     respuesta.Mensaje = "Usuario no existe";
-                    respuesta.Valido = false;
+                    respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
@@ -210,7 +212,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios
                 }
 
                 usuarioEncontrado.Activo = estado;
-                await _context.SaveChangesAsync();
+                respuesta.Datos = true;
+                await _unitOfWork.SaveChangesAsync();
 
 
             }
