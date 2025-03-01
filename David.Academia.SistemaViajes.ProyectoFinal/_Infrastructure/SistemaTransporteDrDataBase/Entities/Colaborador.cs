@@ -16,8 +16,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
         public decimal Longitud { get; set; }
         public int? UsuarioActualiza { get; set; }
         public int? UsuarioCrea { get; set; }
-        public int PuestoId { get; set; }
-        public int CiudadId { get; set; }
+        public int? PuestoId { get; set; }
+        public int? CiudadId { get; set; }
         public DateTime FechaCreacion { get; set; } = DateTime.Now;
         public DateTime? FechaActualizacion { get; set; }
         public bool Activo { get; set; } = true;

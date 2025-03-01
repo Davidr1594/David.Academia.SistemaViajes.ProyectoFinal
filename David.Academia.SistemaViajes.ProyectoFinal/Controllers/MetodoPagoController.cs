@@ -1,9 +1,7 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 {

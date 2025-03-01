@@ -36,7 +36,8 @@
         "FS_SQL_SISTEMATRANSPORTE_SERVER": "localhost,1450",
         "FS_SQL_SISTEMATRANSPORTE_DBNAME": "SistemaTransporteDReyes",
         "FS_SQL_SISTEMATRANSPORTE_USER": "sa",
-        "FS_SQL_SISTEMATRANSPORTE_PASSWORD": "yourStrong(!)Password"
+        "FS_SQL_SISTEMATRANSPORTE_PASSWORD": "yourStrong(!)Password",
+        "GOOGLE_MAPS_API_KEY": "AIzaSyBuuqkCD-I7ruzVvsbPiBjEaK86ev8_IWo"
       }
     },
     "IIS Express": {

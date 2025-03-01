@@ -1,13 +1,18 @@
 ﻿using AutoMapper;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using System.Text;
 
@@ -34,6 +39,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
             CreateMap<EstadoViaje, EstadoViajeDto>().ReverseMap();
             CreateMap<Puesto, PuestoDto>().ReverseMap();
             CreateMap<Viaje, ViajeDto>().ReverseMap();
+            CreateMap<ParametroSistema, ParametroSistemaDto>().ReverseMap();
+
 
 
 

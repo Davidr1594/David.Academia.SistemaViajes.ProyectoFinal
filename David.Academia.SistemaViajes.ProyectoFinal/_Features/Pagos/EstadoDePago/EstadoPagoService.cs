@@ -1,20 +1,24 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
+using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago
 {
     public class EstadoPagoService
     {
-        private readonly SistemaTransporteDrContext _context;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<EstadoPago> _estadoPagoRepository;
         private readonly IMapper _mapper;
 
-        public EstadoPagoService(SistemaTransporteDrContext context, IMapper mapper)
+        public EstadoPagoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
         {
-            _context = context;
+            _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
+            _estadoPagoRepository = _unitOfWork.Repository<EstadoPago>();
             _mapper = mapper;
         }
 
@@ -38,7 +42,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
 
             try
             {
-                if (await _context.EstadosPagos.AnyAsync(ep => ep.Nombre.ToLower() == estadoPagoDto.Nombre.ToLower()))
+                if (await _estadoPagoRepository.AsQueryable().AnyAsync(ep => ep.Nombre.ToLower() == estadoPagoDto.Nombre.ToLower()))
                 {
                     respuesta.Valido = false;
                     respuesta.Mensaje = "Ya existe un estado de pago con este nombre.";
@@ -47,8 +51,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
 
                 var estadoPago = _mapper.Map<EstadoPago>(estadoPagoDto);
 
-                await _context.EstadosPagos.AddAsync(estadoPago);
-                await _context.SaveChangesAsync();
+                await _estadoPagoRepository.AddAsync(estadoPago);
+                await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<EstadoPagoDto>(estadoPago);
                 respuesta.Mensaje = "Rol creado con éxito.";
@@ -73,7 +77,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             var respuesta = new Respuesta<List<EstadoPagoDto>>();
             try
             {
-                var estadosPagos = await _context.EstadosPagos.ToListAsync();
+                var estadosPagos = await _estadoPagoRepository.AsQueryable().ToListAsync();
 
                 if (estadosPagos.Count == 0)
                 {
@@ -113,7 +117,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             var respuesta = new Respuesta<EstadoPagoDto>();
             try
             {
-                var estadoPago = await _context.EstadosPagos.FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPagoId);
+                var estadoPago = await _estadoPagoRepository.AsQueryable().FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPagoId);
 
                 if (estadoPago == null)
                 {
@@ -145,7 +149,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             var respuesta = new Respuesta<EstadoPagoDto>();
             try
             {
-                var estadoPagoEncontrado = await _context.EstadosPagos.FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPago.EstadoPagoId);
+                var estadoPagoEncontrado = await _estadoPagoRepository.AsQueryable().FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPago.EstadoPagoId);
 
                 if (estadoPagoEncontrado == null)
                 {
@@ -156,7 +160,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
 
                 _mapper.Map(estadoPago, estadoPagoEncontrado);
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
                 respuesta.Mensaje = "Estado de pago actualizado con exito";
                 respuesta.Datos = _mapper.Map<EstadoPagoDto>(estadoPagoEncontrado);
             }
@@ -181,7 +185,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             var respuesta = new Respuesta<bool>();
             try
             {
-                var estadoPagoEncontrado = await _context.EstadosPagos.FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPagoId);
+                var estadoPagoEncontrado = await _estadoPagoRepository.AsQueryable().FirstOrDefaultAsync(ep => ep.EstadoPagoId == estadoPagoId);
 
                 if (estadoPagoEncontrado == null)
                 {
@@ -201,7 +205,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
                 estadoPagoEncontrado.Activo = estado;
                 respuesta.Datos = true;
 
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
 
 
             }

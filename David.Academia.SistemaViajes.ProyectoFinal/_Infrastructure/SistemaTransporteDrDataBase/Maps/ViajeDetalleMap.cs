@@ -11,8 +11,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
             builder.ToTable("ViajesDetalles");
             builder.HasKey(vd => vd.ViajeDetalleId);
             builder.Property(vd => vd.DireccionDestino).HasMaxLength(100).IsRequired(false);
+            builder.Property(vd => vd.ColaboradorId).IsRequired();
             builder.Property(vd => vd.Kms).HasColumnType("decimal(10,2)").IsRequired();
             builder.Property(vd => vd.Costo).HasColumnType("decimal(10,2)").IsRequired();
+            builder.Property(vd => vd.ViajeId).IsRequired();
 
             builder.HasOne(vd => vd.Viaje)
                 .WithMany(v => v.ViajeDetalles)

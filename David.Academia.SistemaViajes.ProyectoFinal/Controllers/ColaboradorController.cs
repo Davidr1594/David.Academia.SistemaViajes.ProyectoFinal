@@ -1,5 +1,5 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto;
+﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,8 +16,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             _colaboradorService = colaboradorService;
         }
 
-        [HttpPost("CrearColaborador/{usuarioCreaId}")]
-        public async Task<IActionResult> CrearColaborador(int usuarioCreaId, [FromBody] ColaboradorDto usuario)
+        [HttpPost("CrearColaborador/")]
+        public async Task<IActionResult> CrearColaborador([FromQuery]int usuarioCreaId, [FromBody] ColaboradorDto usuario)
         {
             var respuesta = await _colaboradorService.CrearColaborador(usuarioCreaId, usuario);
 
@@ -40,8 +40,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             return Ok(respuesta);
         }
 
-        [HttpGet("ObtenerColaboradorPorId/{colaboradorId}")]
-        public async Task<IActionResult> ObtenerColaboradorPorId(int colaboradorId)
+        [HttpGet("ObtenerColaboradorPorId")]
+        public async Task<IActionResult> ObtenerColaboradorPorId([FromQuery]int colaboradorId)
         {
             var respuesta = await _colaboradorService.ObtenerColaboradorPorId(colaboradorId);
 
@@ -51,9 +51,20 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             }
             return Ok(respuesta);
         }
+        [HttpGet("ObtenerColaboradorSucursalId")]
+        public async Task<IActionResult> ObtenerColaboradorSucursalId([FromQuery] int sucursalId)
+        {
+            var respuesta = await _colaboradorService.ObtenerColaboradorPorSucursalID(sucursalId);
 
-        [HttpPut("ActualizarColaborador/{usuarioActualizaId}")]
-        public async Task<IActionResult> ActualizarColaborador(int usuarioActualizaId, [FromBody] ColaboradorDto colaborador)
+            if (!respuesta.Valido)
+            {
+                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+            }
+            return Ok(respuesta);
+        }
+
+        [HttpPut("ActualizarColaborador")]
+        public async Task<IActionResult> ActualizarColaborador([FromQuery]int usuarioActualizaId, [FromBody] ColaboradorDto colaborador)
         {
             var respuesta = await _colaboradorService.ActualizarColaborador(usuarioActualizaId, colaborador);
 

@@ -19,7 +19,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
             builder.Property(p => p.Activo).HasDefaultValue(true).IsRequired();
 
             builder.HasOne(p => p.UsuarioCreaNavigation)
-                   .WithMany()
+                   .WithMany(u => u.ParametrosSistemasCrea)
                    .HasForeignKey(p => p.UsuarioCrea)
                    .OnDelete(DeleteBehavior.Restrict);
 

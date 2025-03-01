@@ -1,4 +1,5 @@
 ﻿using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
@@ -11,39 +12,41 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Usuario> _usuarioRepository;
+        private readonly AuthDomain _authDomain;
+       
 
-        public AuthService(UnitOfWorkBuilder unitOfWorkBuilder)
+        public AuthService(UnitOfWorkBuilder unitOfWorkBuilder, AuthDomain authDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _usuarioRepository = _unitOfWork.Repository<Usuario>();
+            _authDomain = authDomain;
+
         }
 
-        public async Task<Respuesta<bool>> AutenticarUsuario(string clave, string usuario)
+        public async Task<Respuesta<bool>> AutenticarUsuario(UsuarioAuthDto usuario)
         {
             var respuesta = new Respuesta<bool>();
 
-            if(string.IsNullOrWhiteSpace(clave))
+            var validarCredenciales = _authDomain.ValidarCredencialesValidas(usuario);
+
+            if (!validarCredenciales.Datos)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El campo Clave es requerido.";
+                respuesta.Valido = validarCredenciales.Valido;
+                respuesta.Mensaje = validarCredenciales.Mensaje;
+                respuesta.Datos = validarCredenciales.Datos;
                 return respuesta;
             }
-            if (string.IsNullOrWhiteSpace(usuario))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El campo Usuario es requerido.";
-                return respuesta;
-            }
+
             try
             {
-                var usuarioEcontrado = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.Nombre == usuario);
+                var usuarioEcontrado = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.Nombre == usuario.nombre);
                 if (usuarioEcontrado == null)
                 {
-                    respuesta.Datos = false;
                     respuesta.Mensaje = "No se encontró un usuario con este nombre.";
+                    respuesta.Datos = false;
                     return respuesta;
                 }
-                var claveEncriptada = SeguridadHelper.EncriptarClave(clave);
+                var claveEncriptada = _authDomain.EncriptarClave(usuario.clave);
 
                 if (!usuarioEcontrado.ClaveHash.SequenceEqual(claveEncriptada))
                 {
@@ -51,6 +54,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
                     respuesta.Mensaje = "La clave no es valida.";
                     return respuesta;
                 }
+
                 respuesta.Mensaje = "Accesso Correcto";
                 respuesta.Datos = true;
             }

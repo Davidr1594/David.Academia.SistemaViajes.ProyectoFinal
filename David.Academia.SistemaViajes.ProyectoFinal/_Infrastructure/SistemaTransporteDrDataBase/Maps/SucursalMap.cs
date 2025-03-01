@@ -14,8 +14,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
             builder.HasIndex(s => s.Nombre).IsUnique();
             builder.Property(s => s.Nombre).HasMaxLength(100).IsRequired();
             builder.Property(s => s.Direccion).HasMaxLength(100).IsRequired();
-            builder.Property(s => s.Latitud).HasColumnType("decimal(9,6)").IsRequired();
-            builder.Property(s => s.Longitud).HasColumnType("decimal(9,6)").IsRequired();
+            builder.Property(s => s.Latitud).HasColumnType("decimal(19,15)").IsRequired();
+            builder.Property(s => s.Longitud).HasColumnType("decimal(19,15)").IsRequired();
             builder.Property(s => s.Telefono).HasMaxLength(15).IsRequired(false);
             builder.Property(s => s.FechaCreacion).HasColumnType("datetime").HasDefaultValueSql("GETDATE()").IsRequired();
             builder.Property(s => s.UsuarioCrea).IsRequired();

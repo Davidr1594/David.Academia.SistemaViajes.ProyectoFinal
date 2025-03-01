@@ -20,7 +20,9 @@
     <Folder Include="Tests\Controllers\" />
     <Folder Include="Tests\_Infrastructure\" />
     <Folder Include="Tests\_Features\" />
-    <Folder Include="_Features\Seguridad\Dto\" />
+    <Folder Include="_Features\Viajes\SolicitudDeViaje\Dto\" />
+    <Folder Include="_Features\Viajes\ValoracionDeViaje\Dto\" />
+    <Folder Include="_Features\Viajes\ViajeDetalles\Dto\" />
   </ItemGroup>
 
 </Project>

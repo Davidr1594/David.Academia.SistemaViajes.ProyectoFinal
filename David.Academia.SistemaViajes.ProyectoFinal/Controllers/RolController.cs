@@ -1,12 +1,12 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 {
-  
+
 
     [Route("api/[controller]")]
     [ApiController]

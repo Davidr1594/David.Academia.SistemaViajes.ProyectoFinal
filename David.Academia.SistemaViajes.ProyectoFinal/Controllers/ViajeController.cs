@@ -1,5 +1,5 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto;
+﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,8 +16,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             _viajeService = viajeService;
         }
 
-        [HttpPost("CrearViaje/{usuarioCreaId}")]
-        public async Task<IActionResult> CrearViaje(int usuarioCreaId, [FromBody] ViajeDto viaje)
+        [HttpPost("CrearViaje")]
+        public async Task<IActionResult> CrearViaje([FromQuery]int usuarioCreaId, [FromBody] ViajeDto viaje)
         {
             var respuesta = await _viajeService.CrearViaje(usuarioCreaId, viaje);
 
@@ -27,6 +27,32 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             }
             return Ok(respuesta);
         }
+
+        [HttpPost("AgregarColaboradoresAViaje")]
+        public async Task<IActionResult> AgregarColaboradoresAViaje([FromQuery]int usuarioCreaId, [FromQuery]int sucursalId, [FromBody] List<int> colaboradoresId)
+        {
+            var respuesta = await _viajeService.AgregarColaboradoresAViaje(usuarioCreaId, sucursalId, colaboradoresId);
+
+            if (!respuesta.Valido)
+            {
+                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+            }
+            return Ok(respuesta);
+        }
+
+
+        [HttpPatch("CambiarEstadoViaje")]
+        public async Task<IActionResult> CambiarEstadoViaje([FromQuery] int usuarioActualizaId,[FromQuery]int sucursalId, [FromQuery] int viajeId, [FromQuery] int estadoId)
+        {
+            var respuesta = await _viajeService.ActualizadoEstadoViaje(usuarioActualizaId, sucursalId,viajeId,estadoId);
+
+            if (!respuesta.Valido)
+            {
+                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+            }
+            return Ok(respuesta);
+        }
+
 
         [HttpGet("ObtenerViajes")]
         public async Task<IActionResult> ObtenerViajes()
@@ -40,8 +66,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             return Ok(respuesta);
         }
 
-        [HttpGet("ObtenerViajePorId/{viajeId}")]
-        public async Task<IActionResult> ObtenerViajePorId(int viajeId)
+        [HttpGet("ObtenerViajePorId")]
+        public async Task<IActionResult> ObtenerViajePorId([FromQuery]int viajeId)
         {
             var respuesta = await _viajeService.ObtenerViajePorId(viajeId);
 
@@ -64,10 +90,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             return Ok(respuesta);
         }
 
-        [HttpPatch("CambiarEstadoViaje/{viajeId}/estado")]
+        [HttpPatch("CambiarEstadoActivoViaje/{viajeId}/estado")]
         public async Task<IActionResult> EstadoViaje(int viajeId, [FromQuery] bool estado)
         {
-            var respuesta = await _viajeService.EstadoViaje(viajeId, estado);
+            var respuesta = await _viajeService.EstadoViajeActivo(viajeId, estado);
 
             if (!respuesta.Valido)
             {

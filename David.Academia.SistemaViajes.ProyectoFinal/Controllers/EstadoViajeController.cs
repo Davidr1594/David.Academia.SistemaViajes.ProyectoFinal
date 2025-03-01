@@ -1,9 +1,7 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes;
-using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.Dto;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 {

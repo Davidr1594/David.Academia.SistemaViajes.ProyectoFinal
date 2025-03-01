@@ -20,14 +20,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
             builder.Property(x => x.Email).HasMaxLength(50).IsRequired();
             builder.HasIndex(x => x.Email).IsUnique();
             builder.Property(x => x.Direccion).HasMaxLength(100).IsRequired();
-            builder.Property(x => x.Latitud).HasColumnType("DECIMAL(9,6)").IsRequired();
-            builder.Property(x => x.Longitud).HasColumnType("DECIMAL(9,6)").IsRequired();
-            builder.Property(x => x.CiudadId).IsRequired();
+            builder.Property(x => x.Latitud).HasColumnType("DECIMAL(19,15)").IsRequired();
+            builder.Property(x => x.Longitud).HasColumnType("DECIMAL(19,15)").IsRequired();
+            builder.Property(x => x.CiudadId).IsRequired(false);
             builder.Property(x => x.FechaCreacion).IsRequired().HasDefaultValueSql("GETDATE()");
             builder.Property(x => x.UsuarioCrea).IsRequired(false);
             builder.Property(x => x.FechaActualizacion).IsRequired(false);
             builder.Property(x => x.UsuarioActualiza).IsRequired(false);
-            builder.Property(x => x.PuestoId).IsRequired();
+            builder.Property(x => x.PuestoId).IsRequired(false);
             builder.Property(x => x.Activo).HasDefaultValue(true);
 
             builder.HasOne(co => co.CiudadNavigation)

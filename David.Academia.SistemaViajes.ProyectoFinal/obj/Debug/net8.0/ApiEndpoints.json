@@ -3,19 +3,14 @@
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.AuthUsuarioController",
     "Method": "AuntenticarUsuario",
     "RelativePath": "api/AuthUsuario/AutenticarUsuario",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clave",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "usuario",
-        "Type": "System.String",
-        "IsRequired": false
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.Dto.UsuarioAuthDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -30,7 +25,7 @@
     "Parameters": [
       {
         "Name": "ciudad",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.CiudadDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.Dto.CiudadDto",
         "IsRequired": true
       }
     ],
@@ -67,7 +62,7 @@
     "Parameters": [
       {
         "Name": "ciudad",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.CiudadDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.Dto.CiudadDto",
         "IsRequired": true
       }
     ],
@@ -102,7 +97,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
     "Method": "ActualizarColaborador",
-    "RelativePath": "api/Colaborador/ActualizarColaborador/{usuarioActualizaId}",
+    "RelativePath": "api/Colaborador/ActualizarColaborador",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -110,11 +105,11 @@
       {
         "Name": "usuarioActualizaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "colaborador",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto.ColaboradorDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto.ColaboradorDto",
         "IsRequired": true
       }
     ],
@@ -144,7 +139,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
     "Method": "CrearColaborador",
-    "RelativePath": "api/Colaborador/CrearColaborador/{usuarioCreaId}",
+    "RelativePath": "api/Colaborador/CrearColaborador",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -152,11 +147,11 @@
       {
         "Name": "usuarioCreaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "usuario",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Dto.ColaboradorDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto.ColaboradorDto",
         "IsRequired": true
       }
     ],
@@ -175,7 +170,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
     "Method": "ObtenerColaboradorPorId",
-    "RelativePath": "api/Colaborador/ObtenerColaboradorPorId/{colaboradorId}",
+    "RelativePath": "api/Colaborador/ObtenerColaboradorPorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -183,7 +178,23 @@
       {
         "Name": "colaboradorId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController",
+    "Method": "ObtenerColaboradorSucursalId",
+    "RelativePath": "api/Colaborador/ObtenerColaboradorSucursalId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -356,7 +367,7 @@
     "Parameters": [
       {
         "Name": "estadoViaje",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto.EstadoViajeDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.Dto.EstadoViajeDto",
         "IsRequired": true
       }
     ],
@@ -393,7 +404,7 @@
     "Parameters": [
       {
         "Name": "estadoViaje",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto.EstadoViajeDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.Dto.EstadoViajeDto",
         "IsRequired": true
       }
     ],
@@ -426,6 +437,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ManejoDistanciaController",
+    "Method": "ObtenerDireccion",
+    "RelativePath": "api/ManejoDistancia/ObtenerDireccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "latitud",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitud",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ManejoDistanciaController",
+    "Method": "ObtenerKms2Sucurrsales",
+    "RelativePath": "api/ManejoDistancia/Obtenerkms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "latitudSucursal",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitudSucursal",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "latitudColaborador",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitudColaborador",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.MetodoPagoController",
     "Method": "ActualizarMetodoPago",
     "RelativePath": "api/MetodoPago/ActualizarMetodoPago",
@@ -435,7 +498,7 @@
     "Parameters": [
       {
         "Name": "metodoPago",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto.MetodoPagoDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto.MetodoPagoDto",
         "IsRequired": true
       }
     ],
@@ -477,7 +540,7 @@
     "Parameters": [
       {
         "Name": "metodoPago",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto.MetodoPagoDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto.MetodoPagoDto",
         "IsRequired": true
       }
     ],
@@ -519,7 +582,7 @@
     "Parameters": [
       {
         "Name": "moneda",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto.MonedaDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto.MonedaDto",
         "IsRequired": true
       }
     ],
@@ -556,7 +619,7 @@
     "Parameters": [
       {
         "Name": "moneda",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.Dto.MonedaDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto.MonedaDto",
         "IsRequired": true
       }
     ],
@@ -603,7 +666,7 @@
       },
       {
         "Name": "pais",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.PaisDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto.PaisDto",
         "IsRequired": true
       }
     ],
@@ -640,7 +703,7 @@
     "Parameters": [
       {
         "Name": "paisDto",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.PaisDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto.PaisDto",
         "IsRequired": true
       }
     ],
@@ -673,6 +736,95 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController",
+    "Method": "ActualizarParametro",
+    "RelativePath": "api/ParametroSistema/ActualizarParametro/{usuarioActualizaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "parametro",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto.ParametroSistemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController",
+    "Method": "CambiarEstadoParametro",
+    "RelativePath": "api/ParametroSistema/CambiarEstadoParametro/{parametroId}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametroId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController",
+    "Method": "CrearParametro",
+    "RelativePath": "api/ParametroSistema/CrearParametro/{usuarioCreaId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCreaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "parametro",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto.ParametroSistemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController",
+    "Method": "ObtenerParametroPorId",
+    "RelativePath": "api/ParametroSistema/ObtenerParametroPorId/{parametroId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametroId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController",
+    "Method": "ObtenerParametros",
+    "RelativePath": "api/ParametroSistema/ObtenerParametros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PuestoController",
     "Method": "ActualizarPuesto",
     "RelativePath": "api/Puesto/ActualizarPuesto",
@@ -682,7 +834,7 @@
     "Parameters": [
       {
         "Name": "puesto",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.PuestoDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto.PuestoDto",
         "IsRequired": true
       }
     ],
@@ -719,7 +871,7 @@
     "Parameters": [
       {
         "Name": "puesto",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.PuestoDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto.PuestoDto",
         "IsRequired": true
       }
     ],
@@ -752,6 +904,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ReporteController",
+    "Method": "ObtenerReporteViajes",
+    "RelativePath": "api/Reporte/ObtenerReporteViajes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transportistaId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ReporteController",
+    "Method": "ObtenerReporteViajesDetalle",
+    "RelativePath": "api/Reporte/ObtenerReporteViajesDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viajeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController",
     "Method": "ActualizarRol",
     "RelativePath": "api/Rol/ActualizarRol",
@@ -761,7 +955,7 @@
     "Parameters": [
       {
         "Name": "rol",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.RolDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles.Dto.RolDto",
         "IsRequired": true
       }
     ],
@@ -798,7 +992,7 @@
     "Parameters": [
       {
         "Name": "rol",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.RolDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles.Dto.RolDto",
         "IsRequired": true
       }
     ],
@@ -833,7 +1027,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
     "Method": "ActualizarSucursal",
-    "RelativePath": "api/Sucursal/ActualizarSucursal/{usuarioActualizaId}",
+    "RelativePath": "api/Sucursal/ActualizarSucursal",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -841,7 +1035,7 @@
       {
         "Name": "usuarioActualizaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "sucursalDto",
@@ -854,20 +1048,20 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
     "Method": "AgregarRelacionSucursalColaborador",
-    "RelativePath": "api/Sucursal/AgregarRelacionSucursalColaborador/{sucursalId}/{colaboradorId}",
-    "HttpMethod": "PATCH",
+    "RelativePath": "api/Sucursal/AgregarRelacionSucursalColaborador",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "sucursalId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "colaboradorId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -902,7 +1096,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UsuarioActualizaId",
+        "Name": "UsuarioCread",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -927,7 +1121,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController",
     "Method": "ObtenerSucursalPorId",
-    "RelativePath": "api/Sucursal/ObtenerSucursalPorId/{sucursalId}",
+    "RelativePath": "api/Sucursal/ObtenerSucursalPorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -935,7 +1129,7 @@
       {
         "Name": "sucursalId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -955,7 +1149,7 @@
       },
       {
         "Name": "transportista",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto.TransportistaDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto.TransportistaDto",
         "IsRequired": true
       }
     ],
@@ -1002,7 +1196,7 @@
       },
       {
         "Name": "transportista",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto.TransportistaDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto.TransportistaDto",
         "IsRequired": true
       }
     ],
@@ -1037,7 +1231,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
     "Method": "ActualizarUsuario",
-    "RelativePath": "api/Usuario/ActualizarUsuario/{usuarioActualizaId}",
+    "RelativePath": "api/Usuario/ActualizarUsuario",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -1045,11 +1239,11 @@
       {
         "Name": "usuarioActualizaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "usuario",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.UsuarioDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto.UsuarioDto",
         "IsRequired": true
       }
     ],
@@ -1058,7 +1252,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
     "Method": "EstadoRol",
-    "RelativePath": "api/Usuario/CambiarEstadoUsuario/{usuarioId}/estado",
+    "RelativePath": "api/Usuario/CambiarEstadoUsuario/{usuarioId}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -1079,7 +1273,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
     "Method": "CrearUsuario",
-    "RelativePath": "api/Usuario/CrearUsuario/{usuarioCreaId}",
+    "RelativePath": "api/Usuario/CrearUsuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1087,11 +1281,11 @@
       {
         "Name": "usuarioCreaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "usuario",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto.UsuarioDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto.UsuarioDto",
         "IsRequired": true
       }
     ],
@@ -1100,7 +1294,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController",
     "Method": "ObtenerUsuarioPorId",
-    "RelativePath": "api/Usuario/ObtenerUsuarioPorId/{usuarioId}",
+    "RelativePath": "api/Usuario/ObtenerUsuarioPorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1108,7 +1302,7 @@
       {
         "Name": "usuarioId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1138,7 +1332,33 @@
       },
       {
         "Name": "viaje",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto.ViajeDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto.ViajeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController",
+    "Method": "AgregarColaboradoresAViaje",
+    "RelativePath": "api/Viaje/AgregarColaboradoresAViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCreaId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "colaboradoresId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
@@ -1147,7 +1367,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController",
     "Method": "EstadoViaje",
-    "RelativePath": "api/Viaje/CambiarEstadoViaje/{viajeId}/estado",
+    "RelativePath": "api/Viaje/CambiarEstadoActivoViaje/{viajeId}/estado",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -1167,8 +1387,39 @@
   },
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController",
+    "Method": "CambiarEstadoViaje",
+    "RelativePath": "api/Viaje/CambiarEstadoViaje",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioActualizaId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "viajeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estadoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController",
     "Method": "CrearViaje",
-    "RelativePath": "api/Viaje/CrearViaje/{usuarioCreaId}",
+    "RelativePath": "api/Viaje/CrearViaje",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1176,11 +1427,11 @@
       {
         "Name": "usuarioCreaId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "viaje",
-        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Dto.ViajeDto",
+        "Type": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto.ViajeDto",
         "IsRequired": true
       }
     ],
@@ -1189,7 +1440,7 @@
   {
     "ContainingType": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController",
     "Method": "ObtenerViajePorId",
-    "RelativePath": "api/Viaje/ObtenerViajePorId/{viajeId}",
+    "RelativePath": "api/Viaje/ObtenerViajePorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1197,7 +1448,7 @@
       {
         "Name": "viajeId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

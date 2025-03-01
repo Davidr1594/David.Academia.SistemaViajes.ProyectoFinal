@@ -46,7 +46,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
 
             builder.HasOne(v => v.MonedaNavigation)
                 .WithMany(m => m.Viajes)
-                .HasForeignKey(v => v.MonedaId);
+                .HasForeignKey(v => v.MonedaId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

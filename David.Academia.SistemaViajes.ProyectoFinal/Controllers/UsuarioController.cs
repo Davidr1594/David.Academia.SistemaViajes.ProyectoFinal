@@ -1,6 +1,5 @@
-﻿
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,8 +18,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
 
-        [HttpPost("CrearUsuario/{usuarioCreaId}")]
-        public async Task<IActionResult> CrearUsuario(int usuarioCreaId,[FromBody]UsuarioDto usuario)
+        [HttpPost("CrearUsuario")]
+        public async Task<IActionResult> CrearUsuario([FromQuery]int usuarioCreaId,[FromBody]UsuarioDto usuario)
         {
             var respuesta = await _usuarioService.CrearUsuario(usuarioCreaId,usuario);
 
@@ -45,8 +44,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
 
-        [HttpGet("ObtenerUsuarioPorId/{usuarioId}")]
-        public async Task<IActionResult> ObtenerUsuarioPorId(int usuarioId)
+        [HttpGet("ObtenerUsuarioPorId")]
+        public async Task<IActionResult> ObtenerUsuarioPorId([FromQuery]int usuarioId)
         {
             var respuesta = await _usuarioService.ObtenerUsuarioPorId(usuarioId);
 
@@ -58,8 +57,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
 
-        [HttpPut("ActualizarUsuario/{usuarioActualizaId}")]
-        public async Task<IActionResult> ActualizarUsuario(int usuarioActualizaId, [FromBody] UsuarioDto usuario)
+        [HttpPut("ActualizarUsuario")]
+        public async Task<IActionResult> ActualizarUsuario([FromQuery]int usuarioActualizaId, [FromBody] UsuarioDto usuario)
         {
             var respuesta= await _usuarioService.ActualizarUsuario(usuarioActualizaId, usuario);
 
@@ -71,7 +70,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         }
 
 
-        [HttpPatch("CambiarEstadoUsuario/{usuarioId}/estado")]
+        [HttpPatch("CambiarEstadoUsuario/{usuarioId}")]
         public async Task<IActionResult> EstadoRol(int usuarioId, [FromQuery] bool estado)
         {
             var respuesta = await _usuarioService.EstadoUsuario(usuarioId, estado);

@@ -1,5 +1,5 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
+﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

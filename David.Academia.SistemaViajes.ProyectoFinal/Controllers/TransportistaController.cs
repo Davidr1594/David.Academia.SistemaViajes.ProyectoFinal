@@ -1,9 +1,8 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios;
-using Microsoft.AspNetCore.Http;
+﻿
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto;
 using Microsoft.AspNetCore.Mvc;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Dto;
+
 
 namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 {

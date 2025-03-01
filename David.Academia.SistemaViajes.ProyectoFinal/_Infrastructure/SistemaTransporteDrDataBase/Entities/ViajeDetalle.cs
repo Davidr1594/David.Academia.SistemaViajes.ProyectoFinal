@@ -15,8 +15,6 @@
         public ViajeDetalle()
         { 
             DireccionDestino = string.Empty;
-            Viaje = new Viaje();
-            Colaborador = new Colaborador();
         }
     }
 }
