@@ -14,25 +14,25 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             if (usuarioDto == null)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un usuario valido.";
+                respuesta.Mensaje = Mensajes.DatosDeEntradaInvalido;
                 return respuesta;
             }
             if (string.IsNullOrWhiteSpace(usuarioDto.Nombre))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del usuario es requerido.";
+                respuesta.Mensaje = string.Format(Mensajes.ElCampoEsRequerido,"nombre");
                 return respuesta;
             }
             if (string.IsNullOrWhiteSpace(usuarioDto.Clave))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "La clave del usuario es requerida.";
+                respuesta.Mensaje = string.Format(Mensajes.ElCampoEsRequerido, "clave");
                 return respuesta;
             }
             if (usuarioDto.RolId <= 0)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "El rolId del usuario es requerido.";
+                respuesta.Mensaje = string.Format(Mensajes.ElCampoEsRequerido, "rol");
                 return respuesta;
             }
             if (usuarioDto.ColaboradorId <= 0)

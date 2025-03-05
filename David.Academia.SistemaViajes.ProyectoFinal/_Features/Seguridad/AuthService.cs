@@ -1,7 +1,6 @@
 ﻿using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -42,7 +41,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
                 var usuarioEcontrado = await _usuarioRepository.AsQueryable().FirstOrDefaultAsync(u => u.Nombre == usuario.nombre);
                 if (usuarioEcontrado == null)
                 {
-                    respuesta.Mensaje = "No se encontró un usuario con este nombre.";
+                    respuesta.Mensaje = string.Format(Mensajes.NoSeEncontroEntidadNombre, "un usuario");
                     respuesta.Datos = false;
                     return respuesta;
                 }
@@ -51,11 +50,11 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
                 if (!usuarioEcontrado.ClaveHash.SequenceEqual(claveEncriptada))
                 {
                     respuesta.Datos = false;
-                    respuesta.Mensaje = "La clave no es valida.";
+                    respuesta.Mensaje = Mensajes.ContraseniaIncorrecta;
                     return respuesta;
                 }
 
-                respuesta.Mensaje = "Accesso Correcto";
+                respuesta.Mensaje = Mensajes.AccessoCorrecto;
                 respuesta.Datos = true;
             }
             catch (DbUpdateException ex)
@@ -66,7 +65,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
             return respuesta;

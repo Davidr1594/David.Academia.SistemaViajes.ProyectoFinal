@@ -1,5 +1,4 @@
 ﻿using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features._Common0;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Enum;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
@@ -42,21 +41,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             return respuesta;
         }
 
-        public  Respuesta<bool> EsGerente(Usuario usuarioCrea)
-        {
-            var respuesta = new Respuesta<bool>();
-
-            if (usuarioCrea.RolId != (int)RolEnum.Gerente && usuarioCrea.RolId != (int)RolEnum.Administrador)
-            { 
-                respuesta.Valido = false;
-                respuesta.Mensaje = Mensajes.UsuarioNoEsGerente;
-                return respuesta;
-            }
-
-            respuesta.Valido = true;
-            return respuesta;
-        }
-
         public Respuesta<bool> ValidarKmsDeViajeAlAgregarColaborador(decimal totalKmsViaje, Viaje viaje, decimal maximoKms)
         {
             var respuesta = new Respuesta<bool>();
@@ -72,40 +56,40 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             return respuesta;
         }
 
-        public Respuesta<bool>ValidarDatosDeEntradaViaje(ViajeDto viajeDto)
+        public Respuesta<Viaje>ValidarDatosDeEntradaViaje(Viaje viajeACrear, List<int> colaboradoresId) 
         {
-            var respuesta = new Respuesta<bool> { Valido = true };
+            var respuesta = new Respuesta<Viaje> { Valido = true };
 
 
-            if (viajeDto == null)
+            if (viajeACrear == null)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = Mensajes.DatosDeEntradaInvalido;
                 return respuesta;
             }
 
-            if (viajeDto.SucursalId <= 0)
+            if (viajeACrear.SucursalId <= 0)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = string.Format(Mensajes.DatosDeEntradaInvalidoEntidad, "la sucursal");
                 return respuesta;
             }
 
-            if (viajeDto.TransportistaId <= 0)
+            if (viajeACrear.TransportistaId <= 0)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = string.Format(Mensajes.DatosDeEntradaInvalidoEntidad, "el transportista");
                 return respuesta;
             }
 
-            if (viajeDto.MonedaId <= 0)
+            if (viajeACrear.MonedaId <= 0)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = string.Format(Mensajes.DatosDeEntradaInvalidoEntidad, "la moneda.");
                 return respuesta;
             }
 
-            if (viajeDto.FechaViaje.Date < DateTime.Now.Date)
+            if (viajeACrear.FechaViaje.Date < DateTime.Now.Date)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = Mensajes.FechaNoValida;
@@ -113,14 +97,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             }
 
 
-            if (viajeDto.HoraSalida == TimeSpan.Zero)
+            if (viajeACrear.HoraSalida == TimeSpan.Zero)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = Mensajes.HoraNoValida;
                 return respuesta;
             }
 
-            if (viajeDto.ColaboradoresId == null || !viajeDto.ColaboradoresId.Any())
+            if (colaboradoresId == null || !colaboradoresId.Any())
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = Mensajes.NoSeRecibieronColaboradores;
@@ -158,7 +142,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
         }
 
 
-        public Respuesta<bool> ValidarRespuestasDeBD(Sucursal sucursal, Usuario usucarioCrea, Transportista transportista, List<ColaboradorConKmsDto> colaboradoresDetalle, List<int> colaboradoresEnViaje )
+        public Respuesta<bool> ValidarRespuestasDeBD(Sucursal sucursal, Usuario usuarioCrea, Transportista transportista, List<ColaboradorConKmsDto> colaboradoresDetalle, List<int> colaboradoresEnViaje )
         {
             var respuesta = new Respuesta<bool> { Valido = true };
 
@@ -170,10 +154,16 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
                 return respuesta;
             }
-            if (usucarioCrea.UsuarioId == 0)
+            if (usuarioCrea.UsuarioId == 0)
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Gerente");
+                return respuesta;
+            }
+            if (usuarioCrea.RolId != (int)RolEnum.Gerente && usuarioCrea.RolId != (int)RolEnum.Administrador)
+            {
+                respuesta.Valido = false;
+                respuesta.Mensaje = Mensajes.UsuarioNoEsGerente;
                 return respuesta;
             }
             if (transportista.TransportistaId <= 0)
@@ -198,6 +188,65 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             return respuesta;
         }
 
+        public Respuesta<Viaje> ProcesarDatosDeViajeAGuardar(Viaje viajeACrear, int usuarioCreaId, decimal totalKmsConCalculoDistancia, Transportista transportista)
+        {
+            var respuesta = new Respuesta<Viaje>();
+
+            viajeACrear.UsuarioCrea = usuarioCreaId;
+            viajeACrear.TotalKms = totalKmsConCalculoDistancia;
+            viajeACrear.MontoTotal = transportista.TarifaPorKm * totalKmsConCalculoDistancia;
+            viajeACrear.EstadoId = (int)EstadoViajeEnum.Pendiente;
+            viajeACrear.Activo = true;
+
+            respuesta.Datos = viajeACrear;
+            return respuesta;
+        }
+
+        public Respuesta<List<ViajeDetalle>> ProcesarDatosDetalleViajeAGuardar(List<ColaboradorConKmsDto> colaboradoresDetalle, int viajeId)
+        {
+            var respuesta = new Respuesta<List<ViajeDetalle>>();
+
+            var viajeDetalleAGuardar = new List<ViajeDetalle>();
+            foreach (var colaborador in colaboradoresDetalle)
+            {
+                var viajeDetalle = new ViajeDetalle()
+                {
+                    ViajeId = viajeId,
+                    ColaboradorId = colaborador.ColaboradorId,
+                    DireccionDestino = colaborador.DireccionDestino,
+                    Kms = colaborador.DistanciaKms,
+                };
+
+                viajeDetalleAGuardar.Add(viajeDetalle);
+            }
+            respuesta.Datos = viajeDetalleAGuardar;
+
+            return respuesta;
+
+        }
+
+        public Respuesta<List<ViajeDetalle>>ProcesarDatosAgregarColaboradorAViaje(List<ColaboradorConKmsDto> colaboradoresValidos, int viajeId)
+        {
+            var respuesta = new Respuesta<List<ViajeDetalle>>();
+
+            var viajeDetalleAGuardar = new List<ViajeDetalle>();
+
+            foreach (var colaborador in colaboradoresValidos)
+            {
+                var viajeDetalle = new ViajeDetalle()
+                {
+                    ViajeId = viajeId,
+                    ColaboradorId = colaborador.ColaboradorId,
+                    DireccionDestino = colaborador.DireccionDestino,
+                    Kms = colaborador.DistanciaKms,
+                };
+
+                viajeDetalleAGuardar.Add(viajeDetalle);
+            }
+            respuesta.Datos = viajeDetalleAGuardar;
+
+            return respuesta;
+        }
     }
 
 

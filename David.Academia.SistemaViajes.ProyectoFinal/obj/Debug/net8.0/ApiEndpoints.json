@@ -1399,11 +1399,6 @@
         "IsRequired": false
       },
       {
-        "Name": "sucursalId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
         "Name": "viajeId",
         "Type": "System.Int32",
         "IsRequired": false

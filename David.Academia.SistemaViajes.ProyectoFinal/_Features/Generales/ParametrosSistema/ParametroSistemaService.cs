@@ -12,36 +12,38 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<ParametroSistema> _parametroSistemaRepository;
+        private readonly ParametroSistemaDomain _parametroSistemaDomain;
         private readonly IMapper _mapper;
 
 
-        public ParametroSistemaService(UnitOfWorkBuilder unitOfWork, IMapper mapper)
+        public ParametroSistemaService(UnitOfWorkBuilder unitOfWork, IMapper mapper, ParametroSistemaDomain parametroSistemaDomain)
         {
             _unitOfWork = unitOfWork.BuildSistemaDeTransporte();
             _parametroSistemaRepository = _unitOfWork.Repository<ParametroSistema>();
             _mapper = mapper;
+            _parametroSistemaDomain = parametroSistemaDomain;
         }
 
         public async Task<Respuesta<ParametroSistemaDto>> CrearParametroSistema(int usuarioCreaId, ParametroSistemaDto parametroDto)
         {
             var respuesta = new Respuesta<ParametroSistemaDto>();
 
-            if (parametroDto == null)
+            var respuestaValidarEntrada = _parametroSistemaDomain.ValidarDatosDeEntrada(parametroDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un parámetro válido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(parametroDto.Descripcion) || string.IsNullOrWhiteSpace(parametroDto.Descripcion))
+
+            var yaExisteDescripcion = await _parametroSistemaRepository.AsQueryable()
+                .AnyAsync(p => p.Descripcion.ToLower() == parametroDto.Descripcion.ToLower());
+
+            var respuestaValidarBD = _parametroSistemaDomain.ValidarRespuestaDeBD(yaExisteDescripcion);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del parámetro es requerido.";
-                return respuesta;
-            }
-            if (await _parametroSistemaRepository.AsQueryable().AnyAsync(p => p.Descripcion.ToLower() == parametroDto.Descripcion.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un parámetro con este nombre.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
 
@@ -54,7 +56,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<ParametroSistemaDto>(parametroACrear);
-                respuesta.Mensaje = "Parámetro creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -64,12 +66,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
+
 
         public async Task<Respuesta<List<ParametroSistemaDto>>> ObtenerParametrosSistema()
         {
@@ -81,7 +84,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
                 if (parametros.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay parámetros";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -97,13 +100,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -120,7 +123,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
                 if (parametro == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Parámetro no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var parametroDto = _mapper.Map<ParametroSistemaDto>(parametro);
 
@@ -129,13 +132,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -151,7 +154,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
 
                 if (parametroEncontrado == null)
                 {
-                    respuesta.Mensaje = "Parámetro no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Parámetro no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -167,13 +170,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -189,17 +192,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
 
                 if (parametroEncontrado == null)
                 {
-                    respuesta.Mensaje = "Parámetro no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Parámetro ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
                 else
                 {
-                    respuesta.Mensaje = "Parámetro ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 parametroEncontrado.Activo = estado;
@@ -209,13 +212,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paramet
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

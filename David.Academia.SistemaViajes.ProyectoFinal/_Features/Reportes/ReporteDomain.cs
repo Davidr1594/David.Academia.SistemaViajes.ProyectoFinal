@@ -11,21 +11,21 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
             if (transportistaId <= 0)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "El ID del transportista no es válido.";
+                respuesta.Mensaje = string.Format(Mensajes.ElCampoEsRequerido, "Transportista");
                 return respuesta;
             }
 
             if (fechaInicio.Date == DateTime.MinValue || fechaFin.Date == DateTime.MinValue)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Las fechas no pueden estar vacías.";
+                respuesta.Mensaje = Mensajes.FechaNoValida;
                 return respuesta;
             }
 
             if (fechaInicio.Date > fechaFin.Date)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "La fecha de inicio no puede ser mayor que la fecha de fin.";
+                respuesta.Mensaje = Mensajes.FechaNoValida;
                 return respuesta;
             }
             return respuesta;

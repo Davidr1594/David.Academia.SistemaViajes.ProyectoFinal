@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features._Common0;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -29,10 +27,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
         }
 
         public async Task<Respuesta<ColaboradorDto>> CrearColaborador(int usuarioCreaId, ColaboradorDto colaboradorDto)
-        {
+        {   
             var respuesta = new Respuesta<ColaboradorDto>();
 
-            var respuestaValidarEntradaDatos = _colaboradorDomain.ValidarCreacionColaborador(colaboradorDto);
+            var respuestaValidarEntradaDatos = _colaboradorDomain.ValidarDatosDeEntrada(colaboradorDto);
             if (!respuestaValidarEntradaDatos.Valido)
             {
                 respuesta.Valido = respuestaValidarEntradaDatos.Valido;
@@ -40,43 +38,32 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
                 return respuesta;
             }
 
-            if (await _colaboradorRepository.AsQueryable().AnyAsync(c => c.Email.ToLower() == colaboradorDto.Email.ToLower()))
+            var yaExisteCorreo = await _colaboradorRepository.AsQueryable().AnyAsync(c => c.Email.ToLower() == colaboradorDto.Email.ToLower());
+            var yaExisteNombre = await _colaboradorRepository.AsQueryable().AnyAsync(c => c.Nombre.ToLower() == colaboradorDto.Nombre.ToLower());
+            var existePuesto = await _unitOfWork.Repository<Puesto>().AsQueryable().AnyAsync(p => p.PuestoId == colaboradorDto.PuestoId);
+            var existeCiudad = await _unitOfWork.Repository<Ciudad>().AsQueryable().AnyAsync(c => c.CiudadId == colaboradorDto.CiudadId);
+
+            var respuestaValidarBaseDatps = _colaboradorDomain.ValidarRespuestaDeBD(yaExisteCorreo,yaExisteNombre,existePuesto,existeCiudad);
+            if (!respuestaValidarBaseDatps.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un colaborador con el mismo correo.";
+                respuesta.Valido = respuestaValidarBaseDatps.Valido;
+                respuesta.Mensaje = respuestaValidarBaseDatps.Mensaje;
                 return respuesta;
             }
-            if (await _colaboradorRepository.AsQueryable().AnyAsync(c => c.Nombre.ToLower() == colaboradorDto.Nombre.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un colaborador con este nombre.";
-                return respuesta;
-            }
-            if (!await _unitOfWork.Repository<Puesto>().AsQueryable().AnyAsync(p => p.PuestoId == colaboradorDto.PuestoId))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Puesto no existe o esta inactivo.";
-                return respuesta;
-            }
-            if (!await _unitOfWork.Repository<Ciudad>().AsQueryable().AnyAsync(c => c.CiudadId == colaboradorDto.CiudadId))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ciudad no existe o esta inactivo.";
-                return respuesta;
-            }
+
             var colaborador = _mapper.Map<Colaborador>(colaboradorDto);
             colaborador.UsuarioCrea = usuarioCreaId;
+
             var convertirCordenadasADireccion = await _manejoDistanciasService.ObtenerDireccionDesdeCordenadas(colaboradorDto.Latitud, colaboradorDto.Longitud);
             colaborador.Direccion = convertirCordenadasADireccion;
 
             try
             {
-
                 await _colaboradorRepository.AddAsync(colaborador);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<ColaboradorDto>(colaborador);
-                respuesta.Mensaje = "Colaborador creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -86,7 +73,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

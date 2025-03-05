@@ -2,7 +2,6 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -14,50 +13,51 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Pais> _paisRepository;
+        private readonly PaisDomain _paisDomain;
         private readonly IMapper _mapper;
 
-        public PaisService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public PaisService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, PaisDomain paisDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _paisRepository = _unitOfWork.Repository<Pais>();
             _mapper = mapper;
+            _paisDomain = paisDomain;
         }
 
         public async Task<Respuesta<PaisDto>> CrearPais(PaisDto paisDto)
         {
-
             var respuesta = new Respuesta<PaisDto>();
 
+            var respuestaValidarEntrada = _paisDomain.ValidarDatosDeEntrada(paisDto);
+            if (!respuestaValidarEntrada.Valido)
+            {
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
+                return respuesta;
+            }
 
-            if (paisDto == null)
+            var yaExisteNombre = await _paisRepository.AsQueryable()
+                                                     .AnyAsync(p => p.Nombre.ToLower() == paisDto.Nombre.ToLower());
+            var existeMoneda = await _unitOfWork.Repository<Moneda>().AsQueryable()
+                                                     .AnyAsync(m => m.MonedaId == paisDto.MonedaId);
+
+            var respuestaValidarBD = _paisDomain.ValidarRespuestaDeBD(yaExisteNombre, existeMoneda);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un rol valido.";
-                return respuesta;
-            }
-            if (string.IsNullOrEmpty(paisDto.Nombre) || string.IsNullOrWhiteSpace(paisDto.Nombre))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del rol es requerido.";
-                return respuesta;
-            }
-            if (await _paisRepository.AsQueryable().AnyAsync(p => p.Nombre.ToLower() == paisDto.Nombre.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un rol con este nombre.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
 
             try
             {
-
                 var pais = _mapper.Map<Pais>(paisDto);
 
                 await _paisRepository.AddAsync(pais);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<PaisDto>(pais);
-                respuesta.Mensaje = "Pais creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -67,7 +67,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -84,7 +84,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
                 if (paises.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Paises";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -101,13 +101,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -124,7 +124,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
                 if (pais == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Pais no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var paisDto = _mapper.Map<PaisDto>(pais);
 
@@ -133,13 +133,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
             return respuesta;
@@ -154,7 +154,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
 
                 if (paisEncontrado == null)
                 {
-                    respuesta.Mensaje = "Rol no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Pais");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -162,19 +162,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
                 _mapper.Map(paisDto, paisEncontrado);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Pais actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = paisDto;
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -190,40 +190,40 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises
 
                 if (paisEncontrado == null)
                 {
-                    respuesta.Mensaje = "Pais no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
+
                 if (estado)
                 {
-                    respuesta.Mensaje = "Pais ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
                 else if (!estado)
                 {
-                    respuesta.Mensaje = "Pais ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 paisEncontrado.Activo = estado;
                 respuesta.Datos = true;
 
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
+
     }
 }

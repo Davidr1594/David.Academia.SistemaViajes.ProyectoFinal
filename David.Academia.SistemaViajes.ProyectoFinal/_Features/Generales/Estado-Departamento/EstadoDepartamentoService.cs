@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Estado_Departamento;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,36 +13,40 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<EstadoDepartamento> _estadoDepartamentoRepository;
+        private readonly EstadoDepartamentoDomain _estadoDepartamentoDomain;
         private readonly IMapper _mapper;
 
 
-        public EstadoDepartamentoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public EstadoDepartamentoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, EstadoDepartamentoDomain estadoDepartamentoDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _estadoDepartamentoRepository = _unitOfWork.Repository<EstadoDepartamento>();
             _mapper = mapper;
+            _estadoDepartamentoDomain = estadoDepartamentoDomain;
         }
 
         public async Task<Respuesta<EstadoDepartamentoDto>> CrearEstadoDepartamento(EstadoDepartamentoDto estadoDepartamentoDto)
         {
             var respuesta = new Respuesta<EstadoDepartamentoDto>();
 
-            if (estadoDepartamentoDto == null)
+            var respuestaValidarEntrada = _estadoDepartamentoDomain.ValidarDatosDeEntrada(estadoDepartamentoDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió una EstadoDepartamento valida.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(estadoDepartamentoDto.Nombre) || string.IsNullOrWhiteSpace(estadoDepartamentoDto.Nombre))
+
+            var yaExisteNombre = await _estadoDepartamentoRepository.AsQueryable()
+                                                                    .AnyAsync(ed => ed.Nombre.ToLower() == estadoDepartamentoDto.Nombre.ToLower());
+            var existePais = await _unitOfWork.Repository<Pais>().AsQueryable()
+                                                                    .AnyAsync(p => p.PaisId == estadoDepartamentoDto.PaisId);
+
+            var respuestaValidarBD = _estadoDepartamentoDomain.ValidarRespuestaDeBD(yaExisteNombre, existePais);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre de la EstadoDepartamento es requerido.";
-                return respuesta;
-            }
-            if (await _estadoDepartamentoRepository.AsQueryable().AnyAsync(ed => ed.Nombre.ToLower() == estadoDepartamentoDto.Nombre.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un EstadoDepartamento con este nombre.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
 
@@ -54,7 +58,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<EstadoDepartamentoDto>(estadoDepartamento);
-                respuesta.Mensaje = "EstadoDepartamento creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -64,12 +68,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
+
 
         public async Task<Respuesta<List<EstadoDepartamentoDto>>> ObtenerEstadosDepartamentos()
         {
@@ -81,7 +86,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (estadosDepartamentos.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay EstadosDepartamentos";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -98,13 +103,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -121,7 +126,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (estadoDepartamento == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "EstadoDepartamento no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var ciudadDto = _mapper.Map<EstadoDepartamentoDto>(estadoDepartamento);
 
@@ -130,13 +135,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -152,7 +157,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
 
                 if (estadoDepartamentoEncontrado == null)
                 {
-                    respuesta.Mensaje = "ÈstadoDepartamento no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Estado no esite");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -160,19 +165,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 _mapper.Map(estadoDepartamento, estadoDepartamentoEncontrado);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "EstadoDepartamento actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<EstadoDepartamentoDto>(estadoDepartamentoEncontrado);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -188,17 +193,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
 
                 if (estadoDepartamentoEncontrado == null)
                 {
-                    respuesta.Mensaje = "EstadoDepartamento no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "EstadoDepartamento ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
                 else if (!estado)
                 {
-                    respuesta.Mensaje = "EstadoDepartamento ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 estadoDepartamentoEncontrado.Activo = estado;
@@ -211,13 +216,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

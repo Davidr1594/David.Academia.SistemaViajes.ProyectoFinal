@@ -42,9 +42,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
 
         [HttpPatch("CambiarEstadoViaje")]
-        public async Task<IActionResult> CambiarEstadoViaje([FromQuery] int usuarioActualizaId,[FromQuery]int sucursalId, [FromQuery] int viajeId, [FromQuery] int estadoId)
+        public async Task<IActionResult> CambiarEstadoViaje([FromQuery] int usuarioActualizaId,[FromQuery] int viajeId, [FromQuery] int estadoId)
         {
-            var respuesta = await _viajeService.ActualizadoEstadoViaje(usuarioActualizaId, sucursalId,viajeId,estadoId);
+            var respuesta = await _viajeService.ActualizadoEstadoViaje(usuarioActualizaId,viajeId,estadoId);
 
             if (!respuesta.Valido)
             {

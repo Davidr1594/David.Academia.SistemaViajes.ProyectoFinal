@@ -16,6 +16,9 @@ public class ManejoDistanciasService
         _httpClient = httpClient;
         _googleMapsSettings = googleMapsSettings.Value;
     }
+    public ManejoDistanciasService()
+    {
+    }
 
     public async Task<string> ObtenerDireccionDesdeCordenadas(decimal latitud, decimal longitud)
     {
@@ -47,7 +50,7 @@ public class ManejoDistanciasService
     }
 
 
-    public async Task<decimal> ObtenerDistanciaEntreSucursalColaborador(decimal latitudOrigen, decimal longitudOrigen, decimal latitudDestino, decimal longitudDestino)
+    public async Task<decimal> ObtenerDistanciaEntreSucursalColaborador(decimal? latitudOrigen, decimal? longitudOrigen, decimal? latitudDestino, decimal? longitudDestino)
     {
         if (latitudOrigen < -90 || latitudOrigen > 90)
         {
@@ -112,14 +115,19 @@ public class ManejoDistanciasService
                     colaboradores[i].latitud, colaboradores[i].longitud,
                     colaboradores[j].latitud, colaboradores[j].longitud);
 
-                
+
+                var distanciaMasLarga = 0m;
+                if (colaboradores[i].DistanciaKms > colaboradores[j].DistanciaKms) { distanciaMasLarga = colaboradores[i].DistanciaKms; }
+                else { distanciaMasLarga = colaboradores[j].DistanciaKms; }
+
+
                 if (distanciaEntreColaboradores <= umbralProximidadKm)
                 {
                     
                     distanciaTotal += Math.Abs(colaboradores[j].DistanciaKms - colaboradores[i].DistanciaKms);
 
                     colaboradoresProcesados.Add(colaboradores[j].ColaboradorId);
-                } else if (distanciaEntreColaboradores > (colaboradores[j].DistanciaKms + umbralProximidadKm))
+                } else if (distanciaEntreColaboradores > (distanciaMasLarga + umbralProximidadKm))
                 {
                     respuesta.Valido = false;
                     respuesta.Mensaje = $"Colaborador {colaboradores[j].Nombre} supera la distancia permitida entre colaboradores.";

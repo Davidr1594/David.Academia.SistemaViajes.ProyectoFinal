@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features._Common0;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -14,37 +12,41 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Pue
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Puesto> _puestoRepository;
+        private readonly PuestoDomain _puestoDomain;
         private readonly IMapper _mapper;
 
-        public PuestoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public PuestoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, PuestoDomain puestoDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _puestoRepository = _unitOfWork.Repository<Puesto>();
             _mapper = mapper;
+            _puestoDomain = puestoDomain;
         }
 
         public async Task<Respuesta<PuestoDto>> CrearPuesto(PuestoDto puestoDto)
         {
             var respuesta = new Respuesta<PuestoDto>();
 
-            if (puestoDto == null)
+            var respuestaValidarEntrada = _puestoDomain.ValidarDatosDeEntrada(puestoDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un puesto válido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(puestoDto.Nombre) || string.IsNullOrWhiteSpace(puestoDto.Nombre))
+
+
+            var yaExisteNombre = await _puestoRepository.AsQueryable()
+                .AnyAsync(p => p.Nombre.ToLower() == puestoDto.Nombre.ToLower());
+
+            var respuestaValidarBD = _puestoDomain.ValidarRespuestaDeBD(yaExisteNombre);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del puesto es requerido.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
-            if (await _puestoRepository.AsQueryable().AnyAsync(p => p.Nombre.ToLower() == puestoDto.Nombre.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un puesto con este nombre.";
-                return respuesta;
-            }
+
 
             try
             {
@@ -54,7 +56,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Pue
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<PuestoDto>(puesto);
-                respuesta.Mensaje = "Puesto creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -64,7 +66,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Pue
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

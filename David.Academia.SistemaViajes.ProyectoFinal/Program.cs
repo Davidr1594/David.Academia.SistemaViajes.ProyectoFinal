@@ -1,9 +1,9 @@
-using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps.Entities;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Estado_Departamento;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago;
@@ -18,9 +18,7 @@ using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Controllers;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 
@@ -72,6 +70,7 @@ builder.Services.AddDbContext<SistemaTransporteDrContext>(o => o.UseSqlServer(
 // Servicios de Aplicación
 builder.Services.AddScoped<UnitOfWorkBuilder>();
 
+#region clases de servicios
 builder.Services.AddTransient<RolService>();
 builder.Services.AddTransient<UsuarioService>();
 builder.Services.AddTransient<AuthService>();
@@ -89,16 +88,33 @@ builder.Services.AddTransient<PuestoService>();
 builder.Services.AddTransient<ViajeService>();
 builder.Services.AddTransient<ParametroSistemaService>();
 builder.Services.AddTransient<ReportesService>();
+#endregion
 
-
-
+#region Domains
 builder.Services.AddScoped<UsuarioDomain>();
 builder.Services.AddScoped<AuthDomain>();
 builder.Services.AddScoped<ViajeDomain>();
 builder.Services.AddScoped<SucursalDomain>();
 builder.Services.AddScoped<ReporteDomain>();
 builder.Services.AddScoped<ColaboradorDomain>();
+builder.Services.AddScoped<PuestoDomain>();
+builder.Services.AddScoped<CiudadDomain>();
+builder.Services.AddScoped<EstadoDepartamentoDomain>();
+builder.Services.AddScoped<PaisDomain>();
+builder.Services.AddScoped<ParametroSistemaDomain>();
+builder.Services.AddScoped<EstadoPagoDomain>();
+builder.Services.AddScoped<MetodoPagoDomain>();
+builder.Services.AddScoped<MonedaDomain>();
+builder.Services.AddScoped<RolDomain>();
+builder.Services.AddScoped<EstadoViajeDomain>();
+builder.Services.AddScoped<TransportistaDomain>();
 
+
+
+
+
+
+#endregion
 
 
 

@@ -2,7 +2,6 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,49 +12,49 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<EstadoPago> _estadoPagoRepository;
+        private readonly EstadoPagoDomain _estadoPagoDomain;
         private readonly IMapper _mapper;
 
-        public EstadoPagoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public EstadoPagoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, EstadoPagoDomain estadoPagoDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _estadoPagoRepository = _unitOfWork.Repository<EstadoPago>();
             _mapper = mapper;
+            _estadoPagoDomain = estadoPagoDomain;
         }
 
         public async Task<Respuesta<EstadoPagoDto>> CrearEstadoPago(EstadoPagoDto estadoPagoDto)
         {
             var respuesta = new Respuesta<EstadoPagoDto>();
 
-            if (estadoPagoDto == null)
+            var respuestaValidarEntrada = _estadoPagoDomain.ValidarDatosDeEntrada(estadoPagoDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un estado de pago válido.";
-                return respuesta;
-            }
-            if (string.IsNullOrEmpty(estadoPagoDto.Nombre) || string.IsNullOrWhiteSpace(estadoPagoDto.Nombre))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del estado de pago es requerido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
 
+            var yaExisteNombre = await _estadoPagoRepository.AsQueryable()
+                                                          .AnyAsync(ep => ep.Nombre.ToLower() == estadoPagoDto.Nombre.ToLower());
+
+            var respuestaValidarBD = _estadoPagoDomain.ValidarRespuestaDeBD(yaExisteNombre);
+            if (!respuestaValidarBD.Valido)
+            {
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
+                return respuesta;
+            }
 
             try
             {
-                if (await _estadoPagoRepository.AsQueryable().AnyAsync(ep => ep.Nombre.ToLower() == estadoPagoDto.Nombre.ToLower()))
-                {
-                    respuesta.Valido = false;
-                    respuesta.Mensaje = "Ya existe un estado de pago con este nombre.";
-                    return respuesta;
-                }
-
                 var estadoPago = _mapper.Map<EstadoPago>(estadoPagoDto);
 
                 await _estadoPagoRepository.AddAsync(estadoPago);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<EstadoPagoDto>(estadoPago);
-                respuesta.Mensaje = "Rol creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -65,12 +64,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
+
 
         public async Task<Respuesta<List<EstadoPagoDto>>> ObtenerEstadosPagos()
         {
@@ -82,7 +82,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
                 if (estadosPagos.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Estados de pagos";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -94,18 +94,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
                 }
 
                 respuesta.Datos = estadosPagosDto;
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -122,7 +121,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
                 if (estadoPago == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Estado de pago no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var rolDto = _mapper.Map<EstadoPagoDto>(estadoPago);
 
@@ -131,13 +130,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -153,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
 
                 if (estadoPagoEncontrado == null)
                 {
-                    respuesta.Mensaje = "Estado de pago no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Estado de pago no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -161,19 +160,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
                 _mapper.Map(estadoPago, estadoPagoEncontrado);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Estado de pago actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<EstadoPagoDto>(estadoPagoEncontrado);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -189,36 +188,34 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePag
 
                 if (estadoPagoEncontrado == null)
                 {
-                    respuesta.Mensaje = "Estado de pago no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Estado de pago ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Estado de pago ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 estadoPagoEncontrado.Activo = estado;
                 respuesta.Datos = true;
 
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

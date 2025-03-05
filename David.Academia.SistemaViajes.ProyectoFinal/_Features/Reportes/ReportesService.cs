@@ -1,6 +1,5 @@
 ﻿using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes.Dto;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes.Enum;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
@@ -38,7 +37,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
             if (transportista == null)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Transportista no existe o esta inactivo.";
+                respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Transportista");
                 return respuesta;
             }
             try
@@ -63,7 +62,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
                 if (reporte.Count <= 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Error al obtener el reporte";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -87,7 +86,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -133,7 +132,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
                 if (reporte.Count <= 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Error al obtener el reporte";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -148,7 +147,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
             return respuesta;

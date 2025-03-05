@@ -2,7 +2,6 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,48 +12,49 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Moneda> _monedaRepository;
+        private readonly MonedaDomain _monedaDomain;
         private readonly IMapper _mapper;
 
-        public MonedaService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public MonedaService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, MonedaDomain monedaDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _monedaRepository = _unitOfWork.Repository<Moneda>();
             _mapper = mapper;
+            _monedaDomain = monedaDomain;
         }
 
         public async Task<Respuesta<MonedaDto>> CrearMoneda(MonedaDto monedaDto)
         {
             var respuesta = new Respuesta<MonedaDto>();
 
-            if (monedaDto == null)
+            var respuestaValidarEntrada = _monedaDomain.ValidarDatosDeEntrada(monedaDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió una moneda valido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(monedaDto.Nombre) || string.IsNullOrWhiteSpace(monedaDto.Nombre))
+
+            var yaExisteNombre = await _monedaRepository.AsQueryable()
+                                                        .AnyAsync(m => m.Nombre.ToLower() == monedaDto.Nombre.ToLower());
+
+            var respuestaValidarBD = _monedaDomain.ValidarRespuestaDeBD(yaExisteNombre);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre de la moneda es requerido.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
 
             try
             {
-                if (await _monedaRepository.AsQueryable().AnyAsync(m => m.Nombre.ToLower() == monedaDto.Nombre.ToLower()))
-                {
-                    respuesta.Valido = false;
-                    respuesta.Mensaje = "Ya existe una moneda con este nombre.";
-                    return respuesta;
-                }
-
                 var moneda = _mapper.Map<Moneda>(monedaDto);
 
                 await _monedaRepository.AddAsync(moneda);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<MonedaDto>(moneda);
-                respuesta.Mensaje = "Moneda creada con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -64,12 +64,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
+
 
         public async Task<Respuesta<List<MonedaDto>>> ObtenerMonedas()
         {
@@ -81,7 +82,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
                 if (monedas.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Monedas";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -93,18 +94,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
                 }
 
                 respuesta.Datos = monedasDto;
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -121,7 +121,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
                 if (moneda == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Moneda no encontrada.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var monedaDto = _mapper.Map<MonedaDto>(moneda);
 
@@ -130,13 +130,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -152,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
 
                 if (monedaEncontrada == null)
                 {
-                    respuesta.Mensaje = "Moneda no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Moneda no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -160,19 +160,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
                 _mapper.Map(moneda, monedaEncontrada);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Moneda actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<MonedaDto>(monedaEncontrada);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -184,40 +184,38 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaServi
             var respuesta = new Respuesta<bool>();
             try
             {
-                var rolEncontrado = await _monedaRepository.AsQueryable().FirstOrDefaultAsync(m => m.MonedaId == monedaId);
+                var monedaEncontrada = await _monedaRepository.AsQueryable().FirstOrDefaultAsync(m => m.MonedaId == monedaId);
 
-                if (rolEncontrado == null)
+                if (monedaEncontrada == null)
                 {
-                    respuesta.Mensaje = "Moneda no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Moneda ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Moneda ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
-                rolEncontrado.Activo = estado;
+                monedaEncontrada.Activo = estado;
                 respuesta.Datos = true;
 
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

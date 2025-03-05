@@ -30,11 +30,11 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
         {
             var respuesta = new Respuesta<bool>();
 
-            //validad si ya existe una relacion
-            if (colaboradorId <= 0 || sucursalId <= 0)
+            var respuestaValidarDatosEntrada = _sucursalDomain.ValidarDatosDeEntradaRelacion(sucursalId, colaboradorId);
+            if (!respuestaValidarDatosEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Se debe de recibir una sucursal y colaborador valido.";
+                respuesta.Valido = respuestaValidarDatosEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarDatosEntrada.Mensaje;
                 return respuesta;
             }
             try
@@ -46,20 +46,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                                                 .AsQueryable().AsNoTracking()
                                                 .FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
 
-                if (colaborador == null || sucursal == null)
+                var respuestaValidarDatosBaseDatos = _sucursalDomain.ValidarDatosBDRelacion(colaborador, sucursal);
+                if(!respuestaValidarDatosBaseDatos.Valido)
                 {
-                    respuesta.Valido = false;
-                    respuesta.Mensaje = "El colaborador o la sucursal no existe en la base de datos.";
+                    respuesta.Valido = respuestaValidarDatosBaseDatos.Valido;
+                    respuesta.Mensaje = respuestaValidarDatosBaseDatos.Mensaje;
                     return respuesta;
                 }
-                if (await _unitOfWork.Repository<SucursalColaborador>().AsQueryable().AsNoTracking().AnyAsync(sc => sc.ColaboradorId == colaborador.ColaboradorId && sc.SucursalId == sucursal.SucursalId))
-                {
-                    respuesta.Valido = false;
-                    respuesta.Mensaje = "Ya existe la relacion entre esta sucursal y este colaborador.";
-                    return respuesta;
-                }
-
-                var kmsDeDistancia = await _manejoDistanciasService.ObtenerDistanciaEntreSucursalColaborador(sucursal.Latitud, sucursal.Longitud, colaborador.Latitud, colaborador.Longitud);
+                var kmsDeDistancia = await _manejoDistanciasService.ObtenerDistanciaEntreSucursalColaborador(sucursal!.Latitud, sucursal.Longitud, colaborador!.Latitud, colaborador.Longitud);
 
                 var sucursalColaborador = new SucursalColaborador()
                 {
@@ -71,7 +65,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 await _unitOfWork.Repository<SucursalColaborador>().AddAsync(sucursalColaborador);
                 await _unitOfWork.SaveChangesAsync();
 
-                respuesta.Mensaje = "Relacion entre colaborador y sucursal guardada con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = true;
 
             }
@@ -83,7 +77,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -106,7 +100,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             if (await _sucursalRepository.AsQueryable().AnyAsync(c => c.Nombre.ToLower() == sucursalDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe una sucursal con este nombre.";
+                respuesta.Mensaje = Mensajes.YaExisteRegistro;
                 return respuesta;
             }
 
@@ -123,7 +117,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<SucursalDto>(sucursal); ;
-                respuesta.Mensaje = "Sucursal creada con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -134,7 +128,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }
@@ -152,7 +146,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (sucursales.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Sucursales";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -164,19 +158,18 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 }
 
                 respuesta.Datos = sucursalesDto;
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
                 return respuesta;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }
@@ -192,7 +185,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (sucursalId <= 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Id de Sucursal no válido.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
                 var sucursal = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
@@ -200,23 +193,23 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 if (sucursal == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Sucursal no encontrada.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
-                var rolDto = _mapper.Map<SucursalDto>(sucursal);
+                var sucursalDto = _mapper.Map<SucursalDto>(sucursal);
 
-                respuesta.Datos = rolDto;
+                respuesta.Datos = sucursalDto;
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
                 return respuesta;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }
@@ -233,7 +226,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
 
                 if (sucursalEncontrada == null)
                 {
-                    respuesta.Mensaje = "Sucursal no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Sucursal no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -246,20 +239,20 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
                 sucursalEncontrada.Direccion = convertirCordenadasADireccion;
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Sucursal actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = sucursalDto;
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
                 return respuesta;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }
@@ -272,41 +265,39 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             var respuesta = new Respuesta<bool>();
             try
             {
-                var SucursalEncontrada = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
+                var sucursalEncontrada = await _sucursalRepository.AsQueryable().FirstOrDefaultAsync(s => s.SucursalId == sucursalId);
 
-                if (SucursalEncontrada == null)
+                if (sucursalEncontrada == null)
                 {
-                    respuesta.Mensaje = "Sucursal no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Sucursal ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Sucursal ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
-                SucursalEncontrada.Activo = estado;
+                sucursalEncontrada.Activo = estado;
                 respuesta.Datos = true;
 
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
                 return respuesta;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }

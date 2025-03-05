@@ -2,7 +2,6 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,48 +12,48 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<MetodoPago> _metodoPagoRepository;
+        private readonly MetodoPagoDomain _metodoPagoDomain;
         private readonly IMapper _mapper;
 
-        public MetodoPagoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public MetodoPagoService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, MetodoPagoDomain metodoPagoDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _metodoPagoRepository = _unitOfWork.Repository<MetodoPago>();
             _mapper = mapper;
+            _metodoPagoDomain = metodoPagoDomain;
         }
-
         public async Task<Respuesta<MetodoPagoDto>> CrearMetodoPago(MetodoPagoDto metodoPagoDto)
         {
             var respuesta = new Respuesta<MetodoPagoDto>();
 
-            if (metodoPagoDto == null)
+            var respuestaValidarEntrada = _metodoPagoDomain.ValidarDatosDeEntrada(metodoPagoDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un Metodo de pago valido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(metodoPagoDto.Nombre) || string.IsNullOrWhiteSpace(metodoPagoDto.Nombre))
+
+            var yaExisteNombre = await _metodoPagoRepository.AsQueryable()
+                                                             .AnyAsync(mp => mp.Nombre.ToLower() == metodoPagoDto.Nombre.ToLower());
+
+            var respuestaValidarBD = _metodoPagoDomain.ValidarRespuestaDeBD(yaExisteNombre);
+            if (!respuestaValidarBD.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del Metodo de pago es requerido.";
+                respuesta.Valido = respuestaValidarBD.Valido;
+                respuesta.Mensaje = respuestaValidarBD.Mensaje;
                 return respuesta;
             }
 
             try
             {
-                if (await _metodoPagoRepository.AsQueryable().AnyAsync(r => r.Nombre.ToLower() == metodoPagoDto.Nombre.ToLower()))
-                {
-                    respuesta.Valido = false;
-                    respuesta.Mensaje = "Ya existe un Metodo de pago con este nombre.";
-                    return respuesta;
-                }
-
                 var metodoPago = _mapper.Map<MetodoPago>(metodoPagoDto);
 
                 await _metodoPagoRepository.AddAsync(metodoPago);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<MetodoPagoDto>(metodoPago);
-                respuesta.Mensaje = "Metodo de pago creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -64,7 +63,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -81,7 +80,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
                 if (metodosPagos.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Metodos de pagos";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -93,18 +92,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
                 }
 
                 respuesta.Datos = metodosPagosDto;
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -121,7 +119,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
                 if (metodoPago == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Metodo de pago no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var metodoPagoDto = _mapper.Map<MetodoPagoDto>(metodoPago);
 
@@ -130,13 +128,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -152,7 +150,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
 
                 if (metodoPagoEncontrado == null)
                 {
-                    respuesta.Mensaje = "Metodo de pago no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Método de pago no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -160,19 +158,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
                 _mapper.Map(metodoPago, metodoPagoEncontrado);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Metodo de pago actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<MetodoPagoDto>(metodoPagoEncontrado);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -188,35 +186,33 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePag
 
                 if (metodoPagoEncontrado == null)
                 {
-                    respuesta.Mensaje = "Metodo de pago no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Metodo de pago ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Metodo de pago ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 metodoPagoEncontrado.Activo = estado;
                 respuesta.Datos = true;
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

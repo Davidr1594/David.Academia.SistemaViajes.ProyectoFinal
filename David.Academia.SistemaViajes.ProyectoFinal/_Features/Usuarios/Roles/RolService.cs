@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
-using Farsiman.Infraestructure.Core.Entity.Standard;
 using Microsoft.EntityFrameworkCore;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
@@ -16,36 +14,36 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Rol> _rolRepository;
+        private readonly RolDomain _rolDomain;
 
 
-        public RolService(IMapper mapper, UnitOfWorkBuilder unitOfWorkBuilder)
+        public RolService(IMapper mapper, UnitOfWorkBuilder unitOfWorkBuilder, RolDomain rolDomain)
         {
             _mapper = mapper;
 
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _rolRepository = _unitOfWork.Repository<Rol>();
+            _rolDomain = rolDomain;
         }
 
         public async Task<Respuesta<RolDto>> CrearRol(RolDto rolDto)
         {
             var respuesta = new Respuesta<RolDto>();
 
-            if (rolDto == null)
+            var respuestaValidarEntrada = _rolDomain.ValidarDatosDeEntrada(rolDto);
+            if (!respuestaValidarEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un rol valido.";
+                respuesta.Valido = respuestaValidarEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(rolDto.Nombre) || string.IsNullOrWhiteSpace(rolDto.Nombre))
+
+            var yaExisteNombre = await _rolRepository.AsQueryable()
+                                                     .AnyAsync(r => r.Nombre.ToLower().Equals(rolDto.Nombre!.ToLower()));
+            if (yaExisteNombre)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del rol es requerido.";
-                return respuesta;
-            }
-            if (await _rolRepository.AsQueryable().AnyAsync(r => r.Nombre.ToLower() == rolDto.Nombre.ToLower()))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un rol con este nombre.";
+                respuesta.Mensaje = Mensajes.YaExisteRegistro;
                 return respuesta;
             }
 
@@ -53,13 +51,11 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
             {
                 var rol = _mapper.Map<Rol>(rolDto);
 
-
-
                 await _rolRepository.AddAsync(rol);
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<RolDto>(rol);
-                respuesta.Mensaje = "Rol creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -69,7 +65,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -86,7 +82,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
                 if (roles.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay Roles";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -98,18 +94,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
                 }
 
                 respuesta.Datos = rolesDto;
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al conectar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -126,7 +121,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
                 if (rol == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Rol no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var rolDto = _mapper.Map<RolDto>(rol);
 
@@ -135,13 +130,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -157,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
 
                 if (rolEncontrado == null)
                 {
-                    respuesta.Mensaje = "Rol no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Rol no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -165,19 +160,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
                 _mapper.Map(rol, rolEncontrado);
 
                 await _unitOfWork.SaveChangesAsync();
-                respuesta.Mensaje = "Rol actualizado con exito";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<RolDto>(rolEncontrado);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -193,41 +188,38 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Roles
 
                 if (rolEncontrado == null)
                 {
-                    respuesta.Mensaje = "Rol no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Rol ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Rol ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 rolEncontrado.Activo = estado;
                 respuesta.Datos = true;
 
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
             return respuesta;
         }
-
     }
 }

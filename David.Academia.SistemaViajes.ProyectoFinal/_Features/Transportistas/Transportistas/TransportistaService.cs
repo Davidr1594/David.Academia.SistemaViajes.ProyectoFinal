@@ -2,7 +2,6 @@
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Farsiman.Infraestructure.Core.Entity.Standard;
@@ -14,12 +13,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Transportista> _transportistaRepository;
+        private readonly TransportistaDomain _transportistaDomain;
         private readonly IMapper _mapper;
 
-        public TransportistaService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper)
+        public TransportistaService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, TransportistaDomain transportistaDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _transportistaRepository = _unitOfWork.Repository<Transportista>();
+            _transportistaDomain = transportistaDomain;
 
             _mapper = mapper;
         }
@@ -29,22 +30,18 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
 
             var respuesta = new Respuesta<TransportistaDto>();
 
-            if (transportistaDto == null)
+            var respuestaValidarDatosEntrada = _transportistaDomain.ValidarDatosDeEntrada(transportistaDto);
+            if (!respuestaValidarDatosEntrada.Valido)
             {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "No se recibió un usuario valido.";
+                respuesta.Valido = respuestaValidarDatosEntrada.Valido;
+                respuesta.Mensaje = respuestaValidarDatosEntrada.Mensaje;
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(transportistaDto.Nombre) || string.IsNullOrWhiteSpace(transportistaDto.Nombre))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = "El nombre del usuario es requerido.";
-                return respuesta;
-            }
+
             if (await _transportistaRepository.AsQueryable().AnyAsync(t => t.Nombre.ToLower() == transportistaDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un usuario con este nombre.";
+                respuesta.Mensaje = Mensajes.YaExisteRegistro;
                 return respuesta;
             }
 
@@ -58,7 +55,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<TransportistaDto>(transportistaACrear);
-                respuesta.Mensaje = "Transportista creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -68,7 +65,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -80,12 +77,12 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
             var respuesta = new Respuesta<List<TransportistaDto>>();
             try
             {
-                var transportistas = await _transportistaRepository.AsQueryable().AsQueryable().AsNoTracking().ToListAsync();
+                var transportistas = await _transportistaRepository.AsQueryable().AsNoTracking().ToListAsync();
 
                 if (transportistas.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay transportistas";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -101,13 +98,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -124,7 +121,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
                 if (transportista == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Transportista no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var transportistaDto = _mapper.Map<TransportistaDto>(transportista);
 
@@ -133,13 +130,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -155,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
 
                 if (transportistaEncontrado == null)
                 {
-                    respuesta.Mensaje = "Usuario no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Transportista no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -165,18 +162,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
 
                 await _unitOfWork.SaveChangesAsync();
 
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = transportistaDto;
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -192,35 +190,33 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Tr
 
                 if (transportistaEncontrado == null)
                 {
-                    respuesta.Mensaje = "Transportista no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Transportista ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Transportista ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 transportistaEncontrado.Activo = estado;
                 respuesta.Datos = true;
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

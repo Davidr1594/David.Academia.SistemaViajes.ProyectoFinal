@@ -42,14 +42,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             if (!await _unitOfWork.Repository<Rol>().AsQueryable().AsNoTracking().AnyAsync(r => r.RolId == usuarioDto.RolId))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Rol no existe esta inactivo";
+                respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Rol");
 
                 return respuesta;
             }
             if (usuarioDto.ColaboradorId > 0 &&  !await _unitOfWork.Repository<Colaborador>().AsQueryable().AsNoTracking().AnyAsync(c => c.ColaboradorId == usuarioDto.ColaboradorId))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Colaborador no existe esta inactivo";
+                respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "colaborador");
 
                 return respuesta;
             }
@@ -60,7 +60,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             if (await _usuarioRepository.AsQueryable().AnyAsync(u => u.Nombre.ToLower() == usuarioDto.Nombre.ToLower()))
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Ya existe un usuario con este nombre.";
+                respuesta.Mensaje = Mensajes.YaExisteRegistro;
                 return respuesta;
             }
 
@@ -76,7 +76,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
                 await _unitOfWork.SaveChangesAsync();
 
                 respuesta.Datos = _mapper.Map<UsuarioDto>(usuarioACrear);
-                respuesta.Mensaje = "Usuario creado con éxito.";
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
             }
             catch (DbUpdateException ex)
             {
@@ -86,7 +86,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -103,7 +103,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
                 if (usuarios.Count == 0)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "No hay usuarios";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     return respuesta;
                 }
 
@@ -119,13 +119,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -142,7 +142,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
                 if (usuario == null)
                 {
                     respuesta.Valido = false;
-                    respuesta.Mensaje = "Usuario no encontrado.";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                 }
                 var usuarioDto = _mapper.Map<UsuarioDto>(usuario);
 
@@ -151,13 +151,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -173,7 +173,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
 
                 if (usuarioEncontrado == null)
                 {
-                    respuesta.Mensaje = "Usuario no existe";
+                    respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Usuario no existe");
                     respuesta.Valido = false;
                     return respuesta;
                 }
@@ -184,18 +184,19 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
 
                 await _unitOfWork.SaveChangesAsync();
 
+                respuesta.Mensaje = Mensajes.EntidadGuardada;
                 respuesta.Datos = _mapper.Map<UsuarioDto>(usuarioEncontrado);
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al guardar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 
@@ -211,35 +212,33 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios
 
                 if (usuarioEncontrado == null)
                 {
-                    respuesta.Mensaje = "Usuario no existe";
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
                     respuesta.Datos = false;
                     return respuesta;
                 }
                 if (estado)
                 {
-                    respuesta.Mensaje = "Usuario ha sido activado.";
+                    respuesta.Mensaje = Mensajes.EntidadActivada;
                 }
-                else if (!estado)
+                else
                 {
-                    respuesta.Mensaje = "Usuario ha sido inactivado.";
+                    respuesta.Mensaje = Mensajes.EntidadInactivada;
                 }
 
                 usuarioEncontrado.Activo = estado;
                 respuesta.Datos = true;
                 await _unitOfWork.SaveChangesAsync();
-
-
             }
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
             }
 

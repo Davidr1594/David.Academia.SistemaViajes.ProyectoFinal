@@ -14,13 +14,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
 
             if (string.IsNullOrWhiteSpace(usuario.clave))
             {
-                respuesta.Mensaje = "El campo Clave es requerido.";
+                respuesta.Mensaje = string.Format(Mensajes.DatoNoValidoEspecifico, "clave");
                 respuesta.Datos = false;
                 return respuesta;
             }
             if (string.IsNullOrWhiteSpace(usuario.nombre))
             {
-                respuesta.Mensaje = "El campo Usuario es requerido.";
+                respuesta.Mensaje = string.Format(Mensajes.DatoNoValidoEspecifico, "usuario");
                 respuesta.Datos = false;
                 return respuesta;
             }

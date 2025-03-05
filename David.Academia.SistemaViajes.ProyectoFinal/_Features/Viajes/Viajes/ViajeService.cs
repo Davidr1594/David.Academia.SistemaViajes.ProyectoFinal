@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
-using David.Academia.SistemaViajes.ProyectoFinal._Features._Common0;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Enum;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
-using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -36,8 +34,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
         {
             var respuesta = new Respuesta<ViajeDto>();
 
-            var respuestaValidarDatosRecibido = _viajeDomain.ValidarDatosDeEntradaViaje(viajeDto);
+            Viaje viajeACrear = _mapper.Map<Viaje>(viajeDto);
+            var colaboradoresId = viajeDto.ColaboradoresId;
 
+            var respuestaValidarDatosRecibido = _viajeDomain.ValidarDatosDeEntradaViaje(viajeACrear, colaboradoresId);
             if (!respuestaValidarDatosRecibido.Valido)
             {
                 respuesta.Valido = respuestaValidarDatosRecibido.Valido;
@@ -47,27 +47,17 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
             try
             {
-
-                var sucursal = await ObtenerSucursalAsync(viajeDto.SucursalId);
+                var sucursal = await ObtenerSucursalAsync(viajeACrear.SucursalId);
                 var usucarioCrea = await ObtenerUsuarioAsync(usuarioCreaId);
-                var transportista = await ObtenerTransportistaAsync(viajeDto.TransportistaId);
-                var colaboradoresDetalle = await ObtenerColaboradoresDetalleAsync(viajeDto.ColaboradoresId);
-                var colaboradoresEnViaje = await ValidarColaboradoresTieneViajeAsigando(viajeDto.ColaboradoresId);
+                var transportista = await ObtenerTransportistaAsync(viajeACrear.TransportistaId);
+                var colaboradoresDetalle = await ObtenerColaboradoresDetalleAsync(colaboradoresId);
+                var colaboradoresEnViaje = await ValidarColaboradoresTieneViajeAsigando(colaboradoresId);
 
                 var respuestaValidarRespuestasBaseDatos = _viajeDomain.ValidarRespuestasDeBD(sucursal, usucarioCrea, transportista, colaboradoresDetalle, colaboradoresEnViaje);
                 if (!respuestaValidarRespuestasBaseDatos.Valido)
                 {
                     respuesta.Valido = respuestaValidarRespuestasBaseDatos.Valido;
                     respuesta.Mensaje = respuestaValidarRespuestasBaseDatos.Mensaje;
-                    return respuesta;
-                }
-
-                var respuestaEsGerente = _viajeDomain.EsGerente(usucarioCrea);
-                if (!respuestaEsGerente.Valido)
-                {
-                    respuesta.Valido = respuestaEsGerente.Valido;
-                    respuesta.Mensaje = respuestaEsGerente.Mensaje;
-
                     return respuesta;
                 }
 
@@ -91,41 +81,23 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
                 try
                 {
-                    var totalKmsSinRadio = respuestaDistanciaTotalViaje.Datos;
-                    var precioPorKm = transportista.TarifaPorKm;
-
-                    var viajeACrear = _mapper.Map<Viaje>(viajeDto);
-                    viajeACrear.UsuarioCrea = usuarioCreaId;
-                    viajeACrear.TotalKms = totalKmsSinRadio;
-                    viajeACrear.EstadoId = (int)EstadoViajeEnum.Pendiente;
-                    viajeACrear.MontoTotal = totalKmsSinRadio * precioPorKm;
-                    viajeACrear.Activo = true;
-
-                    await _viajeRepository.AddAsync(viajeACrear);
+                    var respuestaViajeAGuardar = _viajeDomain.ProcesarDatosDeViajeAGuardar(viajeACrear, usuarioCreaId, respuestaDistanciaTotalViaje.Datos, transportista);
+                    await _viajeRepository.AddAsync(respuestaViajeAGuardar.Datos!);
 
                     if (!await _unitOfWork.SaveChangesAsync())
                     {
                         respuesta.Valido = false;
                         respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
-
                         await _unitOfWork.RollBackAsync();
-
                         return respuesta;
                     }
 
-                    foreach (var colaborador in colaboradoresDetalle)
+                    var respuestaViajeDetalleAGuardar = _viajeDomain.ProcesarDatosDetalleViajeAGuardar(colaboradoresDetalle, respuestaViajeAGuardar.Datos!.ViajeId);
+                    foreach (var viajeDetalle in respuestaViajeDetalleAGuardar.Datos!)
                     {
-                        var viajeDetalle = new ViajeDetalle()
-                        {
-                            ViajeId = viajeACrear.ViajeId,
-                            ColaboradorId = colaborador.ColaboradorId,
-                            DireccionDestino = colaborador.DireccionDestino,
-                            Kms = colaborador.DistanciaKms,
-                        };
-
                         await _unitOfWork.Repository<ViajeDetalle>().AddAsync(viajeDetalle);
-
                     }
+
                     if (!await _unitOfWork.SaveChangesAsync())
                     {
                         respuesta.Valido = false;
@@ -186,7 +158,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                     return respuesta;
                 }
 
-
                 var validarDistanciaNuevosColaboradores = await _manejoDistanciasService.ValidarDistanciaEntreColaboradoresExistentesEnViajeAsync(colaboradoresYaAsignados, colaboradoresValidos, 5m);
                 if (!validarDistanciaNuevosColaboradores.Valido)
                 {
@@ -213,21 +184,16 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                     respuesta.Mensaje = respuestaValidarKmsViaje.Mensaje;
                     return respuesta;
                 }
+
+                var respuestaViajeDetalleAGuardar = _viajeDomain.ProcesarDatosAgregarColaboradorAViaje(colaboradoresValidos, viaje.ViajeId);
+
                 await _unitOfWork.BeginTransactionAsync();
                 try
                 {
                     
-                    foreach (var colaborador in colaboradoresValidos)
+                    foreach (var viajeDetalle in respuestaViajeDetalleAGuardar.Datos!)
                     {
-                        var viajeDetalle = new ViajeDetalle()
-                        {
-                            ViajeId = viaje.ViajeId,
-                            ColaboradorId = colaborador.ColaboradorId,
-                            DireccionDestino = colaborador.DireccionDestino,
-                            Kms = colaborador.DistanciaKms,
-                        };
-
-                            await _unitOfWork.Repository<ViajeDetalle>().AddAsync(viajeDetalle);
+                         await _unitOfWork.Repository<ViajeDetalle>().AddAsync(viajeDetalle);
                     }
 
                         if (!await _unitOfWork.SaveChangesAsync())
@@ -235,8 +201,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                             await _unitOfWork.RollBackAsync();
                             respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                             respuesta.Valido = false;
-                            respuesta.Datos = false;
-
                             return respuesta;
                         }
 
@@ -280,7 +244,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             }
             return respuesta;
         }
-        public async Task<Respuesta<bool>> ActualizadoEstadoViaje(int usuarioActualiza,int sucursalId, int viajeId, int estadoId)
+        public async Task<Respuesta<bool>> ActualizadoEstadoViaje(int usuarioActualiza, int viajeId, int estadoId)
         {
             var respuesta = new Respuesta<bool>();
             try
@@ -321,14 +285,14 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             catch (DbUpdateException ex)
             {
                 respuesta.Valido = false;
-                respuesta.Mensaje = "Error al actualizar en la base de datos.";
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
                 respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
                 return respuesta;
             }
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = "Ocurrió un error inesperado.";
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
                 respuesta.Mensaje = ex.Message;
                 return respuesta;
             }
