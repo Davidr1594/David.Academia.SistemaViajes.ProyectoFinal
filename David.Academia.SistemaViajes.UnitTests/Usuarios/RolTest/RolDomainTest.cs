@@ -7,6 +7,7 @@ namespace David.Academia.SistemaViajes.UnitTests.Usuarios.RolTest
 {
     public class RolDomainTest
     {
+        private RolDomain _rolDomain = new RolDomain();
 
         [Theory]
         [InlineData("Nombre", true)]
@@ -17,14 +18,36 @@ namespace David.Academia.SistemaViajes.UnitTests.Usuarios.RolTest
             var rolDto = new RolDto();
             rolDto.Nombre = nombre;
 
-            var rolDomain = new RolDomain();
-
             //Act
-            var respuesta = rolDomain.ValidarDatosDeEntrada(rolDto);
+            var respuesta = _rolDomain.ValidarDatosDeEntrada(rolDto);
 
             //Asssert
 
             respuesta.Valido.Should().Be(esperado);
+        }
+
+        [Theory]
+        [InlineData(true, false)]  // ❌ Ya existe el nombre
+        [InlineData(false, true)]  // ✅ No existe el nombre
+        public void ValidarRespuestaDeBD_DeberiaRetornarEsperado(bool yaExisteNombre, bool resultadoEsperado)
+        {
+            // Act
+            var resultado = _rolDomain.ValidarRespuestaDeBD(yaExisteNombre);
+
+            // Assert
+            resultado.Valido.Should().Be(resultadoEsperado);
+        }
+
+        [Fact]
+        public void Dado_UnObjeto_Cuando_SeValida_EntoncesDebeRetornarResultado()
+        {
+
+            //Act
+            var respuesta = _rolDomain.ValidarDatosDeEntrada(null);
+
+            //Asssert
+
+            respuesta.Valido.Should().Be(false);
         }
 
 

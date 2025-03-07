@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj": {}
+    "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj": {}
   },
   "projects": {
-    "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj": {
+    "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj",
+        "projectUniqueName": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj",
         "projectName": "David.Academia.SistemaViajes.ProyectoFinal",
-        "projectPath": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj",
+        "projectPath": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj",
         "packagesPath": "C:\\Users\\dreyes\\.nuget\\packages\\",
-        "outputPath": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.ProyectoFinal\\obj\\",
+        "outputPath": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -65,6 +65,10 @@
             "Farsiman.Infraestructure.Core.Entity.Standard": {
               "target": "Package",
               "version": "[8.1.8, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

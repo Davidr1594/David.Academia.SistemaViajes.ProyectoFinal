@@ -45,6 +45,7 @@
         public const string CampoExcedeCaracteres = "El campo {0} no puede superar los {1} caracteres";
         public const string CorreoNoValido = "El correo electrónico no es válido";
         public const string ElCampoDebeSerMayorCero = "El campo {0} debe ser mayor a cero.";
+        public const string ErrorApiGoogle = "No se pudo obtener la dirección.";
 
         #endregion
 

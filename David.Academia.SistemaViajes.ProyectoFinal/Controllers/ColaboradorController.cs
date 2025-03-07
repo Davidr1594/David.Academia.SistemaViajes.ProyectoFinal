@@ -23,7 +23,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+                return BadRequest(new { respuesta.Valido, respuesta.Mensaje, respuesta.DetalleError });
             }
             return Ok(respuesta);
         }

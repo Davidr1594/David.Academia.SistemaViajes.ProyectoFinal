@@ -1,3 +1,4 @@
+using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps.Entities;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores;
@@ -19,7 +20,9 @@ using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
+using Farsiman.Domain.Core.Standard.Repositories;
 using Farsiman.Extensions.Configuration;
+using Farsiman.Infraestructure.Core.Entity.Standard;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -62,9 +65,25 @@ builder.Services.AddHttpClient<ManejoDistanciasService>();
 
 
 
-builder.Services.AddDbContext<SistemaTransporteDrContext>(o => o.UseSqlServer(
-                builder.Configuration.GetConnectionStringFromENV("SISTEMATRANSPORTE")
-            ));
+//builder.Services.AddDbContext<SistemaTransporteDrContext>(o => o.UseSqlServer(
+//                builder.Configuration.GetConnectionStringFromENV("SISTEMATRANSPORTE")
+//            ));
+
+
+var isTesting = builder.Environment.IsEnvironment("Test");
+
+if (!isTesting)
+{
+    builder.Services.AddDbContext<SistemaTransporteDrContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionStringFromENV("SISTEMATRANSPORTE"));
+    });
+    builder.Services.AddScoped<IUnitOfWork>(ServiceProvider =>
+    {
+        var dbContext = ServiceProvider.GetRequiredService<SistemaTransporteDrContext>();
+        return new UnitOfWork(dbContext);
+    });
+}
 
 
 // Servicios de Aplicación
@@ -88,6 +107,8 @@ builder.Services.AddTransient<PuestoService>();
 builder.Services.AddTransient<ViajeService>();
 builder.Services.AddTransient<ParametroSistemaService>();
 builder.Services.AddTransient<ReportesService>();
+
+builder.Services.AddScoped<IManejoDistanciasService, ManejoDistanciasService>();
 #endregion
 
 #region Domains
@@ -143,3 +164,5 @@ app.UseAuthentication();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }

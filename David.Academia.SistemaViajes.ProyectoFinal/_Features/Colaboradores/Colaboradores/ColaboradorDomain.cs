@@ -63,14 +63,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
                 respuesta.Mensaje = Mensajes.CorreoNoValido;
                 return respuesta;
             }
-
-            if (string.IsNullOrWhiteSpace(colaboradorDto.Direccion))
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = string.Format(Mensajes.ElCampoEsRequerido, "dirección");
-                return respuesta;
-            }
-
             if (colaboradorDto.Latitud < -90 || colaboradorDto.Latitud > 90)
             {
                 respuesta.Valido = false;
@@ -112,18 +104,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = Mensajes.YaExisteCorreo;
-                return respuesta;
-            }
-            if (yaExisteNombre)
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = Mensajes.YaExisteRegistro;
-                return respuesta;
-            }
-            if (yaExisteNombre)
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "El puesto");
                 return respuesta;
             }
             if (!existePuesto)

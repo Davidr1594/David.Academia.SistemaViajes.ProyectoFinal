@@ -3,7 +3,7 @@ using David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto;
 
 namespace David.Academia.SistemaViajes.UnitTests.Sucursales
 {
-    public class SucursalDomainTestData : TheoryData<SucursalDto, bool>
+    public class SucursalDomainTestData : TheoryData<SucursalDto?, bool>
     {
 
         public SucursalDomainTestData()
@@ -15,6 +15,8 @@ namespace David.Academia.SistemaViajes.UnitTests.Sucursales
             Add(SucursalLongitudInvalidaMayor(), false);
             Add(SucursalTelefonoVacio(), false);
             Add(SucursalTodosLosCamposValidos(), true);
+            Add(null, false);
+
         }
 
         public SucursalDto SucursalNombreVacio() => new SucursalDto()

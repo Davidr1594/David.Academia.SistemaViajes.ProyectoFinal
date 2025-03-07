@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace David.Academia.SistemaViajes.UnitTests.ColaboradorTest
 {
-    internal class ColaboradorDtoTestData :TheoryData<ColaboradorDto, bool>
+    internal class ColaboradorDtoTestData :TheoryData<ColaboradorDto?, bool>
     {
         public ColaboradorDtoTestData()
         {
@@ -17,12 +17,14 @@ namespace David.Academia.SistemaViajes.UnitTests.ColaboradorTest
             Add(ColaboradorDniVacio(), false);
             Add(ColaboradorFechaNacimientoVacio(), false);
             Add(ColaboradorEmailVacio(), false);
-            Add(ColaboradorDireccionVacio(), false);
-            Add(ColaboradorDireccionVacio(), false);
+            Add(ColaboradorLatitudInvalidaMenor(), false);
+            Add(ColaboradorLongitudInvalidaMenor(), false);
             Add(ColaboradorCiudadNoExiste(), false);
             Add(ColaboradorPuestoNoExiste(), false);
             Add(ColaboradorEmailNoValido(), false);
             Add(ColaboradorTodosLosCamposValidos(), true);
+            Add(null, false);
+
 
         }
 
@@ -139,6 +141,35 @@ namespace David.Academia.SistemaViajes.UnitTests.ColaboradorTest
             PuestoId = 1,
             CiudadId = 1
         };
+        public ColaboradorDto ColaboradorLatitudInvalidaMenor() => new ColaboradorDto()
+        {
+            Nombre = "David",
+            Apellido = "Reyes",
+            Telefono = "95663355",
+            Dni = "050115566522",
+            FechaNacimiento = new DateTime(1995, 12, 15),
+            Email = "email@hotmail.com",
+            Direccion = "Direccion",
+            Latitud = -91.0m, // ❌ Fuera de rango permitido
+            Longitud = 0.0m,
+            PuestoId = 1,
+            CiudadId = 1
+        };
+        public ColaboradorDto ColaboradorLongitudInvalidaMenor() => new ColaboradorDto()
+        {
+            Nombre = "David",
+            Apellido = "Reyes",
+            Telefono = "95663355",
+            Dni = "050115566522",
+            FechaNacimiento = new DateTime(1995, 12, 15),
+            Email = "email@hotmail.com",
+            Direccion = "Direccion",
+            Latitud = 0.0m, // ❌ Fuera de rango permitido
+            Longitud = -191.0m,
+            PuestoId = 1,
+            CiudadId = 1
+        };
+
         public ColaboradorDto ColaboradorPuestoNoExiste() => new ColaboradorDto()
         {
             Nombre = "David",
@@ -182,7 +213,6 @@ namespace David.Academia.SistemaViajes.UnitTests.ColaboradorTest
             PuestoId = 1,
             CiudadId = 1
         };
-
 
     }
 }

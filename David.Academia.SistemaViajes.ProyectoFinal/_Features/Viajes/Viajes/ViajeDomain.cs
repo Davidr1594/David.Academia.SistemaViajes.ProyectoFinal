@@ -7,8 +7,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 {
     public class ViajeDomain
     {
-        private const decimal RADIO_CERCANIA_KM = 5.0m;
-
 
         public Respuesta<decimal> ValidarKmsDeColaborador(List<ColaboradorConKmsDto> colaboradoresDetalle,  decimal maximoKms)
         {
@@ -154,7 +152,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
                 return respuesta;
             }
-            if (usuarioCrea.UsuarioId == 0)
+            if (usuarioCrea.UsuarioId != (int)RolEnum.Gerente && usuarioCrea.UsuarioId != (int)RolEnum.Administrador )
             {
                 respuesta.Valido = false;
                 respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Gerente");
@@ -199,6 +197,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             viajeACrear.Activo = true;
 
             respuesta.Datos = viajeACrear;
+            respuesta.Valido = true;
             return respuesta;
         }
 
@@ -220,6 +219,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                 viajeDetalleAGuardar.Add(viajeDetalle);
             }
             respuesta.Datos = viajeDetalleAGuardar;
+            respuesta.Valido = true;
 
             return respuesta;
 
@@ -244,6 +244,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                 viajeDetalleAGuardar.Add(viajeDetalle);
             }
             respuesta.Datos = viajeDetalleAGuardar;
+            respuesta.Valido = true;
 
             return respuesta;
         }

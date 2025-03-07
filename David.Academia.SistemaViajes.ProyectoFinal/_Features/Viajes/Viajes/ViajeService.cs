@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
+using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Enum;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
@@ -15,11 +16,11 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Viaje> _viajeRepository;
         private readonly ViajeDomain _viajeDomain;
-        private readonly ManejoDistanciasService _manejoDistanciasService;
+        private readonly IManejoDistanciasService _manejoDistanciasService;
         private readonly IMapper _mapper;
         private readonly decimal _maximoKms;
 
-        public ViajeService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, ViajeDomain viajeDomain, ManejoDistanciasService manejoDistanciasService)
+        public ViajeService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, ViajeDomain viajeDomain, IManejoDistanciasService manejoDistanciasService)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _viajeRepository = _unitOfWork.Repository<Viaje>();
@@ -53,6 +54,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                 var colaboradoresDetalle = await ObtenerColaboradoresDetalleAsync(colaboradoresId);
                 var colaboradoresEnViaje = await ValidarColaboradoresTieneViajeAsigando(colaboradoresId);
 
+
                 var respuestaValidarRespuestasBaseDatos = _viajeDomain.ValidarRespuestasDeBD(sucursal, usucarioCrea, transportista, colaboradoresDetalle, colaboradoresEnViaje);
                 if (!respuestaValidarRespuestasBaseDatos.Valido)
                 {
@@ -65,7 +67,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                 if (!ValidarKmsDeColaborador.Valido)
                 {
                     respuesta.Valido = ValidarKmsDeColaborador.Valido;
-                    respuesta.Mensaje = ValidarKmsDeColaborador.Mensaje;
+                    respuesta.Mensaje = string.Format(ValidarKmsDeColaborador.Mensaje, _maximoKms);
                     return respuesta;
                 }
 
@@ -500,7 +502,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
         private async Task<List<int>> ValidarColaboradoresTieneViajeAsigando(List<int> colaboradoresId)
         {
             return await _unitOfWork.Repository<ViajeDetalle>()
-                                                            .AsQueryable().AsNoTracking()
+                                                            .AsQueryable().Include(vd => vd.Viaje)
                                                             .Where(vd => colaboradoresId.Contains(vd.ColaboradorId) && vd.Viaje.FechaCreacion.Date == DateTime.Now.Date)
                                                             .Select(vd => vd.ColaboradorId)
                                                             .Distinct()

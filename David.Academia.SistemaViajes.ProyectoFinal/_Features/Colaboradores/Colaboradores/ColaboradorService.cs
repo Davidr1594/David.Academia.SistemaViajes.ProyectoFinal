@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
+using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
@@ -14,10 +15,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<Colaborador> _colaboradorRepository;
         private readonly IMapper _mapper;
-        private readonly ManejoDistanciasService _manejoDistanciasService;
+        private readonly IManejoDistanciasService _manejoDistanciasService;
         private readonly ColaboradorDomain _colaboradorDomain;
 
-        public ColaboradorService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, ManejoDistanciasService manejoDistanciasService, ColaboradorDomain colaboradorDomain)
+        public ColaboradorService(UnitOfWorkBuilder unitOfWorkBuilder, IMapper mapper, IManejoDistanciasService manejoDistanciasService, ColaboradorDomain colaboradorDomain)
         {
             _unitOfWork = unitOfWorkBuilder.BuildSistemaDeTransporte();
             _colaboradorRepository = _unitOfWork.Repository<Colaborador>();
@@ -50,15 +51,25 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
                 respuesta.Mensaje = respuestaValidarBaseDatps.Mensaje;
                 return respuesta;
             }
+  
 
             var colaborador = _mapper.Map<Colaborador>(colaboradorDto);
             colaborador.UsuarioCrea = usuarioCreaId;
 
-            var convertirCordenadasADireccion = await _manejoDistanciasService.ObtenerDireccionDesdeCordenadas(colaboradorDto.Latitud, colaboradorDto.Longitud);
-            colaborador.Direccion = convertirCordenadasADireccion;
 
             try
             {
+                var convertirCordenadasADireccion = await _manejoDistanciasService.ObtenerDireccionDesdeCordenadas(colaboradorDto.Latitud, colaboradorDto.Longitud);
+                
+
+                if (string.IsNullOrWhiteSpace(convertirCordenadasADireccion))
+                {
+                    respuesta.Valido = false;
+                    respuesta.Mensaje = Mensajes.ErrorApiGoogle;
+                    return respuesta;
+                }
+                colaborador.Direccion = convertirCordenadasADireccion;
+
                 await _colaboradorRepository.AddAsync(colaborador);
                 await _unitOfWork.SaveChangesAsync();
 
@@ -73,8 +84,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             catch (Exception ex)
             {
                 respuesta.Valido = false;
-                respuesta.DetalleError = Mensajes.ErrorExcepcion;
-                respuesta.Mensaje = ex.Message;
+                respuesta.DetalleError = ex.Message;
+                respuesta.Mensaje = Mensajes.ErrorExcepcion;
             }
 
             return respuesta;
