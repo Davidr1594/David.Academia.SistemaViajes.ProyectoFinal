@@ -47,5 +47,6 @@ namespace AcademiaIntegrationTestAndMock.IntegrationTest.Mocks
             servicio.CalcularDistanciaTotalAjustadaAsync(Arg.Any<List<ColaboradorConKmsDto>>(), Arg.Any<decimal>())
                     .Returns(Task.FromResult(respuestaMock));
         }
+            
     }
 }

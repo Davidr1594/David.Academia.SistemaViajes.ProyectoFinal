@@ -30,8 +30,8 @@ namespace David.Academia.SistemaViajes.UnitTests.Viajes
 
         private List<ColaboradorConKmsDto> ColaboradoresSuperandoMaximo() => new()
         {
-            new ColaboradorConKmsDto { Nombre = "Carlos", DistanciaKms = 30 },
-            new ColaboradorConKmsDto { Nombre = "Sofía", DistanciaKms = 25 } 
+            new ColaboradorConKmsDto { Nombre = "Carlos", DistanciaKms = 60 },
+            new ColaboradorConKmsDto { Nombre = "Sofía", DistanciaKms = 50 } 
         };
     }
 }

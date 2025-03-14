@@ -1,5 +1,6 @@
 ﻿
 using AcademiaIntegrationTestAndMock.IntegrationTest.Mocks;
+
 using David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
@@ -18,6 +19,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests
 {
     public class CustomWebApplicationFactory<TProgram> : WebApplicationFactory<TProgram> where TProgram : class
     {
+
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
             builder.ConfigureTestServices(services =>
@@ -35,8 +37,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests
                 }
 
                 services.RemoveService<IManejoDistanciasService>();
+  
 
                 services.AddDefaultManejoDistanciasServiceMock();
+
 
                 services.AddDbContext<SistemaTransporteDrContext>(options =>
                 {
@@ -62,6 +66,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests
 
 
         }
+
 
         private static void SeedTestData(SistemaTransporteDrContext context)
         {
@@ -370,6 +375,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests
                 return sha256.ComputeHash(Encoding.UTF8.GetBytes(clave));
             }
         }
+
+
+
     }
 
 

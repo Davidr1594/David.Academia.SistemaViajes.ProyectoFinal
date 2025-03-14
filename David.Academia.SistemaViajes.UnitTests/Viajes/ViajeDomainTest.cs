@@ -3,11 +3,7 @@ using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Enum;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace David.Academia.SistemaViajes.UnitTests.Viajes
 {
@@ -50,7 +46,7 @@ namespace David.Academia.SistemaViajes.UnitTests.Viajes
 
 
         [Theory]
-        [InlineData(10, 40, 50, true)]  //No excede el máximo
+        [InlineData(5, 40, 50, true)]  //No excede el máximo
         [InlineData(20, 30, 50, true)]  //Límite exacto (30+20=50)
         [InlineData(25, 30, 50, false)] //Excede el máximo permitido (30+25=55)
         [InlineData(5, 45, 50, true)]   //Justo dentro del límite
@@ -70,7 +66,7 @@ namespace David.Academia.SistemaViajes.UnitTests.Viajes
         [Theory]
         [InlineData(1, true, true, true)]  //Caso válido: Viaje existe, colaboradores asignados y válidos
         [InlineData(0, true, true, false)] //Viaje no existe
-        [InlineData(1, false, true, false)] //No hay colaboradores con kms
+        [InlineData(1, false, true, false)] //No hay colaboradores con relacion
         [InlineData(1, true, false, false)] //No hay colaboradores válidos
         [InlineData(0, false, false, false)] //Ninguna condición válida
         public void ValidarRespuestasDeBDAgregarColaboradores_DeberiaRetornarEsperado(int viajeId, bool hayColaboradoresConKms, bool hayColaboradoresValidos, bool resultadoEsperado)
@@ -96,7 +92,7 @@ namespace David.Academia.SistemaViajes.UnitTests.Viajes
 
             // Assert
             resultado.Valido.Should().Be(resultadoEsperado);
-            resultado.Datos.UsuarioCrea.Should().Be(usuarioCreaId);
+            resultado.Datos!.UsuarioCrea.Should().Be(usuarioCreaId);
             resultado.Datos.TotalKms.Should().Be(totalKms);
             resultado.Datos.MontoTotal.Should().Be(transportista.TarifaPorKm * totalKms);
             resultado.Datos.EstadoId.Should().Be((int)EstadoViajeEnum.Pendiente);

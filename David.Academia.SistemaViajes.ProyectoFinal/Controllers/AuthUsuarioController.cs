@@ -24,13 +24,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+                return Ok(new { respuesta.Mensaje, respuesta.DetalleError });
             }
-            if (!respuesta.Datos)
-            {
-                return Unauthorized(new { mensaje = respuesta.Mensaje });
-            }
-
 
             return Ok(respuesta);
 

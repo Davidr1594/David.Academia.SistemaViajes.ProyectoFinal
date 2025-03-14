@@ -152,12 +152,6 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
                 return respuesta;
             }
-            if (usuarioCrea.UsuarioId != (int)RolEnum.Gerente && usuarioCrea.UsuarioId != (int)RolEnum.Administrador )
-            {
-                respuesta.Valido = false;
-                respuesta.Mensaje = string.Format(Mensajes.EntidadNoExiste, "Gerente");
-                return respuesta;
-            }
             if (usuarioCrea.RolId != (int)RolEnum.Gerente && usuarioCrea.RolId != (int)RolEnum.Administrador)
             {
                 respuesta.Valido = false;

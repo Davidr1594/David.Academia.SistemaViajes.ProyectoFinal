@@ -177,6 +177,51 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales
             return respuesta;
         }
 
+        public async Task<Respuesta<List<SucursalColaboradorDto>>> ObtenerSucursalColaboradores()
+        {
+            var respuesta = new Respuesta<List<SucursalColaboradorDto>>();
+            try
+            {
+                var sucursalesColaboradores = await _unitOfWork.Repository<SucursalColaborador>().AsQueryable().ToListAsync();
+
+                if (sucursalesColaboradores.Count == 0)
+                {
+                    respuesta.Valido = false;
+                    respuesta.Mensaje = Mensajes.NoHayEntidades;
+                    return respuesta;
+                }
+
+                var sucursalesColaboradoresDto = (from sc in _unitOfWork.Repository<SucursalColaborador>().AsQueryable().AsNoTracking()
+                                                  join s in _unitOfWork.Repository<Sucursal>().AsQueryable().AsNoTracking() on sc.SucursalId equals s.SucursalId
+                                                  join c in _unitOfWork.Repository<Colaborador>().AsQueryable().AsNoTracking() on sc.ColaboradorId equals c.ColaboradorId
+                                                  select new SucursalColaboradorDto()
+                                                  {
+                                                      NombreColaborador = c.Nombre,
+                                                      NombreSucursal = s.Nombre,
+                                                      DistanciaKm = sc.DistanciaKm
+                                                  }).ToList();
+
+                respuesta.Datos = sucursalesColaboradoresDto;
+            }
+            catch (DbUpdateException ex)
+            {
+                respuesta.Valido = false;
+                respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
+                respuesta.DetalleError = ex.InnerException?.Message ?? ex.Message;
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                respuesta.Valido = false;
+                respuesta.DetalleError = Mensajes.ErrorExcepcion;
+                respuesta.Mensaje = ex.Message;
+                return respuesta;
+            }
+
+            return respuesta;
+        }
+
+
         public async Task<Respuesta<SucursalDto>> ObtenerSucursalPorId(int sucursalId)
         {
             var respuesta = new Respuesta<SucursalDto>();

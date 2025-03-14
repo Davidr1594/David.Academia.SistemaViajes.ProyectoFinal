@@ -154,9 +154,12 @@ D:\David\Academia\prueba\David.Academia.SistemaViajes.UnitTests\obj\Debug\net8.0
 D:\David\Academia\prueba\David.Academia.SistemaViajes.UnitTests\obj\Debug\net8.0\David.Academia.SistemaViajes.UnitTests.pdb
 D:\David\Academia\prueba\David.Academia.SistemaViajes.UnitTests\obj\Debug\net8.0\David.Academia.SistemaViajes.UnitTests.genruntimeconfig.cache
 D:\David\Academia\prueba\David.Academia.SistemaViajes.UnitTests\obj\Debug\net8.0\ref\David.Academia.SistemaViajes.UnitTests.dll
+D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\David.Academia.SistemaViajes.ProyectoFinal.deps.json
+D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.Immutable.dll
+D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.WebClient.dll
+D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Encodings.Web.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_David.Academia.SistemaViajes.UnitTests
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\testhost.dll
-D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\David.Academia.SistemaViajes.ProyectoFinal.deps.json
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\David.Academia.SistemaViajes.ProyectoFinal.runtimeconfig.json
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\out\CodeCoverage\amd64\VanguardInstrumentationProfiler_x64.config
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\out\CodeCoverage\arm64\VanguardInstrumentationProfiler_arm64.config
@@ -333,7 +336,6 @@ D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Acad
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Buffers.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.Concurrent.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.dll
-D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.Immutable.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.NonGeneric.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Collections.Specialized.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.ComponentModel.Annotations.dll
@@ -403,7 +405,6 @@ D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Acad
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.Security.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.ServicePoint.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.Sockets.dll
-D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.WebClient.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.WebHeaderCollection.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.WebProxy.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Net.WebSockets.Client.dll
@@ -459,7 +460,6 @@ D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Acad
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Encoding.CodePages.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Encoding.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Encoding.Extensions.dll
-D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Encodings.Web.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.Json.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Text.RegularExpressions.dll
 D:\David\Academia\Proyecto\David.Academia.SistemaViajes.ProyectoFinal\David.Academia.SistemaViajes.UnitTests\bin\Debug\net8.0\refs\System.Threading.Channels.dll

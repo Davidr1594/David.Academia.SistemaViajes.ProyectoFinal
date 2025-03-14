@@ -28,7 +28,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+                return Ok(new { respuesta.Mensaje, respuesta.DetalleError });
             }
             return Ok(respuesta);
         }
@@ -40,7 +40,18 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+                return Ok(new { respuesta.Mensaje, respuesta.DetalleError });
+            }
+            return Ok(respuesta);
+        }
+        [HttpGet("ObtenerSucursalesColaboradores")]
+        public async Task<IActionResult> ObtenerSucursalesColaboradores()
+        {
+            var respuesta = await _sucursalService.ObtenerSucursalColaboradores();
+
+            if (!respuesta.Valido)
+            {
+                return Ok(new { respuesta.Mensaje, respuesta.DetalleError });
             }
             return Ok(respuesta);
         }
@@ -88,7 +99,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Mensaje, respuesta.DetalleError });
+                return Ok(new { respuesta.Mensaje, respuesta.DetalleError });
             }
             return Ok(respuesta);
         }

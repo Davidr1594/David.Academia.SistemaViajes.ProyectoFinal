@@ -1,5 +1,8 @@
-﻿namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class EstadoViaje
     {
         public int EstadoViajeId { get; set; }

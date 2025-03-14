@@ -223,31 +223,12 @@ var assemblies = [
     "classes": [
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features._Common.GoogleMaps.Entities.GoogleMapsSetting", "rp": "David.Academia.SistemaViajes.ProyectoFinal_GoogleMapsSetting.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features._Common.Respuesta<T>", "rp": "David.Academia.SistemaViajes.ProyectoFinal_Respuesta_1.html", "cl": 8, "ucl": 1, "cal": 9, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "cl": 0, "ucl": 210, "cal": 210, "tl": 295, "cb": 0, "tb": 46, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "cl": 0, "ucl": 215, "cal": 215, "tl": 306, "cb": 0, "tb": 48, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto.ColaboradorDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorDto.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores.ColaboradorDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorDomain.html", "cl": 95, "ucl": 0, "cal": 95, "tl": 139, "cb": 38, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto.PuestoDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PuestoDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PuestoDomain.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 55, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "cl": 0, "ucl": 150, "cal": 150, "tl": 213, "cb": 0, "tb": 36, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_CiudadDomain.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 60, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "cl": 0, "ucl": 150, "cal": 150, "tl": 213, "cb": 0, "tb": 34, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.Dto.CiudadDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_CiudadDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Estado_Departamento.EstadoDepartamentoDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoDomain.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 60, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto.PaisDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PaisDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PaisDomain.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 67, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "cl": 0, "ucl": 164, "cal": 164, "tl": 229, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto.ParametroSistemaDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaDto.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaDomain.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 53, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores.ColaboradorDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorDomain.html", "cl": 85, "ucl": 0, "cal": 85, "tl": 125, "cb": 34, "tb": 34, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto.ParametroSistemaDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaDto.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaDomain.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 53, "cb": 10, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaService.html", "cl": 0, "ucl": 163, "cal": 163, "tl": 228, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.Dto.EstadoPagoDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoDto.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoDomain.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 46, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "cl": 0, "ucl": 161, "cal": 161, "tl": 227, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.Dto.MetodoPagoDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoDto.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoDomain.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 46, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "cl": 0, "ucl": 161, "cal": 161, "tl": 222, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto.MonedaDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MonedaDto.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MonedaDomain.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 60, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "cl": 0, "ucl": 161, "cal": 161, "tl": 225, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes.Dto.ReporteViajeDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ReporteViajeDto.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes.Dto.ViajeDetalleReporteDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDetalleReporteDto.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Reportes.ReporteDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ReporteDomain.html", "cl": 19, "ucl": 0, "cal": 19, "tl": 34, "cb": 8, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -255,10 +236,8 @@ var assemblies = [
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.AuthDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_AuthDomain.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 40, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.AuthService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_AuthService.html", "cl": 0, "ucl": 44, "cal": 44, "tl": 74, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.Dto.UsuarioAuthDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UsuarioAuthDto.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.EstadoDepartamentoDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.SucursalActualizaDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SucursalActualizaDto.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.SucursalDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SucursalDto.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "cl": 0, "ucl": 164, "cal": 164, "tl": 233, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.SucursalDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SucursalDomain.html", "cl": 63, "ucl": 0, "cal": 63, "tl": 99, "cb": 22, "tb": 22, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.SucursalService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SucursalService.html", "cl": 0, "ucl": 217, "cal": 217, "tl": 309, "cb": 0, "tb": 46, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto.TransportistaDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_TransportistaDto.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -270,33 +249,21 @@ var assemblies = [
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto.UsuarioDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UsuarioDto.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.UsuarioDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UsuarioDomain.html", "cl": 30, "ucl": 0, "cal": 30, "tl": 50, "cb": 10, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.UsuarioService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UsuarioService.html", "cl": 0, "ucl": 174, "cal": 174, "tl": 250, "cb": 0, "tb": 42, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.Dto.EstadoViajeDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeDto.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeDomain.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 46, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "cl": 0, "ucl": 161, "cal": 161, "tl": 225, "cb": 0, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto.ColaboradorConKmsDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorConKmsDto.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto.ViajeDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDto.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDomain.html", "cl": 170, "ucl": 0, "cal": 170, "tl": 254, "cb": 49, "tb": 50, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "cl": 0, "ucl": 396, "cal": 396, "tl": 541, "cb": 0, "tb": 88, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeDomain", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDomain.html", "cl": 170, "ucl": 0, "cal": 170, "tl": 254, "cb": 50, "tb": 52, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "cl": 0, "ucl": 396, "cal": 396, "tl": 543, "cb": 0, "tb": 88, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal._Infrastructure.UnitOfWorkBuilder", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UnitOfWorkBuilder.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.AuthUsuarioController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_AuthUsuarioController.html", "cl": 0, "ucl": 14, "cal": 14, "tl": 39, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.CiudadController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_CiudadController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 81, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ColaboradorController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorController.html", "cl": 0, "ucl": 46, "cal": 46, "tl": 90, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.EstadoDepartamentoController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 81, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.EstadoPagoController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 81, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.EstadoViajeController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 80, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ManejoDistanciaController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciaController.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.MetodoPagoController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 80, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.MonedaController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_MonedaController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 81, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PaisController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PaisController.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 81, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ParametroSistemaController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 79, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.PuestoController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_PuestoController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 80, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ReporteController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ReporteController.html", "cl": 0, "ucl": 18, "cal": 18, "tl": 43, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.RolController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_RolController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 84, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.SucursalController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SucursalController.html", "cl": 0, "ucl": 46, "cal": 46, "tl": 96, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.TransportistaController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_TransportistaController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 84, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.UsuarioController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_UsuarioController.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 85, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Controllers.ViajeController", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeController.html", "cl": 0, "ucl": 53, "cal": 53, "tl": 105, "cb": 0, "tb": 14, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.AutoMapperProfile", "rp": "David.Academia.SistemaViajes.ProyectoFinal_AutoMapperProfile.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.AutoMapperProfile", "rp": "David.Academia.SistemaViajes.ProyectoFinal_AutoMapperProfile.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Ciudad", "rp": "David.Academia.SistemaViajes.ProyectoFinal_Ciudad.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Colaborador", "rp": "David.Academia.SistemaViajes.ProyectoFinal_Colaborador.html", "cl": 37, "ucl": 0, "cal": 37, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.EstadoDepartamento", "rp": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamento.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -345,8 +312,8 @@ var assemblies = [
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Maps.ViajeMap", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ViajeMap.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.SistemaTransporteDrContext", "rp": "David.Academia.SistemaViajes.ProyectoFinal_SistemaTransporteDrContext.html", "cl": 0, "ucl": 51, "cal": 51, "tl": 67, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "David.Academia.SistemaViajes.ProyectoFinal.WeatherForecast", "rp": "David.Academia.SistemaViajes.ProyectoFinal_WeatherForecast.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "ManejoDistanciasService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "cl": 23, "ucl": 88, "cal": 111, "tl": 180, "cb": 20, "tb": 58, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Program", "rp": "David.Academia.SistemaViajes.ProyectoFinal_Program.html", "cl": 0, "ucl": 91, "cal": 91, "tl": 165, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "ManejoDistanciasService", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "cl": 11, "ucl": 79, "cal": 90, "tl": 132, "cb": 22, "tb": 54, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Program", "rp": "David.Academia.SistemaViajes.ProyectoFinal_Program.html", "cl": 0, "ucl": 76, "cal": 76, "tl": 144, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "ReporteViajeResumenDto", "rp": "David.Academia.SistemaViajes.ProyectoFinal_ReporteViajeResumenDto.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 165, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
@@ -362,13 +329,13 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "AgregarColaboradoresAViaje()", "methodShortName": "AgregarColaboradoresAViaje()", "fileIndex": 0, "line": 141,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "AgregarColaboradoresAViaje()", "methodShortName": "AgregarColaboradoresAViaje()", "fileIndex": 0, "line": 143,
     "metrics": [
       { "value": 342, "exceeded": true },
       { "value": 18, "exceeded": true },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "CrearViaje()", "methodShortName": "CrearViaje()", "fileIndex": 0, "line": 34,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "CrearViaje()", "methodShortName": "CrearViaje()", "fileIndex": 0, "line": 35,
     "metrics": [
       { "value": 342, "exceeded": true },
       { "value": 18, "exceeded": true },
@@ -380,55 +347,37 @@ var riskHotspots = [
       { "value": 14, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ActualizadoEstadoViaje()", "methodShortName": "ActualizadoEstadoViaje()", "fileIndex": 0, "line": 248,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ObtenerDistanciaEntreSucursalColaborador()", "methodShortName": "ObtenerDistanciaEntreSucursalColaborador()", "fileIndex": 0, "line": 45,
+    "metrics": [
+      { "value": 161, "exceeded": true },
+      { "value": 20, "exceeded": true },
+    ]},
+  {
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ActualizadoEstadoViaje()", "methodShortName": "ActualizadoEstadoViaje()", "fileIndex": 0, "line": 250,
     "metrics": [
       { "value": 156, "exceeded": true },
       { "value": 12, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "CalcularDistanciaTotalAjustadaAsync()", "methodShortName": "CalcularDistanciaTotalAjustadaAsync()", "fileIndex": 0, "line": 93,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ObtenerDireccionDesdeCordenadas()", "methodShortName": "ObtenerDireccionDesdeCordenadas()", "fileIndex": 0, "line": 24,
     "metrics": [
-      { "value": 156, "exceeded": true },
-      { "value": 12, "exceeded": false },
+      { "value": 123, "exceeded": true },
+      { "value": 18, "exceeded": true },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradorPorSucursalID()", "methodShortName": "ObtenerColaboradorPorSucursalID()", "fileIndex": 0, "line": 157,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "methodName": "CrearPuesto()", "methodShortName": "CrearPuesto()", "fileIndex": 0, "line": 27,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "CrearColaborador()", "methodShortName": "CrearColaborador()", "fileIndex": 0, "line": 31,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "methodName": "EstadoPais()", "methodShortName": "EstadoPais()", "fileIndex": 0, "line": 185,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradorPorSucursalID()", "methodShortName": "ObtenerColaboradorPorSucursalID()", "fileIndex": 0, "line": 168,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaService.html", "methodName": "CrearParametroSistema()", "methodShortName": "CrearParametroSistema()", "fileIndex": 0, "line": 28,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "methodName": "CrearEstadoPago()", "methodShortName": "CrearEstadoPago()", "fileIndex": 0, "line": 27,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "methodName": "CrearMetodoPago()", "methodShortName": "CrearMetodoPago()", "fileIndex": 0, "line": 26,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "methodName": "CrearMoneda()", "methodShortName": "CrearMoneda()", "fileIndex": 0, "line": 27,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
@@ -452,12 +401,6 @@ var riskHotspots = [
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "methodName": "EstadoDeEstadoDepartamento()", "methodShortName": "EstadoDeEstadoDepartamento()", "fileIndex": 0, "line": 188,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.TransportistaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_TransportistaService.html", "methodName": "CrearTransportista()", "methodShortName": "CrearTransportista()", "fileIndex": 0, "line": 29,
     "metrics": [
       { "value": 110, "exceeded": true },
@@ -470,91 +413,31 @@ var riskHotspots = [
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "methodName": "CrearEstadoViaje()", "methodShortName": "CrearEstadoViaje()", "fileIndex": 0, "line": 27,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "EstadoViajeActivo()", "methodShortName": "EstadoViajeActivo()", "fileIndex": 0, "line": 418,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "EstadoViajeActivo()", "methodShortName": "EstadoViajeActivo()", "fileIndex": 0, "line": 416,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "CalcularDistanciaTotalAjustadaAsync()", "methodShortName": "CalcularDistanciaTotalAjustadaAsync()", "fileIndex": 0, "line": 69,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "Program", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_Program.html", "methodName": "<Main>$(System.String[])", "methodShortName": "<Main>$(...)", "fileIndex": 0, "line": 27,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "Program", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_Program.html", "methodName": "<Main>$(System.String[])", "methodShortName": "<Main>$(...)", "fileIndex": 0, "line": 20,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ObtenerDireccionDesdeCordenadas()", "methodShortName": "ObtenerDireccionDesdeCordenadas()", "fileIndex": 0, "line": 24,
-    "metrics": [
-      { "value": 92, "exceeded": true },
-      { "value": 18, "exceeded": true },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ObtenerDistanciaEntreSucursalColaborador()", "methodShortName": "ObtenerDistanciaEntreSucursalColaborador()", "fileIndex": 0, "line": 54,
-    "metrics": [
-      { "value": 76, "exceeded": true },
-      { "value": 20, "exceeded": true },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "CrearColaborador()", "methodShortName": "CrearColaborador()", "fileIndex": 0, "line": 30,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "EstadoColaborador()", "methodShortName": "EstadoColaborador()", "fileIndex": 0, "line": 261,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "EstadoColaborador()", "methodShortName": "EstadoColaborador()", "fileIndex": 0, "line": 250,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradores()", "methodShortName": "ObtenerColaboradores()", "fileIndex": 0, "line": 84,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "methodName": "EstadoPuesto()", "methodShortName": "EstadoPuesto()", "fileIndex": 0, "line": 178,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "methodName": "CrearCiudad()", "methodShortName": "CrearCiudad()", "fileIndex": 0, "line": 27,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "methodName": "EstadoCiudad()", "methodShortName": "EstadoCiudad()", "fileIndex": 0, "line": 176,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.Dto.PaisDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "methodName": "CrearPais()", "methodShortName": "CrearPais()", "fileIndex": 0, "line": 28,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "methodName": "ObtenerPaises()", "methodShortName": "ObtenerPaises()", "fileIndex": 0, "line": 78,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.Dto.ParametroSistemaDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradores()", "methodShortName": "ObtenerColaboradores()", "fileIndex": 0, "line": 95,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
@@ -567,60 +450,6 @@ var riskHotspots = [
     ]},
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaService.html", "methodName": "ObtenerParametrosSistema()", "methodShortName": "ObtenerParametrosSistema()", "fileIndex": 0, "line": 78,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "methodName": "EstadoDeEstadoPago()", "methodShortName": "EstadoDeEstadoPago()", "fileIndex": 0, "line": 183,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "methodName": "ObtenerEstadosPagos()", "methodShortName": "ObtenerEstadosPagos()", "fileIndex": 0, "line": 76,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "methodName": "EstadoMetodoPago()", "methodShortName": "EstadoMetodoPago()", "fileIndex": 0, "line": 181,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "methodName": "ObtenerMetodosPagos()", "methodShortName": "ObtenerMetodosPagos()", "fileIndex": 0, "line": 74,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.Dto.MonedaDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "methodName": "EstadoMoneda()", "methodShortName": "EstadoMoneda()", "fileIndex": 0, "line": 183,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "methodName": "ObtenerMonedas()", "methodShortName": "ObtenerMonedas()", "fileIndex": 0, "line": 76,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "methodName": "CrearEstadoDepartamento()", "methodShortName": "CrearEstadoDepartamento()", "fileIndex": 0, "line": 29,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "methodName": "ObtenerEstadosDepartamentos()", "methodShortName": "ObtenerEstadosDepartamentos()", "fileIndex": 0, "line": 80,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
@@ -692,103 +521,19 @@ var riskHotspots = [
       { "value": 8, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "methodName": "EstadoDeEstadoViaje()", "methodShortName": "EstadoDeEstadoViaje()", "fileIndex": 0, "line": 183,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ObtenerViajes()", "methodShortName": "ObtenerViajes()", "fileIndex": 0, "line": 305,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "methodName": "ObtenerEstadosViajes()", "methodShortName": "ObtenerEstadosViajes()", "fileIndex": 0, "line": 76,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ObtenerViajes()", "methodShortName": "ObtenerViajes()", "fileIndex": 0, "line": 303,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ValidarDistanciaEntreColaboradoresExistentesEnViajeAsync()", "methodShortName": "ValidarDistanciaEntreColaboradoresExistentesEnViajeAsync()", "fileIndex": 0, "line": 144,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ActualizarColaborador()", "methodShortName": "ActualizarColaborador()", "fileIndex": 0, "line": 209,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ActualizarColaborador()", "methodShortName": "ActualizarColaborador()", "fileIndex": 0, "line": 220,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradorPorId()", "methodShortName": "ObtenerColaboradorPorId()", "fileIndex": 0, "line": 125,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.Dto.PuestoDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "methodName": "ActualizarPuesto()", "methodShortName": "ActualizarPuesto()", "fileIndex": 0, "line": 142,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "methodName": "ObtenerPuestoPorId()", "methodShortName": "ObtenerPuestoPorId()", "fileIndex": 0, "line": 110,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Puestos.PuestoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PuestoService.html", "methodName": "ObtenerPuestos()", "methodShortName": "ObtenerPuestos()", "fileIndex": 0, "line": 77,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.Dto.CiudadDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "methodName": "ActualizarCiudad()", "methodShortName": "ActualizarCiudad()", "fileIndex": 0, "line": 140,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "methodName": "ObtenerCiudadPorId()", "methodShortName": "ObtenerCiudadPorId()", "fileIndex": 0, "line": 108,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Ciudades.CiudadService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_CiudadService.html", "methodName": "ObtenerCiudades()", "methodShortName": "ObtenerCiudades()", "fileIndex": 0, "line": 75,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Estado_Departamento.EstadoDepartamentoDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.Dto.EstadoDepartamentoDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "methodName": "ActualizarPais()", "methodShortName": "ActualizarPais()", "fileIndex": 0, "line": 149,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.Paises.PaisService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_PaisService.html", "methodName": "ObtenerPaisPorId()", "methodShortName": "ObtenerPaisPorId()", "fileIndex": 0, "line": 118,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.ColaboradorService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorService.html", "methodName": "ObtenerColaboradorPorId()", "methodShortName": "ObtenerColaboradorPorId()", "fileIndex": 0, "line": 136,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
@@ -801,54 +546,6 @@ var riskHotspots = [
     ]},
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Generales.ParametrosSistema.ParametroSistemaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ParametroSistemaService.html", "methodName": "ObtenerParametroSistemaPorId()", "methodShortName": "ObtenerParametroSistemaPorId()", "fileIndex": 0, "line": 117,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "methodName": "ActualizarRol()", "methodShortName": "ActualizarRol()", "fileIndex": 0, "line": 147,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.EstadoDePago.EstadoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoPagoService.html", "methodName": "ObtenerEstadoPagoPorId()", "methodShortName": "ObtenerEstadoPagoPorId()", "fileIndex": 0, "line": 115,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "methodName": "ActualizarMetodoPago()", "methodShortName": "ActualizarMetodoPago()", "fileIndex": 0, "line": 145,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MetodoDePago.MetodoPagoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MetodoPagoService.html", "methodName": "ObtenerMetodoPagoPorId()", "methodShortName": "ObtenerMetodoPagoPorId()", "fileIndex": 0, "line": 113,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "methodName": "ActualizarMoneda()", "methodShortName": "ActualizarMoneda()", "fileIndex": 0, "line": 147,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Pagos.MonedaService.MonedaService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_MonedaService.html", "methodName": "ObtenerMonedaPorId()", "methodShortName": "ObtenerMonedaPorId()", "fileIndex": 0, "line": 115,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "methodName": "ActualizarEstadoDepartamento()", "methodShortName": "ActualizarEstadoDepartamento()", "fileIndex": 0, "line": 152,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Sucursales.EstadoDepartamentoService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoDepartamentoService.html", "methodName": "ObtenerEstadoDepartamentoPorId()", "methodShortName": "ObtenerEstadoDepartamentoPorId()", "fileIndex": 0, "line": 120,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
@@ -896,25 +593,19 @@ var riskHotspots = [
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "methodName": "ActualizarEstadoViaje()", "methodShortName": "ActualizarEstadoViaje()", "fileIndex": 0, "line": 147,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ActualizarViaje()", "methodShortName": "ActualizarViaje()", "fileIndex": 0, "line": 378,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.EstadoDeViaje.EstadoViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_EstadoViajeService.html", "methodName": "ObtenerEstadoViajePorId()", "methodShortName": "ObtenerEstadoViajePorId()", "fileIndex": 0, "line": 115,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ObtenerViajePorId()", "methodShortName": "ObtenerViajePorId()", "fileIndex": 0, "line": 345,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ActualizarViaje()", "methodShortName": "ActualizarViaje()", "fileIndex": 0, "line": 376,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeService.html", "methodName": "ObtenerViajePorId()", "methodShortName": "ObtenerViajePorId()", "fileIndex": 0, "line": 343,
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "ManejoDistanciasService", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ManejoDistanciasService.html", "methodName": "ValidarDistanciaEntreColaboradoresExistentesEnViajeAsync()", "methodShortName": "ValidarDistanciaEntreColaboradoresExistentesEnViajeAsync()", "fileIndex": 0, "line": 106,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
@@ -922,8 +613,8 @@ var riskHotspots = [
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaboradores.ColaboradorDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ColaboradorDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Colaborador_.Dto.ColaboradorDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 9,
     "metrics": [
-      { "value": 30, "exceeded": false },
-      { "value": 30, "exceeded": true },
+      { "value": 28, "exceeded": false },
+      { "value": 28, "exceeded": true },
     ]},
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.TransportistaDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_TransportistaDomain.html", "methodName": "ValidarDatosDeEntrada(David.Academia.SistemaViajes.ProyectoFinal._Features.Transportistas.Transportistas.Dto.TransportistaDto)", "methodShortName": "ValidarDatosDeEntrada(...)", "fileIndex": 0, "line": 10,
@@ -933,6 +624,12 @@ var riskHotspots = [
     ]},
   {
     "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDomain.html", "methodName": "ValidarDatosDeEntradaViaje(David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Viaje,System.Collections.Generic.List`1<System.Int32>)", "methodShortName": "ValidarDatosDeEntradaViaje(...)", "fileIndex": 0, "line": 58,
+    "metrics": [
+      { "value": 16, "exceeded": false },
+      { "value": 16, "exceeded": true },
+    ]},
+  {
+    "assembly": "David.Academia.SistemaViajes.ProyectoFinal", "class": "David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.ViajeDomain", "reportPath": "David.Academia.SistemaViajes.ProyectoFinal_ViajeDomain.html", "methodName": "ValidarRespuestasDeBD(David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Sucursal,David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Usuario,David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities.Transportista,System.Collections.Generic.List`1<David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes.Dto.ColaboradorConKmsDto>,System.Collections.Generic.List`1<System.Int32>)", "methodShortName": "ValidarRespuestasDeBD(...)", "fileIndex": 0, "line": 144,
     "metrics": [
       { "value": 16, "exceeded": false },
       { "value": 16, "exceeded": true },

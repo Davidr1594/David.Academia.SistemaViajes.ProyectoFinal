@@ -96,7 +96,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             var respuesta = new Respuesta<List<ColaboradorDto>>();
             try
             {
-                var colaboradores = await _colaboradorRepository.AsQueryable().ToListAsync();
+                var colaboradores = await _colaboradorRepository.AsQueryable().Where(c => c.Activo).ToListAsync();
 
                 if (colaboradores.Count == 0)
                 {
@@ -137,7 +137,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             var respuesta = new Respuesta<ColaboradorDto>();
             try
             {
-                var colaborador = await _colaboradorRepository.AsQueryable().FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId);
+                var colaborador = await _colaboradorRepository.AsQueryable().FirstOrDefaultAsync(c => c.ColaboradorId == colaboradorId && c.Activo);
 
                 if (colaborador == null)
                 {
@@ -164,7 +164,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             return respuesta;
         }
 
-        public async Task<Respuesta<List<ColaboradorDto>>> ObtenerColaboradorPorSucursalID(int sucursalId)
+        public async Task<Respuesta<List<ColaboradorDto>>> ObtenerColaboradoresPorSucursalID(int sucursalId)
         {
             var respuesta = new Respuesta<List<ColaboradorDto>>();
 
@@ -257,7 +257,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Colaboradores.Col
             return respuesta;
         }
 
-        public async Task<Respuesta<bool>> EstadoColaborador(int colaboradorId, bool estado)
+        public async Task<Respuesta<bool>> EstadoColaborador(int usuarioActualizaId, int colaboradorId, bool estado)
         {
             var respuesta = new Respuesta<bool>();
             try

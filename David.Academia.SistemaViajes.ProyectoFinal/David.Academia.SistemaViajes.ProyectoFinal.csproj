@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="_Features\Viajes\ValoracionDeViaje\Dto\**" />
+    <Content Remove="_Features\Viajes\ValoracionDeViaje\Dto\**" />
+    <EmbeddedResource Remove="_Features\Viajes\ValoracionDeViaje\Dto\**" />
+    <None Remove="_Features\Viajes\ValoracionDeViaje\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Farsiman.Extensions.Configuration" Version="2.29723.0" />
     <PackageReference Include="Farsiman.Infraestructure.Core.Entity.Standard" Version="8.1.8" />
@@ -19,12 +26,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="7.2.0" />
 
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="_Features\Viajes\SolicitudDeViaje\Dto\" />
-    <Folder Include="_Features\Viajes\ValoracionDeViaje\Dto\" />
-    <Folder Include="_Features\Viajes\ViajeDetalles\Dto\" />
   </ItemGroup>
 
 </Project>

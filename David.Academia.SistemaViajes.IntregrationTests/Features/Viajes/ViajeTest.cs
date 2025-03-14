@@ -69,10 +69,6 @@ namespace David.Academia.SistemaViajes.IntregrationTests.Features.Viajes
             var apiResponse = await response.Content.ReadFromJsonAsync<Respuesta<ViajeDto>>();
 
 
-            // 🔸 Extraer mensaje del error (muy útil para debugging)
-            var contenidoError = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(contenidoError);
-
             // Assert
             response.StatusCode.Should().Be(HttpStatusCode.OK);
 

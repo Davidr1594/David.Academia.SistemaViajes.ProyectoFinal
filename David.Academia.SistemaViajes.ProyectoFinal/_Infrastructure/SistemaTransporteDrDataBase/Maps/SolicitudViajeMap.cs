@@ -23,6 +23,11 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTrans
                 .HasForeignKey(sv => sv.ColaboradorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.HasOne(sv => sv.SucursalNavigation)
+                .WithMany(c => c.SolicitudeViajes)
+                .HasForeignKey(sv => sv.SucursalId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             builder.HasOne(sv => sv.UsuarioAprobadorNavigation)
                 .WithMany(u => u.SolicitudeViajesCrea)
                 .HasForeignKey(sv => sv.UsuarioAprueba)

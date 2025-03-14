@@ -23,7 +23,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
 
             if (!respuesta.Valido)
             {
-                return BadRequest(new { respuesta.Valido, respuesta.Mensaje, respuesta.DetalleError });
+                return Ok(new { respuesta.Valido, respuesta.Mensaje, respuesta.DetalleError });
             }
             return Ok(respuesta);
         }
@@ -54,7 +54,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
         [HttpGet("ObtenerColaboradorSucursalId")]
         public async Task<IActionResult> ObtenerColaboradorSucursalId([FromQuery] int sucursalId)
         {
-            var respuesta = await _colaboradorService.ObtenerColaboradorPorSucursalID(sucursalId);
+            var respuesta = await _colaboradorService.ObtenerColaboradoresPorSucursalID(sucursalId);
 
             if (!respuesta.Valido)
             {
@@ -75,10 +75,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.Controllers
             return Ok(respuesta);
         }
 
-        [HttpPatch("CambiarEstadoColaborador/{colaboradorId}/estado")]
-        public async Task<IActionResult> EstadoColaborador(int colaboradorId, [FromQuery] bool estado)
+        [HttpPatch("CambiarEstadoColaborador")]
+        public async Task<IActionResult> EstadoColaborador([FromQuery]int usuarioActualizaId, [FromQuery] int colaboradorId, [FromQuery] bool estado)
         {
-            var respuesta = await _colaboradorService.EstadoColaborador(colaboradorId, estado);
+            var respuesta = await _colaboradorService.EstadoColaborador(usuarioActualizaId,colaboradorId, estado);
 
             if (!respuesta.Valido)
             {

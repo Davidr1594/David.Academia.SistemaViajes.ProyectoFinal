@@ -1,5 +1,7 @@
-﻿using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
+﻿using AutoMapper;
+using David.Academia.SistemaViajes.ProyectoFinal._Features._Common;
 using David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad.Dto;
+using David.Academia.SistemaViajes.ProyectoFinal._Features.Usuarios.Usuarios.Dto;
 using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
@@ -22,9 +24,9 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
 
         }
 
-        public async Task<Respuesta<bool>> AutenticarUsuario(UsuarioAuthDto usuario)
+        public async Task<Respuesta<UsuarioDto>> AutenticarUsuario(UsuarioAuthDto usuario)
         {
-            var respuesta = new Respuesta<bool>();
+            var respuesta = new Respuesta<UsuarioDto>();
 
             var validarCredenciales = _authDomain.ValidarCredencialesValidas(usuario);
 
@@ -32,7 +34,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
             {
                 respuesta.Valido = validarCredenciales.Valido;
                 respuesta.Mensaje = validarCredenciales.Mensaje;
-                respuesta.Datos = validarCredenciales.Datos;
+  
                 return respuesta;
             }
 
@@ -42,20 +44,29 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
                 if (usuarioEcontrado == null)
                 {
                     respuesta.Mensaje = string.Format(Mensajes.NoSeEncontroEntidadNombre, "un usuario");
-                    respuesta.Datos = false;
+                    respuesta.Valido = false;
                     return respuesta;
                 }
                 var claveEncriptada = _authDomain.EncriptarClave(usuario.clave);
 
                 if (!usuarioEcontrado.ClaveHash.SequenceEqual(claveEncriptada))
                 {
-                    respuesta.Datos = false;
+                    respuesta.Valido = false;
                     respuesta.Mensaje = Mensajes.ContraseniaIncorrecta;
                     return respuesta;
                 }
+                var usuarioDto = new UsuarioDto() { 
+                    Nombre = usuarioEcontrado.Nombre,
+                    Email = usuarioEcontrado.Email,
+                    RolId = usuarioEcontrado.RolId,
+                    Activo = usuarioEcontrado.Activo,
+                    UsuarioId = usuarioEcontrado.UsuarioId,
+                    ColaboradorId = usuarioEcontrado.ColaboradorId
+                };
 
                 respuesta.Mensaje = Mensajes.AccessoCorrecto;
-                respuesta.Datos = true;
+                respuesta.Valido = true;
+                respuesta.Datos = usuarioDto;
             }
             catch (DbUpdateException ex)
             {

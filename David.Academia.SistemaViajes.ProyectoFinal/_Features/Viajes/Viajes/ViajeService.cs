@@ -7,7 +7,6 @@ using David.Academia.SistemaViajes.ProyectoFinal._Infrastructure;
 using David.Academia.SistemaViajes.ProyectoFinal.Infrastructure.SistemaTransporteDrDataBase.Entities;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 {
@@ -79,6 +78,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                     return respuesta;
                 }
 
+                //var colaboradoresEnSolicitudes = await ObtenerColaboradoresEnSolicitudesViajeAsync(colaboradoresDetalle);
+
                 await _unitOfWork.BeginTransactionAsync();
 
                 try
@@ -99,6 +100,27 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                     {
                         await _unitOfWork.Repository<ViajeDetalle>().AddAsync(viajeDetalle);
                     }
+
+                    if (!await _unitOfWork.SaveChangesAsync())
+                    {
+                        respuesta.Valido = false;
+                        respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
+                        await _unitOfWork.RollBackAsync();
+                        return respuesta;
+                    }
+
+                    //if(colaboradoresEnSolicitudes.Count > 0)
+                    //{
+                    //    foreach (var colaborador in colaboradoresEnSolicitudes)
+                    //    {
+                    //        colaborador.EstadoId = (int)EstadoViajeEnum.Completado;
+                    //        colaborador.UsuarioAprueba = usuarioCreaId;
+                    //        colaborador.FechaActualiza = DateTime.Now.Date;
+                    //        colaborador.UsuarioActualiza = usuarioCreaId;
+
+                    //        await _unitOfWork.Repository<SolicitudViaje>().AddAsync(colaborador);
+                    //    } 
+                    //}
 
                     if (!await _unitOfWork.SaveChangesAsync())
                     {
@@ -189,6 +211,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
 
                 var respuestaViajeDetalleAGuardar = _viajeDomain.ProcesarDatosAgregarColaboradorAViaje(colaboradoresValidos, viaje.ViajeId);
 
+                var colaboradoresEnSolicitudes = await ObtenerColaboradoresEnSolicitudesViajeAsync(colaboradoresValidos);
+
                 await _unitOfWork.BeginTransactionAsync();
                 try
                 {
@@ -216,6 +240,27 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                         respuesta.Valido = false;
                         respuesta.Datos = false;
 
+                        return respuesta;
+                    }
+
+                    if (colaboradoresEnSolicitudes.Count > 0)
+                    {
+                        foreach (var colaborador in colaboradoresEnSolicitudes)
+                        {
+                            colaborador.EstadoId = (int)EstadoViajeEnum.Completado;
+                            colaborador.UsuarioAprueba = usuarioCrea;
+                            colaborador.FechaActualiza = DateTime.Now.Date;
+                            colaborador.UsuarioActualiza = usuarioCrea;
+
+                            await _unitOfWork.Repository<SolicitudViaje>().AddAsync(colaborador);
+                        }
+                    }
+
+                    if (!await _unitOfWork.SaveChangesAsync())
+                    {
+                        respuesta.Valido = false;
+                        respuesta.Mensaje = Mensajes.ErrorGuardarEntidad;
+                        await _unitOfWork.RollBackAsync();
                         return respuesta;
                     }
                     respuesta.Datos = true;
@@ -306,7 +351,29 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
             var respuesta = new Respuesta<List<ViajeDto>>();
             try
             {
-                var viajes = await _viajeRepository.AsQueryable().ToListAsync();
+                var viajes = await (from v in _unitOfWork.Repository<Viaje>().AsQueryable().AsNoTracking()
+                                    join s in _unitOfWork.Repository<Sucursal>().AsQueryable().AsNoTracking() on v.SucursalId equals s.SucursalId
+                                    join t in _unitOfWork.Repository<Transportista>().AsQueryable().AsNoTracking() on v.TransportistaId equals t.TransportistaId
+                                    join ev in _unitOfWork.Repository<EstadoViaje>().AsQueryable().AsNoTracking() on v.EstadoId equals ev.EstadoViajeId
+                                    join m in _unitOfWork.Repository<Moneda>().AsQueryable().AsNoTracking() on v.MonedaId equals m.MonedaId
+                                    select new ViajeDto
+                                    {
+                                        ViajeId = v.ViajeId,
+                                        MonedaId = v.MonedaId,
+                                        NombreSucursal = s.Nombre,
+                                        SucursalId = v.SucursalId,
+                                        TransportistaId = v.TransportistaId,
+                                        NombreTransportista = t.Nombre,
+                                        EstadoId = v.EstadoId,
+                                        NombreEstado = ev.Nombre,
+                                        Activo = v.Activo,
+                                        FechaViaje = v.FechaViaje,
+                                        HoraSalida = v.HoraSalida,
+                                        NombreMoneda = m.Nombre,
+                                        TotalKms = v.TotalKms,
+                                        MontoTotal = v.MontoTotal
+                                        
+                                    }).ToListAsync(); ;
 
                 if (viajes.Count == 0)
                 {
@@ -315,14 +382,8 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                     return respuesta;
                 }
 
-                var viajesDto = new List<ViajeDto>();
-
-                foreach (var viaje in viajes)
-                {
-                    viajesDto.Add(_mapper.Map<ViajeDto>(viaje));
-                }
-
-                respuesta.Datos = viajesDto;
+        
+                respuesta.Datos = viajes;
             }
             catch (DbUpdateException ex)
             {
@@ -533,6 +594,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Viajes.Viajes
                               latitud = c.Latitud,
                               longitud = c.Longitud
                           }).ToListAsync();
+
+        }
+        private async Task<List<SolicitudViaje>> ObtenerColaboradoresEnSolicitudesViajeAsync(List<ColaboradorConKmsDto> colaboradoresDetalle)
+        {
+            return await _unitOfWork.Repository<SolicitudViaje>().AsQueryable()
+                                            .Where(vs => colaboradoresDetalle.Select(c => c.ColaboradorId).Contains(vs.ColaboradorId)
+                                             && vs.FechaCreacion.Date == DateTime.Now.Date && vs.EstadoId == (int)EstadoViajeEnum.Pendiente).ToListAsync();
 
         }
         private decimal obtenerParametroDeKms()

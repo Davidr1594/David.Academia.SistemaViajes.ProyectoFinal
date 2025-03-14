@@ -15,13 +15,13 @@ namespace David.Academia.SistemaViajes.ProyectoFinal._Features.Seguridad
             if (string.IsNullOrWhiteSpace(usuario.clave))
             {
                 respuesta.Mensaje = string.Format(Mensajes.DatoNoValidoEspecifico, "clave");
-                respuesta.Datos = false;
+                respuesta.Valido = false;
                 return respuesta;
             }
             if (string.IsNullOrWhiteSpace(usuario.nombre))
             {
                 respuesta.Mensaje = string.Format(Mensajes.DatoNoValidoEspecifico, "usuario");
-                respuesta.Datos = false;
+                respuesta.Valido = false;
                 return respuesta;
             }
             respuesta.Datos = true;

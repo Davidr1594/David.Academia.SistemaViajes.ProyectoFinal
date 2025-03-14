@@ -3,6 +3,176 @@
   "WorkspaceRootPath": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dreyes\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\8.0.0\\build\\net8.0\\Microsoft.AspNetCore.Mvc.Testing.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajes\\viajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajes\\viajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\transportistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\transportistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajes\\dto\\viajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajes\\dto\\viajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\sucursales\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\sucursales\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\transportistas\\transportistas\\transportistadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\transportistas\\transportistas\\transportistadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\transportistas\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\transportistas\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dreyes\\AppData\\Local\\SourceServer\\66a5075e91598a2a2a15ee0b567bf608cac8028b93b59b8b1e33f0e499250aaa\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\SucursalController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\sucursales\\dto\\sucursalcolaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\sucursales\\dto\\sucursalcolaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\reportes\\reportesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\reportes\\reportesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\sucursales\\dto\\sucursaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\sucursales\\dto\\sucursaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\authusuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\authusuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\seguridad\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\seguridad\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\seguridad\\dto\\usuarioauthdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\seguridad\\dto\\usuarioauthdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\seguridad\\authdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\seguridad\\authdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\colaboradordomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\colaboradordomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\usuarios\\roles\\dto\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\usuarios\\roles\\dto\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\generales\\parametrossistema\\dto\\parametrosistemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\generales\\parametrossistema\\dto\\parametrosistemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\solicituddeviaje\\solicitudviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\solicituddeviaje\\solicitudviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\solicituddeviaje\\dto\\solicitudviajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\solicituddeviaje\\dto\\solicitudviajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\solicituddeviaje\\solicitudviajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\solicituddeviaje\\solicitudviajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\maps\\solicitudviajemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\maps\\solicitudviajemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\viajes\\viajetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\mocks\\googlemaps\\manejodistanciaservicemock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\colaboradores\\colaboradortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomainvalidarkmscolaboradortestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomainvalidardatosentradatestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\sucursales\\sucursaltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\googlemaps\\manejodistanciasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\googlemaps\\manejodistanciasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\googlemaps\\imanejodistanciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\googlemaps\\imanejodistanciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\mocks\\infranstructure\\unitofworkmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\coverage.cobertura.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\helpers\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:david.academia.sistemaviajes.proyectofinal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -10,51 +180,65 @@
       "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\david.academia.sistemaviajes.intregrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\viajes\\viajetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\valoracionviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\valoracionviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\puesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\puesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\permisorol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\permisorol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajes\\viajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajes\\viajedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\googlemaps\\imanejodistanciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\googlemaps\\imanejodistanciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\googlemaps\\manejodistanciasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\googlemaps\\manejodistanciasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\pagoviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\pagoviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\pagocontratista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\pagocontratista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\mocks\\googlemaps\\manejodistanciaservicemock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\colaboradores\\colaboradortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\estadoviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\estadoviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\features\\sucursales\\sucursaltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\estadodepartamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\estadodepartamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\pagos\\monedaservice\\dto\\monedadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\pagos\\monedaservice\\dto\\monedadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\entities\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\entities\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\colaboradordomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\colaboradordomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\generales\\parametrossistemas\\parametrossistemadomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\generales\\parametrossistemas\\parametrosistematestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\generales\\parametrossistema\\parametrosistemadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\generales\\parametrossistema\\parametrosistemadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\usuarios\\roltest\\roldomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\colaboradortest\\colaboradordtotestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -63,39 +247,14 @@
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\colaboradortest\\colaboradordomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\colaboradores\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\colaboradores\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\_common\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\_common\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\_common\\googlemaps\\manejodistanciaservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\usuarios\\usuarios\\usuariodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\usuarios\\usuarios\\usuariodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomainprocesardatostestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\helpers\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8937E1-B74A-42EF-98BF-FFAC91704F2D}|..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.intregrationtests\\_common\\respuesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -103,9 +262,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_infrastructure\\sistematransportedrdatabase\\sistematransportedrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_infrastructure\\sistematransportedrdatabase\\sistematransportedrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\usuarios\\roltest\\roldomaintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\sucursales\\sucursaldomaintestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -117,9 +273,6 @@
       "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\sucursales\\sucursaldomainvalidarbdtestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3126202-AF27-4646-A9AA-73D1C8EAD720}|..\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.unittests\\viajes\\viajedomainvalidardatosentradatestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarBdTestData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -127,28 +280,8 @@
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\reportes\\reportedomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\puestos\\puestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\puestos\\puestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\colaboradores\\puestos\\puestodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\colaboradores\\puestos\\puestodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\transportistas\\transportistas\\transportistadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\transportistas\\transportistas\\transportistadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\sucursales\\sucursaldomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\sucursales\\sucursaldomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\sucursales\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\sucursales\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\controllers\\ciudadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:controllers\\ciudadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\usuarios\\roles\\rolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,24 +296,12 @@
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\usuarios\\usuarios\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\viajes\\viajedetalles\\viajedetalleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\viajes\\viajedetalles\\viajedetalleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\pagos\\pagoaviaje\\pagoviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\pagos\\pagoaviaje\\pagoviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\pagos\\pagoacontratista\\pagocontratistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\pagos\\pagoacontratista\\pagocontratistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\transportistas\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\transportistas\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|d:\\david\\academia\\proyecto\\david.academia.sistemaviajes.proyectofinal\\david.academia.sistemaviajes.proyectofinal\\_features\\pagos\\estadodepago\\estadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C973AD9-837A-4B47-9784-0D981AB95447}|David.Academia.SistemaViajes.ProyectoFinal.csproj|solutionrelative:_features\\pagos\\estadodepago\\estadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -247,7 +368,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 237,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -283,98 +404,594 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomWebApplicationFactory.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAQwLwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T20:32:30.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ManejoDistanciasService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
-              "RelativeDocumentMoniker": "_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
-              "RelativeToolTip": "_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswEMAAACTAAAAAAAAAA==",
+              "Title": "TransportistaController.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\TransportistaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransportistaController.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\TransportistaController.cs",
+              "RelativeToolTip": "Controllers\\TransportistaController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:35:48.755Z",
+              "WhenOpened": "2025-03-14T07:15:11.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IManejoDistanciaService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
-              "RelativeDocumentMoniker": "_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
-              "RelativeToolTip": "_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ViajeDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\Dto\\ViajeDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\Viajes\\Dto\\ViajeDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\Dto\\ViajeDto.cs",
+              "RelativeToolTip": "_Features\\Viajes\\Viajes\\Dto\\ViajeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T17:05:38.039Z",
+              "WhenOpened": "2025-03-14T06:18:43.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViajeTest.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAtwKwAAABxAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ColaboradorService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
+              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs*",
+              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs*",
+              "ViewState": "AgIAAKYAAAAAAAAAAAA+wLUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:14:43.399Z",
+              "WhenOpened": "2025-03-02T19:21:26.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ViajeService.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\ViajeService.cs",
               "RelativeDocumentMoniker": "_Features\\Viajes\\Viajes\\ViajeService.cs",
               "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\ViajeService.cs",
               "RelativeToolTip": "_Features\\Viajes\\Viajes\\ViajeService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAApwDYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAAAHoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T19:57:52.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "ViajeController.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ViajeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ViajeController.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ViajeController.cs",
+              "RelativeToolTip": "Controllers\\ViajeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T03:23:01.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ColaboradorDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs*",
+              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T20:55:24.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Microsoft.AspNetCore.Mvc.Testing.targets",
+              "DocumentMoniker": "C:\\Users\\dreyes\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\8.0.0\\build\\net8.0\\Microsoft.AspNetCore.Mvc.Testing.targets",
+              "ToolTip": "C:\\Users\\dreyes\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\8.0.0\\build\\net8.0\\Microsoft.AspNetCore.Mvc.Testing.targets",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwCUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-03-14T09:28:11.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ViajeDomain.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\ViajeDomain.cs",
               "RelativeDocumentMoniker": "_Features\\Viajes\\Viajes\\ViajeDomain.cs",
               "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\Viajes\\ViajeDomain.cs",
               "RelativeToolTip": "_Features\\Viajes\\Viajes\\ViajeDomain.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAtwK4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAewLQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T02:27:34.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "David.Academia.SistemaViajes.IntregrationTests.csproj",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-06T02:42:02.635Z",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAewCIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:53:32.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "TransportistaService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
+              "RelativeDocumentMoniker": "_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
+              "RelativeToolTip": "_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCQAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:43:46.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SucursalService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\SucursalService.cs",
+              "RelativeDocumentMoniker": "_Features\\Sucursales\\SucursalService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\SucursalService.cs",
+              "RelativeToolTip": "_Features\\Sucursales\\SucursalService.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAgwEwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:20:48.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SucursalController.cs",
+              "DocumentMoniker": "C:\\Users\\dreyes\\AppData\\Local\\SourceServer\\66a5075e91598a2a2a15ee0b567bf608cac8028b93b59b8b1e33f0e499250aaa\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\SucursalController.cs",
+              "ToolTip": "C:\\Users\\dreyes\\AppData\\Local\\SourceServer\\66a5075e91598a2a2a15ee0b567bf608cac8028b93b59b8b1e33f0e499250aaa\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\SucursalController.cs [Solo lectura]",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAewGAAAAAAAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T05:40:26.21Z",
+              "EditorCaption": " [Solo lectura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SucursalColaboradorDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\Dto\\SucursalColaboradorDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Sucursales\\Dto\\SucursalColaboradorDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\Dto\\SucursalColaboradorDto.cs",
+              "RelativeToolTip": "_Features\\Sucursales\\Dto\\SucursalColaboradorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T04:09:17.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TransportistaDomain.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
+              "RelativeToolTip": "_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwFgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:46:14.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SucursalDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\Dto\\SucursalDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Sucursales\\Dto\\SucursalDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\Dto\\SucursalDto.cs",
+              "RelativeToolTip": "_Features\\Sucursales\\Dto\\SucursalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T16:30:52.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ColaboradorController.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ColaboradorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ColaboradorController.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ColaboradorController.cs",
+              "RelativeToolTip": "Controllers\\ColaboradorController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAIwFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:02:42.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SucursalController.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\SucursalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SucursalController.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\SucursalController.cs",
+              "RelativeToolTip": "Controllers\\SucursalController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwGAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T04:14:57.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthUsuarioController.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\AuthUsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthUsuarioController.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\AuthUsuarioController.cs",
+              "RelativeToolTip": "Controllers\\AuthUsuarioController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:10:49.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReportesService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Reportes\\ReportesService.cs",
+              "RelativeDocumentMoniker": "_Features\\Reportes\\ReportesService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Reportes\\ReportesService.cs",
+              "RelativeToolTip": "_Features\\Reportes\\ReportesService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T04:48:40.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UsuarioAuthDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\Dto\\UsuarioAuthDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Seguridad\\Dto\\UsuarioAuthDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\Dto\\UsuarioAuthDto.cs",
+              "RelativeToolTip": "_Features\\Seguridad\\Dto\\UsuarioAuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:13:27.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AuthDomain.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\AuthDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\Seguridad\\AuthDomain.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\AuthDomain.cs",
+              "RelativeToolTip": "_Features\\Seguridad\\AuthDomain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:10:26.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ColaboradorDomain.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
+              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAkwHoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T19:20:12.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\AuthService.cs",
+              "RelativeDocumentMoniker": "_Features\\Seguridad\\AuthService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Seguridad\\AuthService.cs",
+              "RelativeToolTip": "_Features\\Seguridad\\AuthService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowFIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T14:24:35.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ParametroSistemaDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Generales\\ParametrosSistema\\Dto\\ParametroSistemaDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Generales\\ParametrosSistema\\Dto\\ParametroSistemaDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Generales\\ParametrosSistema\\Dto\\ParametroSistemaDto.cs",
+              "RelativeToolTip": "_Features\\Generales\\ParametrosSistema\\Dto\\ParametroSistemaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T06:00:36.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RolDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Roles\\Dto\\RolDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Usuarios\\Roles\\Dto\\RolDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Roles\\Dto\\RolDto.cs",
+              "RelativeToolTip": "_Features\\Usuarios\\Roles\\Dto\\RolDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T06:01:53.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SolicitudViajeService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeService.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeService.cs",
+              "RelativeToolTip": "_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:26:48.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\AutoMapperProfile.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\AutoMapperProfile.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\AutoMapperProfile.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAvwBwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:10:40.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SolicitudViajeDto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\Dto\\SolicitudViajeDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\SolicitudDeViaje\\Dto\\SolicitudViajeDto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\Dto\\SolicitudViajeDto.cs",
+              "RelativeToolTip": "_Features\\Viajes\\SolicitudDeViaje\\Dto\\SolicitudViajeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T19:56:37.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Sucursal.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Sucursal.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Sucursal.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Sucursal.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Sucursal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T18:09:28.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ViajeTest.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Viajes\\ViajeTest.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAhwDIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T01:14:43.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SolicitudViajeDomain.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeDomain.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeDomain.cs",
+              "RelativeToolTip": "_Features\\Viajes\\SolicitudDeViaje\\SolicitudViajeDomain.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T16:48:43.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SolicitudViajeMap.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Maps\\SolicitudViajeMap.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Maps\\SolicitudViajeMap.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Maps\\SolicitudViajeMap.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Maps\\SolicitudViajeMap.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T18:09:48.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Mensajes.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\Mensajes.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\Mensajes.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\Mensajes.cs",
+              "RelativeToolTip": "_Features\\_Common\\Mensajes.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwDAAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:56:32.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ManejoDistanciaServiceMock.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwC0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T16:44:23.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ColaboradorTests.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAQwIoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T02:36:19.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ViajeDomainTest.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAADwv1cAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:50:54.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ViajeDomainValidarKmsColaboradorTestData.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T07:25:15.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ViajeDomainValidarDatosEntradaTestData.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T17:01:27.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T00:46:01.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ManejoDistanciasService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
+              "RelativeToolTip": "_Features\\_Common\\GoogleMaps\\ManejoDistanciasService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAmwEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:35:48.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IManejoDistanciaService.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
+              "RelativeToolTip": "_Features\\_Common\\GoogleMaps\\IManejoDistanciaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T17:05:38.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SucursalTest.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T02:13:35.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CustomWebApplicationFactory.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\CustomWebApplicationFactory.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T20:32:30.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UnitOfWorkMock.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\Infranstructure\\UnitOfWorkMock.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\Infranstructure\\UnitOfWorkMock.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\Infranstructure\\UnitOfWorkMock.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\Infranstructure\\UnitOfWorkMock.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T06:24:32.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T21:16:39.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "coverage.cobertura.xml",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\coverage.cobertura.xml",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\coverage.cobertura.xml",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\coverage.cobertura.xml",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\coverage.cobertura.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-03-07T06:46:41.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "David.Academia.SistemaViajes.ProyectoFinal.csproj",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal.csproj",
               "RelativeDocumentMoniker": "David.Academia.SistemaViajes.ProyectoFinal.csproj",
@@ -387,59 +1004,212 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ManejoDistanciaServiceMock.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Mocks\\GoogleMaps\\ManejoDistanciaServiceMock.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwCsAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T16:44:23.655Z",
+              "DocumentIndex": 47,
+              "Title": "David.Academia.SistemaViajes.IntregrationTests.csproj",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\David.Academia.SistemaViajes.IntregrationTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-06T02:42:02.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ViajeController.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ViajeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ViajeController.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ViajeController.cs",
-              "RelativeToolTip": "Controllers\\ViajeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 48,
+              "Title": "ValoracionViaje.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\ValoracionViaje.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\ValoracionViaje.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\ValoracionViaje.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\ValoracionViaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T03:23:01.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T05:40:09.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ColaboradorService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
-              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
-              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\ColaboradorService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAApwB4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 49,
+              "Title": "Puesto.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Puesto.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Puesto.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Puesto.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Puesto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:21:26.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T05:39:53.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ColaboradorTests.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Colaboradores\\ColaboradorTests.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAlwB8AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 50,
+              "Title": "PermisoRol.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PermisoRol.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PermisoRol.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PermisoRol.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PermisoRol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:36:19.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T05:39:47.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 51,
+              "Title": "Permiso.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Permiso.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Permiso.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Permiso.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Permiso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:42.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Pais.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Pais.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Pais.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Pais.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Pais.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:36.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "PagoViaje.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoViaje.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoViaje.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoViaje.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoViaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:31.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "PagoContratista.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoContratista.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoContratista.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoContratista.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\PagoContratista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:27.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Moneda.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Moneda.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Moneda.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Moneda.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Moneda.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:21.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "MetodoPago.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\MetodoPago.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\MetodoPago.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\MetodoPago.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\MetodoPago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:17.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "EstadoViaje.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoViaje.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoViaje.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoViaje.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoViaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:10.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "EstadoDepartamento.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoDepartamento.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoDepartamento.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoDepartamento.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\EstadoDepartamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:39:05.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Ciudad.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Ciudad.cs",
+              "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Ciudad.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Ciudad.cs",
+              "RelativeToolTip": "_Infrastructure\\SistemaTransporteDrDataBase\\Entities\\Ciudad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:38:57.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ParametroSistemaTestData.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametroSistemaTestData.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametroSistemaTestData.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametroSistemaTestData.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametroSistemaTestData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:32:45.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ParametroSistemaDomain.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Generales\\ParametrosSistema\\ParametroSistemaDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\Generales\\ParametrosSistema\\ParametroSistemaDomain.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Generales\\ParametrosSistema\\ParametroSistemaDomain.cs",
+              "RelativeToolTip": "_Features\\Generales\\ParametrosSistema\\ParametroSistemaDomain.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:23:32.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ParametrosSistemaDomainTest.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametrosSistemaDomainTest.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametrosSistemaDomainTest.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametrosSistemaDomainTest.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Generales\\ParametrosSistemas\\ParametrosSistemaDomainTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:22:41.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "RolDomainTest.cs",
+              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
+              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
+              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
+              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T17:24:34.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
               "Title": "ColaboradorDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDomainTest.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDomainTest.cs",
@@ -447,77 +1217,11 @@
               "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDomainTest.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwB4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T16:13:12.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T16:13:12.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ColaboradorDomain.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
-              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
-              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\ColaboradorDomain.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAQwGsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T19:20:12.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SucursalTest.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Features\\Sucursales\\SucursalTest.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T02:13:35.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T00:46:01.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MonedaDto.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\MonedaService\\Dto\\MonedaDto.cs",
-              "RelativeDocumentMoniker": "_Features\\Pagos\\MonedaService\\Dto\\MonedaDto.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\MonedaService\\Dto\\MonedaDto.cs",
-              "RelativeToolTip": "_Features\\Pagos\\MonedaService\\Dto\\MonedaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:20:53.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Mensajes.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\Mensajes.cs",
-              "RelativeDocumentMoniker": "_Features\\_Common\\Mensajes.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\_Common\\Mensajes.cs",
-              "RelativeToolTip": "_Features\\_Common\\Mensajes.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwC8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:56:32.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 64,
               "Title": "ColaboradorDtoTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDtoTestData.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDtoTestData.cs",
@@ -525,38 +1229,11 @@
               "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDtoTestData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T15:22:35.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T15:22:35.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ColaboradorDto.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
-              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
-              "RelativeToolTip": "_Features\\Colaboradores\\Colaboradores\\Dto\\ColaboradorDto.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T20:55:24.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ColaboradorController.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ColaboradorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ColaboradorController.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\ColaboradorController.cs",
-              "RelativeToolTip": "Controllers\\ColaboradorController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T21:02:42.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 66,
               "Title": "ManejoDistanciaServiceTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\_Common\\GoogleMaps\\ManejoDistanciaServiceTest.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\_Common\\GoogleMaps\\ManejoDistanciaServiceTest.cs",
@@ -564,38 +1241,11 @@
               "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\_Common\\GoogleMaps\\ManejoDistanciaServiceTest.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T19:22:51.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T19:22:51.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAG4AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:53:32.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ViajeDomainTest.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T16:50:54.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 67,
               "Title": "UsuarioDomain.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Usuarios\\UsuarioDomain.cs",
               "RelativeDocumentMoniker": "_Features\\Usuarios\\Usuarios\\UsuarioDomain.cs",
@@ -603,12 +1253,11 @@
               "RelativeToolTip": "_Features\\Usuarios\\Usuarios\\UsuarioDomain.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:55:41.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T19:55:41.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 68,
               "Title": "ViajeDomainProcesarDatosTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainProcesarDatosTestData.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainProcesarDatosTestData.cs",
@@ -616,25 +1265,11 @@
               "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainProcesarDatosTestData.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAADwvw8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T15:06:55.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:06:55.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\Helpers\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAswB8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T21:16:39.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 69,
               "Title": "Respuesta.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.IntregrationTests\\_Common\\Respuesta.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.IntregrationTests\\_Common\\Respuesta.cs",
@@ -642,12 +1277,11 @@
               "RelativeToolTip": "..\\David.Academia.SistemaViajes.IntregrationTests\\_Common\\Respuesta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:10:57.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T14:10:57.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 70,
               "Title": "SistemaTransporteDrContext.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Infrastructure\\SistemaTransporteDrDataBase\\SistemaTransporteDrContext.cs",
               "RelativeDocumentMoniker": "_Infrastructure\\SistemaTransporteDrDataBase\\SistemaTransporteDrContext.cs",
@@ -659,19 +1293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RolDomainTest.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA/wCgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T17:24:34.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 71,
               "Title": "SucursalDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTestData.cs",
@@ -683,7 +1305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 72,
               "Title": "SucursalDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTest.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTest.cs",
@@ -695,7 +1317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 73,
               "Title": "SucursalDomainValidarBdTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainValidarBdTestData.cs",
               "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainValidarBdTestData.cs",
@@ -707,19 +1329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ViajeDomainValidarDatosEntradaTestData.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
-              "RelativeDocumentMoniker": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
-              "RelativeToolTip": "..\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T17:01:27.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 74,
               "Title": "ViajeDomainValidarBdTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarBdTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarBdTestData.cs",
@@ -731,7 +1341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 85,
               "Title": "ManejoDistanciaServiceTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\_Common\\GoogleMaps\\ManejoDistanciaServiceTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\_Common\\GoogleMaps\\ManejoDistanciaServiceTest.cs",
@@ -743,7 +1353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 84,
               "Title": "ViajeDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainTest.cs",
@@ -755,7 +1365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 83,
               "Title": "ViajeDomainValidarDatosEntradaTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarDatosEntradaTestData.cs",
@@ -767,7 +1377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 82,
               "Title": "ViajeDomainValidarKmsColaboradorTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Viajes\\ViajeDomainValidarKmsColaboradorTestData.cs",
@@ -779,7 +1389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 86,
               "Title": "AuthDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\SeguridadTest\\AuthDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\SeguridadTest\\AuthDomainTest.cs",
@@ -791,7 +1401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 87,
               "Title": "ReporteDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Reportes\\ReporteDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Reportes\\ReporteDomainTest.cs",
@@ -803,7 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 88,
               "Title": "SucursalDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTestData.cs",
@@ -815,7 +1425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 89,
               "Title": "SucursalDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainTest.cs",
@@ -827,7 +1437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 90,
               "Title": "TransportistaDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\TransportistaTest\\TransportistaDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\TransportistaTest\\TransportistaDomainTestData.cs",
@@ -839,7 +1449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 91,
               "Title": "ReporteDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Reportes\\ReporteDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Reportes\\ReporteDomainTestData.cs",
@@ -851,7 +1461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 92,
               "Title": "AuthDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\SeguridadTest\\AuthDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\SeguridadTest\\AuthDomainTestData.cs",
@@ -863,7 +1473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 93,
               "Title": "SucursalDomainValidarBdTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainValidarBdTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Sucursales\\SucursalDomainValidarBdTestData.cs",
@@ -875,7 +1485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 94,
               "Title": "UsuarioDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\UsuarioTest\\UsuarioDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\UsuarioTest\\UsuarioDomainTest.cs",
@@ -887,7 +1497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 95,
               "Title": "UsuarioDomainTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\UsuarioTest\\UsuarioDomainTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\UsuarioTest\\UsuarioDomainTestData.cs",
@@ -899,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 75,
               "Title": "ReporteDomain.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Reportes\\ReporteDomain.cs",
               "RelativeDocumentMoniker": "_Features\\Reportes\\ReporteDomain.cs",
@@ -911,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 96,
               "Title": "RolDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\Usuarios\\RolTest\\RolDomainTest.cs",
@@ -923,31 +1533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "PuestoDomain.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Puestos\\PuestoDomain.cs",
-              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Puestos\\PuestoDomain.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Puestos\\PuestoDomain.cs",
-              "RelativeToolTip": "_Features\\Colaboradores\\Puestos\\PuestoDomain.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T21:40:51.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "PuestoService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Puestos\\PuestoService.cs",
-              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Puestos\\PuestoService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Colaboradores\\Puestos\\PuestoService.cs",
-              "RelativeToolTip": "_Features\\Colaboradores\\Puestos\\PuestoService.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAgwBkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T21:41:24.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 97,
               "Title": "TransportistaDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\TransportistaTest\\TransportistaDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\TransportistaTest\\TransportistaDomainTest.cs",
@@ -959,19 +1545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "TransportistaDomain.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
-              "RelativeDocumentMoniker": "_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
-              "RelativeToolTip": "_Features\\Transportistas\\Transportistas\\TransportistaDomain.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwFgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:46:14.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 76,
               "Title": "SucursalDomain.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\SucursalDomain.cs",
               "RelativeDocumentMoniker": "_Features\\Sucursales\\SucursalDomain.cs",
@@ -983,7 +1557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 98,
               "Title": "ColaboradorDomainTest.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDomainTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDomainTest.cs",
@@ -995,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 99,
               "Title": "ColaboradorDtoTestData.cs",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDtoTestData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\ColaboradorTest\\ColaboradorDtoTestData.cs",
@@ -1007,31 +1581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "SucursalService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\SucursalService.cs",
-              "RelativeDocumentMoniker": "_Features\\Sucursales\\SucursalService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Sucursales\\SucursalService.cs",
-              "RelativeToolTip": "_Features\\Sucursales\\SucursalService.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwDcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:20:48.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "CiudadController.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\CiudadController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CiudadController.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\Controllers\\CiudadController.cs",
-              "RelativeToolTip": "Controllers\\CiudadController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T19:28:21.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 80,
               "Title": "PagoViajeService.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\PagoAViaje\\PagoViajeService.cs",
               "RelativeDocumentMoniker": "_Features\\Pagos\\PagoAViaje\\PagoViajeService.cs",
@@ -1043,7 +1593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 77,
               "Title": "RolService.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Roles\\RolService.cs",
               "RelativeDocumentMoniker": "_Features\\Usuarios\\Roles\\RolService.cs",
@@ -1055,7 +1605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 78,
               "Title": "RolDomain.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Roles\\RolDomain.cs",
               "RelativeDocumentMoniker": "_Features\\Usuarios\\Roles\\RolDomain.cs",
@@ -1067,7 +1617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 81,
               "Title": "PagoContratistaService.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\PagoAContratista\\PagoContratistaService.cs",
               "RelativeDocumentMoniker": "_Features\\Pagos\\PagoAContratista\\PagoContratistaService.cs",
@@ -1079,7 +1629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 79,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Usuarios\\Usuarios\\UsuarioService.cs",
               "RelativeDocumentMoniker": "_Features\\Usuarios\\Usuarios\\UsuarioService.cs",
@@ -1091,19 +1641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ViajeDetalleService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\ViajeDetalles\\ViajeDetalleService.cs",
-              "RelativeDocumentMoniker": "_Features\\Viajes\\ViajeDetalles\\ViajeDetalleService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Viajes\\ViajeDetalles\\ViajeDetalleService.cs",
-              "RelativeToolTip": "_Features\\Viajes\\ViajeDetalles\\ViajeDetalleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:59:41.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 100,
               "Title": "David.Academia.SistemaViajes.UnitTests.csproj",
               "DocumentMoniker": "D:\\David\\Academia\\prueba\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\prueba\\David.Academia.SistemaViajes.UnitTests\\David.Academia.SistemaViajes.UnitTests.csproj",
@@ -1112,30 +1650,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-03-03T15:06:21.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "TransportistaService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
-              "RelativeDocumentMoniker": "_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
-              "RelativeToolTip": "_Features\\Transportistas\\Transportistas\\TransportistaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:43:46.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "EstadoPagoService.cs",
-              "DocumentMoniker": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\EstadoDePago\\EstadoPagoService.cs",
-              "RelativeDocumentMoniker": "_Features\\Pagos\\EstadoDePago\\EstadoPagoService.cs",
-              "ToolTip": "D:\\David\\Academia\\Proyecto\\David.Academia.SistemaViajes.ProyectoFinal\\David.Academia.SistemaViajes.ProyectoFinal\\_Features\\Pagos\\EstadoDePago\\EstadoPagoService.cs",
-              "RelativeToolTip": "_Features\\Pagos\\EstadoDePago\\EstadoPagoService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T19:34:49.679Z"
             }
           ]
         },

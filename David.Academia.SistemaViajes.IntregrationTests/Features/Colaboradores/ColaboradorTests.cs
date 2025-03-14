@@ -9,6 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 using AcademiaIntegrationTestAndMock.IntegrationTest.Mocks;
 using Microsoft.EntityFrameworkCore;
+using Farsiman.Domain.Core.Standard.Repositories;
+using Farsiman.Infraestructure.Core.Entity.Standard;
+using David.Academia.SistemaViajes.IntregrationTests.Mocks.Infranstructure;
+using NSubstitute.ExceptionExtensions;
 
 namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.Colaboradores
 {
@@ -16,6 +20,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
     {
         private readonly HttpClient _httpClient;
         private readonly IManejoDistanciasService _manejoDistanciasService;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly CustomWebApplicationFactory<Program> _factory;
         public ColaboradoresTests(CustomWebApplicationFactory<Program> factory)
         {
@@ -23,6 +28,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
 
             using var scope = factory.Services.CreateScope();
             _manejoDistanciasService = scope.ServiceProvider.GetRequiredService<IManejoDistanciasService>();
+            _unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
             _factory = factory;
 
         }
@@ -30,15 +36,16 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
         [Fact]
         public async Task ObtenerColaboradores_DeberiaRetornar200YListaDeColaboradores()
         {
-            // Act
+            //Arrange
             var response = await _httpClient.GetAsync("/api/colaborador/ObtenerColaboradores");
 
-            // Assert
+            // Act
             response.StatusCode.Should().Be(HttpStatusCode.OK);
 
             // Deserializar correctamente en Respuesta<IEnumerable<Colaborador>>
             var apiResponse = await response.Content.ReadFromJsonAsync<Respuesta<IEnumerable<Colaborador>>>();
 
+            // Assert
             apiResponse.Should().NotBeNull();
             apiResponse.Valido.Should().BeTrue();
             apiResponse.Datos.Should().NotBeNullOrEmpty();
@@ -48,7 +55,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
         [Fact]
         public async Task CrearColaborador_DeberiaRetornar200YColaboradorCreado()
         {
-            // Configurar el mock para devolver "San Pedro Sula"
+
             ManejoDistanciasServiceMock.SetupExitosoObtenerDireccionDesdeCordenadas(_manejoDistanciasService);
 
             // Arrange
@@ -88,7 +95,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
         [Fact]
         public async Task CrearColaborador_DeberiaRetornarBadRequest_FallaApiGoogle()
         {
-            // 🔸 Configuración para que el mock lance la excepción
+
             ManejoDistanciasServiceMock.SetupErrorObtenerDireccionDesdeCordenadas(_manejoDistanciasService);
 
             // Arrange
@@ -112,12 +119,10 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
             // Act
             var response = await _httpClient.PostAsJsonAsync("/api/colaborador/CrearColaborador/?usuarioCreaId=1", nuevoColaborador);
 
-            // 🔸 Extraer mensaje del error (muy útil para debugging)
-            var contenidoError = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(contenidoError);
+
 
             // Assert
-            response.StatusCode.Should().Be(HttpStatusCode.BadRequest); 
+            response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
 
             var apiResponse = await response.Content.ReadFromJsonAsync<Respuesta<ColaboradorDto>>();
 
@@ -158,6 +163,7 @@ namespace David.Academia.SistemaViajes.ProyectoFinal.IntegrationTests.Features.C
             apiResponse.Valido.Should().BeFalse();
             apiResponse.DetalleError.Should().Contain("Error en el servicio de distancias.");
         }
+
     }
 
 }

@@ -20,6 +20,7 @@
 
         public ICollection<SucursalColaborador> SucursalColaboradores { get; set; } = new List<SucursalColaborador>();
         public ICollection<Viaje> Viajes { get; set; } = new List<Viaje>();
+        public ICollection<SolicitudViaje> SolicitudeViajes { get; set; } = new List<SolicitudViaje>();
 
 
         public Sucursal()
